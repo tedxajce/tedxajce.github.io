@@ -1,0 +1,64 @@
+header {
+  position: relative;
+  height: 100vh;
+  background: url("../img/hero-image.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: greyscale(100%);
+  filter: greyscale(100%); }
+  header .logo {
+    float: left;
+    margin-top: 40px;
+    margin-left: 100px;
+    width: 150px;
+    height: 50px;
+    background: blue; }
+  header nav a {
+    margin-top: 40px;
+    margin-right: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .15em;
+    color: #f7f7f7a3;
+    -webkit-transition: color 300ms;
+    -o-transition: color 300ms;
+    transition: color 300ms;
+    font-size: 20px; }
+    header nav a:last-child {
+      margin-right: 100px; }
+    header nav a:hover {
+      color: white;
+      text-decoration: none; }
+  header .nav {
+    float: right; }
+  header .hero-text {
+    font-weight: 100;
+    color: white;
+    padding-top: 25vh;
+    clear: both;
+    text-align: center; }
+  header .kicker-text {
+    padding-top: 10px;
+    padding-bottom: 75px;
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center; }
+  header .button-reg {
+    color: white;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: red;
+    width: 230px;
+    border-radius: 50px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    padding: 12px; }
+
+* {
+  font-family: Open Sans; }
+
+body {
+  height: 500vh; }
