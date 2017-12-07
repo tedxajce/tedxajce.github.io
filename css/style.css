@@ -10,9 +10,7 @@ header {
     float: left;
     margin-top: 40px;
     margin-left: 100px;
-    width: 150px;
-    height: 50px;
-    background: blue; }
+    height: 50px; }
   header nav a {
     margin-top: 40px;
     margin-right: 60px;

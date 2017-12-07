@@ -4,5 +4,5 @@ $(window).scroll(function(){
     $('header').css({
         'background-position' : `center ${wScroll*.5}px`
      })
-    console.log(wScroll)
+    // console.log(wScroll)
 });
