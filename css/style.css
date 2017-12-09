@@ -1,5 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500,700");
 header {
-  position: relative;
   height: 100vh;
   background: url("../img/hero-image.jpg");
   background-position: center;
@@ -14,11 +14,12 @@ header {
   header nav a {
     margin-top: 40px;
     margin-right: 60px;
-    font-weight: bold;
+    font-family: Rubik;
+    font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: .15em;
-    color: #f7f7f7a3;
+    color: rgba(207, 207, 207, 0.75);
     -webkit-transition: color 300ms;
     -o-transition: color 300ms;
     transition: color 300ms;
@@ -34,6 +35,8 @@ header {
     font-weight: 100;
     color: white;
     padding-top: 25vh;
+    margin-left: 20px;
+    margin-right: 20px;
     clear: both;
     text-align: center; }
   header .kicker-text {

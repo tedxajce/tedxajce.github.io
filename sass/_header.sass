@@ -1,7 +1,7 @@
 $header-height: 100vh
 
 header
-    position: relative
+    // position: relative
     height: $header-height
     background: url('../img/hero-image.jpg')
     background:
@@ -21,11 +21,13 @@ header
     nav a
         margin-top: 40px
         margin-right: 60px
-        font-weight: bold
+        font:
+            family: Rubik
+            weight: 400
         text-transform: uppercase
         text-decoration: none
         letter-spacing: .15em
-        color: #f7f7f7a3
+        color: rgba(207, 207, 207, 0.75)
         transition: color 300ms
         font:
             size: 20px
@@ -44,6 +46,9 @@ header
         font-weight: 100
         color: $font-color-darkbg
         padding-top: $header-height/4
+        margin:
+            left: 20px
+            right: 20px
         clear: both
         text-align: center
 
