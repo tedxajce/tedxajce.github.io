@@ -14,20 +14,20 @@ header {
   header nav a {
     margin-top: 40px;
     margin-right: 60px;
+    font-size: 18px;
     font-family: Rubik;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: .15em;
-    color: rgba(207, 207, 207, 0.75);
+    color: white;
     -webkit-transition: color 300ms;
     -o-transition: color 300ms;
-    transition: color 300ms;
-    font-size: 20px; }
+    transition: color 300ms; }
     header nav a:last-child {
       margin-right: 100px; }
     header nav a:hover {
-      color: white;
+      color: rgba(207, 207, 207, 0.75);
       text-decoration: none; }
   header .nav {
     float: right; }
