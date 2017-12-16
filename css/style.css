@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik:400,500,700");
 @media only screen and (max-width: 1080px) {
   nav.navbar.navbar-expand-lg {
-    background: rgba(0, 0, 0, 0.5); }
+    background: rgba(0, 0, 0, 0.7); }
   .nav-link {
     text-align: center; }
   .nav-item {
-    padding-bottom: 10px;
-    padding-top: 10px;
-    margin-left: 0; }
+    padding-bottom: 20px;
+    padding-top: 20px; }
   .hero-text {
     padding-top: 33.33333vh; }
   .nav-item .nav-link {
@@ -20,9 +19,6 @@ header {
   background-size: cover;
   -webkit-filter: greyscale(100%);
   filter: greyscale(100%); }
-
-nav.navbar.navbar-expand-lg {
-  padding-top: 40px; }
 
 .nav-item {
   margin-left: 1em;
