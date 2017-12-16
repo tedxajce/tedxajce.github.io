@@ -11,13 +11,13 @@ $(window).scroll(function(){
             'position':'fixed',
             'top':`0`,
             'width': `100%`,
-            'background': `rgba(0, 0, 0, 0.9)`
+            'background': `rgba(0, 0, 0, 0.7)`
         })
     }else{
         $('nav.navbar.navbar-expand-lg').css({
             'position':'relative',
             'width': `100%`,
-            'background': `rgba(0, 0, 0, 0.6)`
+            'background': `rgba(0, 0, 0, 0.7)`
         })
     }
 });
