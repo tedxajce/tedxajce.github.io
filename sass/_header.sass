@@ -1,7 +1,19 @@
 $header-height: 100vh
-
+$bounds: 1px yellow solid
+@media only screen and (max-width: 1080px)
+    nav.navbar.navbar-expand-lg
+        background: rgba(0, 0, 0, 0.5)
+    .nav-link
+        text-align: center 
+    .nav-item
+        padding-bottom: 10px
+        padding-top: 10px
+        margin-left: 0  
+    .hero-text
+        padding-top: $header-height/3 
+    .nav-item .nav-link
+        font-size: 30px
 header
-    // position: relative
     height: $header-height
     background: url('../img/hero-image.jpg')
     background:
@@ -9,69 +21,67 @@ header
         size: cover
     filter: greyscale(100%)
 
-    .logo
-        float: left
-        margin:
-            top: 40px
-            left: 100px
-        // width: 150px
-        height: 50px
-        // background: url('../img/logo.png')
+nav.navbar.navbar-expand-lg
+    padding-top: 40px
+
+.nav-item
+    margin-left: 1em
+    margin-right: 1em
+
+.fa-bars
+    color: white
+
+.event-logo
+    // width: 150px
+    // margin-left: 100px
+    height: 50px
+    // background: url('../img/logo.png')
     
-    nav a
-        margin-top: 40px
-        margin-right: 60px
-        font:
-            size: 18px
-            family: Rubik
-            weight: 500
-        text-transform: uppercase
+.nav-item .nav-link    //     
+    font:
+        size: 18px
+        family: Rubik
+        weight: 500
+    text-transform: uppercase
+    text-decoration: none
+    letter-spacing: .15em
+    color: white
+    transition: color 300ms
+    &:hover
+        color: rgba(207, 207, 207, 0.75)
         text-decoration: none
-        letter-spacing: .15em
-        color: white
-        transition: color 300ms
-        &:last-child
-            margin-right: 100px
-        &:hover
-            color: rgba(207, 207, 207, 0.75)
-            text-decoration: none
-        
-        
 
-    .nav
-        float: right
+.hero-text
+    font-weight: 100
+    color: $font-color-darkbg
+    padding-top: $header-height/4
+    margin:
+        left: 20px
+        right: 20px
+    clear: both
+    text-align: center
 
-    .hero-text
-        font-weight: 100
-        color: $font-color-darkbg
-        padding-top: $header-height/4
-        margin:
-            left: 20px
-            right: 20px
-        clear: both
-        text-align: center
+.kicker-text
+    padding:
+        top: 10px
+        bottom: 75px
+    font:
+        weight: 100
+        size: 1.5rem
 
-    .kicker-text
-        padding:
-            top: 10px
-            bottom: 75px
-        font:
-            weight: 100
-            size: 1.5rem
-    
-        color: $font-color-darkbg
-        text-align: center
+    color: $font-color-darkbg
+    text-align: center
 
-    .button-reg
-        color: $font-color-darkbg
-        letter-spacing: .2rem
-        text:
-            transform: uppercase
-        font:
-            weight: 600
-        background: red
-        width: 230px
-        border-radius: 50px
-        margin: 0 auto 0 auto
-        text-align: center
-        padding: 12px
+.button-reg
+    color: $font-color-darkbg
+    letter-spacing: .2rem
+    text:
+        transform: uppercase
+    font:
+        weight: 600
+    background: red
+    width: 230px
+    border-radius: 50px
+    margin: 0 auto 0 auto
+    text-align: center
+    padding: 12px

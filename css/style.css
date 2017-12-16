@@ -1,4 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik:400,500,700");
+@media only screen and (max-width: 1080px) {
+  nav.navbar.navbar-expand-lg {
+    background: rgba(0, 0, 0, 0.5); }
+  .nav-link {
+    text-align: center; }
+  .nav-item {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-left: 0; }
+  .hero-text {
+    padding-top: 33.33333vh; }
+  .nav-item .nav-link {
+    font-size: 30px; } }
+
 header {
   height: 100vh;
   background: url("../img/hero-image.jpg");
@@ -6,57 +20,63 @@ header {
   background-size: cover;
   -webkit-filter: greyscale(100%);
   filter: greyscale(100%); }
-  header .logo {
-    float: left;
-    margin-top: 40px;
-    margin-left: 100px;
-    height: 50px; }
-  header nav a {
-    margin-top: 40px;
-    margin-right: 60px;
-    font-size: 18px;
-    font-family: Rubik;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: .15em;
-    color: white;
-    -webkit-transition: color 300ms;
-    -o-transition: color 300ms;
-    transition: color 300ms; }
-    header nav a:last-child {
-      margin-right: 100px; }
-    header nav a:hover {
-      color: rgba(207, 207, 207, 0.75);
-      text-decoration: none; }
-  header .nav {
-    float: right; }
-  header .hero-text {
-    font-weight: 100;
-    color: white;
-    padding-top: 25vh;
-    margin-left: 20px;
-    margin-right: 20px;
-    clear: both;
-    text-align: center; }
-  header .kicker-text {
-    padding-top: 10px;
-    padding-bottom: 75px;
-    font-weight: 100;
-    font-size: 1.5rem;
-    color: white;
-    text-align: center; }
-  header .button-reg {
-    color: white;
-    letter-spacing: .2rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    background: red;
-    width: 230px;
-    border-radius: 50px;
-    margin: 0 auto 0 auto;
-    text-align: center;
-    padding: 12px; }
+
+nav.navbar.navbar-expand-lg {
+  padding-top: 40px; }
+
+.nav-item {
+  margin-left: 1em;
+  margin-right: 1em; }
+
+.fa-bars {
+  color: white; }
+
+.event-logo {
+  height: 50px; }
+
+.nav-item .nav-link {
+  font-size: 18px;
+  font-family: Rubik;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .15em;
+  color: white;
+  -webkit-transition: color 300ms;
+  -o-transition: color 300ms;
+  transition: color 300ms; }
+  .nav-item .nav-link:hover {
+    color: rgba(207, 207, 207, 0.75);
+    text-decoration: none; }
+
+.hero-text {
+  font-weight: 100;
+  color: white;
+  padding-top: 25vh;
+  margin-left: 20px;
+  margin-right: 20px;
+  clear: both;
+  text-align: center; }
+
+.kicker-text {
+  padding-top: 10px;
+  padding-bottom: 75px;
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center; }
+
+.button-reg {
+  color: white;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: red;
+  width: 230px;
+  border-radius: 50px;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  padding: 12px; }
 
 * {
   font-family: Open Sans; }
