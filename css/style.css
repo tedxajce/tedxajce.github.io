@@ -110,7 +110,6 @@ body {
   position: absolute;
   bottom: 0px;
   background: url("../img/footer-image.jpg");
-    background-size: cover;
   padding: 70px 0 0 0;
   height: 300px; }
 
@@ -134,7 +133,7 @@ body {
 .footerheading {
   display: inline-block;
   width: 150px;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 18px;
   font-weight: bold;
   letter-spacing: .08m; }
@@ -143,12 +142,13 @@ body {
   padding-bottom: 16px; }
 
 li.details {
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 22px; }
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 21px;
+  font-size: 14px; }
 
 li.details a {
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 31px; }
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 29px; }
 
 * {
   font-family: Open Sans; }
