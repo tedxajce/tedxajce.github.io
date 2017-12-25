@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik:400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 @media only screen and (max-width: 1080px) {
   nav.navbar.navbar-expand-lg {
     width: 100%;
     margin: 0 0;
-    padding-top: 10px; }
+    padding-top: 20px; }
   a.nav-link {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -12,8 +13,8 @@
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease; }
-  .addcolor {
-    background: rgba(0, 0, 0, 0.7); } }
+  .nav-item .nav-link {
+    font-size: 200px; } }
 
 nav.navbar {
   width: 80%;
@@ -42,9 +43,8 @@ button.navbar-toggler {
   height: 50px; }
 
 .nav-item .nav-link {
-  font-size: 18px;
+  font-size: 16px;
   font-family: Rubik;
-  font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: .15em;
@@ -85,8 +85,32 @@ button.navbar-toggler {
   text-align: center;
   padding: 12px; }
 
-* {
-  font-family: Open Sans; }
+.svgpos {
+  position: relative;
+  top: 200px;
+  border: 1px yellow solid; }
 
 body {
-  height: 500vh; }
+  position: relative; }
+
+.page-footer {
+  padding: 20px 0px;
+  width: 100%;
+  height: 250px;
+  background: grey; }
+
+.container {
+  max-width: 98%;
+  margin: 0 auto; }
+
+.box {
+  border: 2px solid blue;
+  background: lightblue;
+  width: 100%px;
+  height: 100px; }
+
+.row {
+  border: solid 2px yellow; }
+
+* {
+  font-family: Open Sans; }
