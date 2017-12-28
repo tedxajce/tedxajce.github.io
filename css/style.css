@@ -90,6 +90,10 @@ button.navbar-toggler {
   top: 200px;
   border: 1px yellow solid; }
 
+.bord {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 #section-about {
   background: pink;
   width: 100%;
@@ -99,17 +103,38 @@ button.navbar-toggler {
   position: relative;
   top: 5vh;
   height: 90vh;
-  background: skyblue;
+  background: white;
   width: 90vw; }
 
 .box {
   margin-top: 10vh; }
+
+#about-row-logo {
+  padding-top: 80px; }
+
+#centerpiece {
+  margin-right: 26px; }
 
 #about-ted, #about-tedx, #about-tedxajce {
   padding: 10px;
   color: rgba(0, 0, 0, 0.65);
   font-size: 13.5px;
   line-height: 24px; }
+
+#about-logo-ted {
+  width: 59%; }
+
+#about-logo-ted, #about-logo-tedx, #about-logo-tedxajce {
+  -webkit-filter: grayscale(1) opacity(0.7);
+  filter: grayscale(1) opacity(0.7);
+  -webkit-transition: -webkit-filter 300ms ease;
+  transition: -webkit-filter 300ms ease;
+  -o-transition: filter 300ms ease;
+  transition: filter 300ms ease;
+  transition: filter 300ms ease, -webkit-filter 300ms ease; }
+  #about-logo-ted:hover, #about-logo-tedx:hover, #about-logo-tedxajce:hover {
+    -webkit-filter: grayscale(0) opacity(1);
+    filter: grayscale(0) opacity(1); }
 
 .border {
   border: 3px solid blue; }

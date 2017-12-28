@@ -1,4 +1,8 @@
-$border: solid 2px green
+$border: solid 1px green
+
+.bord
+    // border: $border
+    box-sizing: border-box
 
 #section-about
     background: pink
@@ -9,15 +13,29 @@ $border: solid 2px green
     position: relative
     top: 5vh
     height: 90vh
-    background: skyblue
+    background: white
     width: 90vw    
 
 .box
     margin-top: 10vh
+
+#about-row-logo
+    padding-top: 80px
+
+#centerpiece
+    margin-right: 26px
+    // background: pink
 
 #about-ted,#about-tedx,#about-tedxajce
     padding: 10px
     color: rgba(0,0,0,.65)
     font-size: 13.5px
     line-height: 24px
-    
+
+#about-logo-ted
+    width: 59%
+#about-logo-ted,#about-logo-tedx,#about-logo-tedxajce
+    filter: grayscale(1) opacity(.7)
+    transition: filter 300ms ease
+    &:hover
+        filter: grayscale(0) opacity(1)
