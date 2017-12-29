@@ -2,40 +2,48 @@ $border: solid 1px green
 
 .bord
     // border: $border
-    box-sizing: border-box
+    // box-sizing: border-box
+.box
+    margin-top: 10vh
+
+@media only screen and (max-width: 1080px)
+    #content-ted,#content-tedx,#content-tedxajce
+        font-style: normal
+        padding: 24px
+        font-size: 16px
+        line-height: 28px
+        color: rgba(0,0,0,.7)
 
 #section-about
     background: pink
     width: 100%
-    height: 100vh
+    height: 100vh    
 
 #about-box-card.container
     position: relative
     top: 5vh
     height: 90vh
     background: white
-    width: 90vw    
+    width: 90vw  
+    border-radius: 4px  
+    box-shadow: 12px 15px 20px 0 rgba(46,61,73,.15)
 
-.box
-    margin-top: 10vh
 
 #about-row-logo
     padding-top: 80px
 
-#centerpiece
-    margin-right: 26px
-    // background: pink
-
-#about-ted,#about-tedx,#about-tedxajce
-    padding: 10px
-    color: rgba(0,0,0,.65)
-    font-size: 13.5px
-    line-height: 24px
-
 #about-logo-ted
-    width: 59%
+    width: 57%
+
 #about-logo-ted,#about-logo-tedx,#about-logo-tedxajce
     filter: grayscale(1) opacity(.7)
-    transition: filter 300ms ease
-    &:hover
-        filter: grayscale(0) opacity(1)
+    transition: all 300ms ease
+
+#content-container
+    margin-top: 0px
+
+.about-content
+    padding: 80px
+    font-style: italic
+    font-size: 24px
+    line-height: 48px
