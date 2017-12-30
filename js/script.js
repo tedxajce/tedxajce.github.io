@@ -29,6 +29,10 @@ $(document).ready(function() {
   tedx.hide();
   tedxajce.hide();
 
+  tedlogo.css({
+    filter: `grayscale(0) opacity(1)`
+  });
+
   tedlogo.click(function() {
     tedlogo.css({
       filter: `grayscale(0) opacity(1)`
