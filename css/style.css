@@ -101,7 +101,8 @@ button.navbar-toggler {
     line-height: 28px;
     color: rgba(0, 0, 0, 0.7); }
   #about-box-card.container {
-    height: 120vh; }
+    height: 120vh;
+    background: blue; }
   #section-about.specifyclass {
     height: 130vh; } }
 
