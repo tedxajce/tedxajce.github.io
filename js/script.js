@@ -21,12 +21,7 @@ $(document).ready(function() {
     }
   });
 
-  $('.carousel-container').slick({
-    arrows: true,
-    dots: true,
-    autoplay: true
-  });
-
+  
   var tedlogo = $("#about-logo-ted");
   var tedxlogo = $("#about-logo-tedx");
   var tedxajcelogo = $("#about-logo-tedxajce");
