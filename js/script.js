@@ -21,6 +21,15 @@ $(document).ready(function() {
     }
   });
 
+
+  $('.owl-carousel').owlCarousel({
+    center: true,
+    stagePadding: 0,
+    autoWidth: true,
+    loop: true,
+    margin: 10,
+    nav: true,
+  });
   
   var tedlogo = $("#about-logo-ted");
   var tedxlogo = $("#about-logo-tedx");
