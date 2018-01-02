@@ -1,17 +1,23 @@
 .container.section-container
     // background: honeydew
     padding: 20px
+    min-height: 100vh
 
 #section-speakers
-    background: blue
+    background: url('../img/speakers-bg.png')
+        size: cover
     padding: 20px
     // height: 100vh
 
 #speaker-heading
     padding:
-        top: 40px
+        top: 20px
         bottom: 40px
     text-align: center
+    text-transform: uppercase
+    color: white
+    font-weight: bold
+    letter-spacing: 3px
 
 .speaker-card
     text-align: center
@@ -20,11 +26,9 @@
     background-color: #fff
     box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2)
     border-radius: .375rem
-    // border:
-    //     top: 2px solid red
-    //     bottom: 2px solid red
     margin: 10px 10px 10px 10px
     padding: 0 1.5rem 3rem
+
 
 .speaker-profile-image
     position: relative
@@ -58,3 +62,23 @@
 .w-100
     margin: 20px
 
+.carousel-container
+    min-height: 75vh
+
+// carousel sass
+
+.slick-list
+    // overflow: visible
+
+.speaker-card-carousel
+    margin-top: 40px
+    margin-bottom: 40px
+    margin-left: 20px
+    margin-right: 20px
+    padding: 0 1.5rem 4rem
+    background: white
+    border-radius: 5px
+    box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2)
+
+.speaker-card-carousel.slick-slide
+    min-height: 425px

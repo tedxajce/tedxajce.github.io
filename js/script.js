@@ -5,6 +5,9 @@ $(document).ready(function() {
     $("header").css({
       "background-position": `center ${wScroll * 0.45}px`
     });
+    $("#section-speakers").css({
+      "background-position": `center ${wScroll * 0.45}px`
+    });
   });
 
   var btnclicked = 0;
@@ -16,6 +19,12 @@ $(document).ready(function() {
       $("nav").css({ background: `none` });
       btnclicked = 0;
     }
+  });
+
+  $('.carousel-container').slick({
+    arrows: true,
+    dots: true,
+    autoplay: true
   });
 
   var tedlogo = $("#about-logo-ted");
