@@ -150,8 +150,7 @@ button.navbar-toggler {
   line-height: 48px; }
 
 .container.section-container {
-  padding: 20px;
-  min-height: 100vh; }
+  padding: 20px; }
 
 .section-container.owler {
   min-height: 103vh; }
@@ -198,6 +197,12 @@ button.navbar-toggler {
 .owl-carousel .owl-item img {
   width: 60%;
   margin: 0 auto; }
+
+#tobeannounced {
+  text-align: center;
+  color: white;
+  font-style: italic;
+  font-size: 5em; }
 
 .speaker-profile-image {
   position: relative;
