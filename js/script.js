@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  $(window).scroll(function() {
+$(document).ready(function () {
+  $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
 
     $("header").css({
@@ -11,12 +11,16 @@ $(document).ready(function() {
   });
 
   var btnclicked = 0;
-  $("button.navbar-toggler").click(function() {
+  $("button.navbar-toggler").click(function () {
     if (btnclicked == 0) {
-      $("nav").css({ background: `rgba(0,0,0,.8)` });
+      $("nav").css({
+        background: `rgba(0,0,0,.8)`
+      });
       btnclicked = 1;
     } else {
-      $("nav").css({ background: `none` });
+      $("nav").css({
+        background: `none`
+      });
       btnclicked = 0;
     }
   });
@@ -30,7 +34,7 @@ $(document).ready(function() {
     margin: 10,
     nav: true,
   });
-  
+
   var tedlogo = $("#about-logo-ted");
   var tedxlogo = $("#about-logo-tedx");
   var tedxajcelogo = $("#about-logo-tedxajce");
@@ -46,7 +50,7 @@ $(document).ready(function() {
     filter: `grayscale(0) opacity(1)`
   });
 
-  tedlogo.click(function() {
+  tedlogo.click(function () {
     tedlogo.css({
       filter: `grayscale(0) opacity(1)`
     });
@@ -60,7 +64,7 @@ $(document).ready(function() {
     tedx.hide();
     tedxajce.hide();
   });
-  tedxlogo.click(function() {
+  tedxlogo.click(function () {
     tedlogo.css({
       filter: `grayscale(1) opacity(0.7)`
     });
@@ -74,7 +78,7 @@ $(document).ready(function() {
     tedx.show();
     tedxajce.hide();
   });
-  tedxajcelogo.click(function() {
+  tedxajcelogo.click(function () {
     tedlogo.css({
       filter: `grayscale(1) opacity(.7)`
     });
@@ -88,4 +92,72 @@ $(document).ready(function() {
     tedx.hide();
     tedxajce.show();
   });
+
+  // Smooth Scrolling that i ripped off  of CSS-TRICKS
+  // Select all links with hashes
+  $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function (event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top-$('nav').outerHeight()
+          }, 1000, function () {
+            // Callback after animation
+            // Must change focus!
+            var $target = $(target);
+            // $target.focus();
+            // if ($target.is(":focus")) { // Checking if the target was focused
+            //   return false;
+            // } else {
+            //   $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+            //   $target.focus(); // Set focus again
+            // };
+          });
+        }
+      }
+    });
+
+  $(window).scroll(function () {
+    
+
+    var windowScrolled = $(this).scrollTop();
+    var headerHeight = $('#home').outerHeight();
+    if (windowScrolled > headerHeight){
+      $('nav.navbar').animate({
+        'opacity': '1'
+      },300,()=>{});
+
+      $('nav.navbar').css(
+        {
+          'position': 'fixed',
+          'background': '#000000f5',
+          'width': '100%',
+          'padding-top': '4px'
+        }
+      );
+    } else {
+      $('nav.navbar').css(
+        {
+          'position': 'relative',
+          'background': 'none',
+          'padding-top': '25px'
+        }
+      );
+    }
+  })
+  console.log($('#home').outerHeight());
+
 });
