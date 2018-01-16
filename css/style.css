@@ -329,7 +329,7 @@ li.details a {
   font-family: Open Sans; }
 
 body {
-  height: 600vh; }
+  min-height: 350vh; }
 
 ul {
   list-style-type: none;
