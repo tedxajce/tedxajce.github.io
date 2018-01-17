@@ -2,7 +2,10 @@ $header-height: 100vh
 $bounds: 1px yellow solid
 
 @media only screen and (max-width: 1080px)
-    $header-heigt: 100vh
+    #reg_butt
+        padding: 10px
+    .hero-text
+        padding-top: 10vh
     nav.navbar.navbar-expand-lg
         width: 100%
         margin: 0 0
@@ -60,7 +63,7 @@ button.navbar-toggler
 
 .hero-text
     font:
-        size: 5em
+        size: 4em
         weight: bold
     color: $font-color-darkbg
     padding-top: $header-height/4
@@ -89,8 +92,7 @@ button.navbar-toggler
     font:
         weight: 600
     background: red
-    min-width: 230px
-    max-width: 500px
+    width: 230px
     border-radius: 50px
     margin: 0 auto 0 auto
     text-align: center

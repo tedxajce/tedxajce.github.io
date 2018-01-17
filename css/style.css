@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik:400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700");
 @media only screen and (max-width: 1080px) {
+  #reg_butt {
+    padding: 10px; }
+  .hero-text {
+    padding-top: 10vh; }
   nav.navbar.navbar-expand-lg {
     width: 100%;
     margin: 0 0;
@@ -58,7 +62,7 @@ button.navbar-toggler {
     text-decoration: none; }
 
 .hero-text {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: bold;
   color: white;
   padding-top: 25vh;
@@ -81,8 +85,7 @@ button.navbar-toggler {
   text-transform: uppercase;
   font-weight: 600;
   background: red;
-  min-width: 230px;
-  max-width: 500px;
+  width: 230px;
   border-radius: 50px;
   margin: 0 auto 0 auto;
   text-align: center;
