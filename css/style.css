@@ -58,7 +58,8 @@ button.navbar-toggler {
     text-decoration: none; }
 
 .hero-text {
-  font-weight: 100;
+  font-size: 5em;
+  font-weight: bold;
   color: white;
   padding-top: 25vh;
   margin-left: 20px;
@@ -67,7 +68,7 @@ button.navbar-toggler {
   text-align: center; }
 
 .kicker-text {
-  padding-top: 10px;
+  padding-top: 8px;
   padding-bottom: 75px;
   font-weight: 100;
   font-size: 1.5rem;
@@ -80,7 +81,8 @@ button.navbar-toggler {
   text-transform: uppercase;
   font-weight: 600;
   background: red;
-  width: 230px;
+  min-width: 230px;
+  max-width: 500px;
   border-radius: 50px;
   margin: 0 auto 0 auto;
   text-align: center;
