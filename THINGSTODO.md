@@ -4,7 +4,7 @@ THINGS TO DO
     X Link it to every where
     X Make it smooth scroll
     - Remove section about speakers
-    X Apply smooth scroll
+    ----------- Apply smooth scroll
     X Give legit contact information
 
 
