@@ -159,7 +159,8 @@ button.navbar-toggler {
 #section-speakers {
   background: url("../img/speakers-bg.png");
     background-size: cover;
-  padding: 20px; }
+  padding: 20px;
+  height: 60vh; }
 
 #speaker-heading {
   padding-top: 20px;
@@ -169,6 +170,11 @@ button.navbar-toggler {
   color: white;
   font-weight: bold;
   letter-spacing: 3px; }
+
+#tobecont {
+  text-align: center;
+  color: white;
+  font-size: 3em; }
 
 .speaker-card {
   text-align: center;
@@ -324,7 +330,7 @@ li.details a {
   font-family: Open Sans; }
 
 body {
-  height: 600vh; }
+  height: 350vh; }
 
 ul {
   list-style-type: none;
