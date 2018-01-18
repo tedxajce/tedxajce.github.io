@@ -85,7 +85,8 @@ button.navbar-toggler {
   text-transform: uppercase;
   font-weight: 600;
   background: red;
-  width: 230px;
+  min-width: 230px;
+  max-width: 380px;
   border-radius: 50px;
   margin: 0 auto 0 auto;
   text-align: center;
