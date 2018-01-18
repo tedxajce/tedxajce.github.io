@@ -2,6 +2,21 @@
 <html lang="en">
 
 <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112700731-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112700731-1');
+    </script>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,8 +25,8 @@
     <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">
 
     <!-- Owl Carousel CSS and Theme -->
-    <link rel="stylesheet" href="./css/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css">    
-    <link rel="stylesheet" href="./css/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.css">    
+    <link rel="stylesheet" href="./css/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.css">
 
     <!-- Local CSS file -->
     <link rel="stylesheet" href="./css/style.css">
@@ -39,10 +54,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">gallery</a>
+                            <a class="nav-link" id="gallery-link" href="#">gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Venue</a>
+                            <a class="nav-link" id="venue-link" href="#section-venue">Venue</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#section-about">About</a>
@@ -56,7 +71,9 @@
             </nav>
             <h1 class="hero-text">STRIVE TO THRIVE</h1>
             <h2 class="kicker-text">coming soon</h2>
-            <p class="button-reg">volunteer call accepting soon</p>
+            <a href="volcall.html" style="text-decoration:none">
+                <p class="button-reg">volunteer call</p>
+            </a>
     </header>
 
 
@@ -185,11 +202,11 @@
                         the founder, chairman, and CEO of NeXT.
                     </p>
                 </div> -->
-            </div>
         </div>
+    </div>
 
 
-        <!-- <div class="section-container owler d-md-none ">
+    <!-- <div class="section-container owler d-md-none ">
             <h2 id="speaker-heading">Speakers</h2>
             <div class="owl-carousel">
                 <div class="speaker-card-carousel " id="guy1">
@@ -263,11 +280,7 @@
     </div>
 
 
-    
 
-    <div class="venu">
-
-    </div>
     <!-- Footer Content -->
     <footer id="myfooter" class="page-footer">
         <div class="container">
@@ -286,13 +299,13 @@
                     <div id="contact" class="align-self-sm-center">
                         <h5 class="footerheading">CONTACT</h5>
                         <ul class="detail-block">
-                            <li class="details">Joseph Ponnezhath</li>
-                            <li class="details">Ph: 9446367432</li>
-                            <li class="details">Email: josephponnezhath@cs.ajce.in</li>
+                            <li class="details">Joseph J Ponnezhath</li>
+                            <li class="details">Ph: +91 9446367432</li>
+                            <li class="details">Email: josephjponnezhath@cs.ajce.in</li>
                         </ul>
                         <ul class="detail-block">
                             <li class="details">Prajith Prassanan</li>
-                            <li class="details">Ph: 7012095734</li>
+                            <li class="details">Ph: +91 7012095734</li>
                             <li class="details">Email: prajithprassanan@cs.ajce.in</li>
                         </ul>
                     </div>
@@ -350,8 +363,14 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 <script src="./css/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
 <script src="./js/script.js"></script>
+<script>
+    var ven = document.getElementById('venue-link');
+    var gall = document.getElementById('gallery-link');
+    ven.addEventListener("click", () => alert("This section is not available right now"));
+    gall.addEventListener("click", () => alert("This section is not available right now"));
+</script>
 
 </html>
 
 <!-- possible links to include in the footer
-    Gallery ->  
+    Gallery ->
