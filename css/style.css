@@ -275,7 +275,8 @@ button.navbar-toggler {
 
 @media only screen and (max-width: 1080px) {
   #myfooter {
-    height: 820px; }
+    height: 820px;
+    position: relative; }
   #contact, #links, #connect {
     padding-left: 60px; }
   #linkslist li a {
