@@ -7,6 +7,8 @@ THINGS TO DO
     ----------- Apply smooth scroll
     X Give legit contact information
 
+    - link fb insta and shit
+
 
     - Venue
     - Gallery

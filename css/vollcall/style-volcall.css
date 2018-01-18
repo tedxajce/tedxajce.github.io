@@ -1,0 +1,30 @@
+body {
+  background: white;
+  font-weight: medium; }
+
+.container {
+  min-height: 100vh;
+  border: 2px solid red;
+  min-width: 90%;
+  margin-top: 40px;
+  margin-bottom: 40px; }
+
+.vc-heading {
+  text-align: center;
+  padding: 24px; }
+
+.colorer {
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: -.2em; }
+
+.bolder {
+  font-weight: bold;
+  display: inline-block;
+  margin-left: .2em; }
+
+.vc-caption {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 1.3em; }
