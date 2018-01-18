@@ -2,6 +2,21 @@
 <html lang="en">
 
 <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112700731-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112700731-1');
+    </script>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -56,7 +71,9 @@
             </nav>
             <h1 class="hero-text">STRIVE TO THRIVE</h1>
             <h2 class="kicker-text">coming soon</h2>
-            <a href="volcall.html" style="text-decoration:none"><p class="button-reg">volunteer call</p></a>
+            <a href="volcall.html" style="text-decoration:none">
+                <p class="button-reg">volunteer call</p>
+            </a>
     </header>
 
 
@@ -349,9 +366,10 @@
 <script>
     var ven = document.getElementById('venue-link');
     var gall = document.getElementById('gallery-link');
-    ven.addEventListener("click", ()=> alert("This section is not available right now"));
-    gall.addEventListener("click", ()=> alert("This section is not available right now"));
+    ven.addEventListener("click", () => alert("This section is not available right now"));
+    gall.addEventListener("click", () => alert("This section is not available right now"));
 </script>
+
 </html>
 
 <!-- possible links to include in the footer
