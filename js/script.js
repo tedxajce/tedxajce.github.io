@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
 
@@ -13,16 +14,18 @@ $(document).ready(function () {
   var btnclicked = 0;
   $("button.navbar-toggler").click(function () {
     if (btnclicked == 0) {
+      console.log("Button clicked yo")
       $("nav").css({
         background: `rgba(0,0,0,.8)`
       });
       btnclicked = 1;
     } else {
+      console.log("Button clicked yoe")
       $("nav").css({
         background: `none`
       });
-      btnclicked = 0;
     }
+    btnclicked = 0;
   });
 
 
