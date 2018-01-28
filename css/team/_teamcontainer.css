@@ -1,0 +1,6 @@
+.container.team-container {
+  background: blue;
+  height: 100vh;
+  position: relative;
+  top: -32vh;
+  border-radius: 2px; }

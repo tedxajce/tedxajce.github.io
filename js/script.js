@@ -2,9 +2,12 @@ $(document).ready(function () {
 
   $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
-
+    var i = 0;
     $("header").css({
-      "background-position": `center ${wScroll * 0.45}px`
+      "background-position": `center ${wScroll * 0.45}px`,
+    });
+    $("body#team-body").css({
+      "background-position": `center ${wScroll * 0.65}px`,
     });
     $("#section-speakers").css({
       "background-position": `center ${wScroll * 0.45}px`
@@ -35,6 +38,11 @@ $(document).ready(function () {
     autoWidth: true,
     loop: true,
     margin: 10,
+    nav: true,
+  });
+
+
+  $('.owl-carousel-team').owlCarousel({
     nav: true,
   });
 
