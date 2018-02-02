@@ -87,16 +87,12 @@ button.navbar-toggler {
   .text-center#core-team-heading {
     font-size: 24px; }
   .box {
-    border: 0.5px solid rgba(128, 128, 128, 0.09); }
-  body#team-body {
-    background-size: 1080px 1920px;
-    background-repeat: no-repeat; } }
+    border: 0.5px solid rgba(128, 128, 128, 0.09); } }
 
 body {
   background: url("../../img/sel1.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  z-index: -9999; }
+  background-size: contain;
+  background-repeat: cover; }
 
 .container.team-container {
   background: white;

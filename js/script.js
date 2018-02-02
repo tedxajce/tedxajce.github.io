@@ -12,6 +12,12 @@ $(document).ready(function () {
     $("#section-speakers").css({
       "background-position": `center ${wScroll * 0.45}px`
     });
+    $("#myfooter").css({
+      "background-position": `center ${wScroll * 0.55}px`
+    });
+    $("#about-box-card").css({
+      "background-position": `center ${wScroll *2}px`
+    });
   });
 
   var btnclicked = 0;

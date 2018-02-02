@@ -6,6 +6,9 @@ $(document).ready(function () {
     $("header").css({
       "background-position": `center ${wScroll * 0.45}px`,
     });
+    $("body").css({
+      "background-position": `center ${wScroll * 0.45}px`,
+    });
   });
 
   var btnclicked = 0;

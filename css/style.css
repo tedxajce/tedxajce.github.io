@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik:400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
 @media only screen and (max-width: 1080px) {
   #reg_butt {
     padding: 10px; }
@@ -140,10 +142,7 @@ button.navbar-toggler {
   border-radius: 4px;
   -webkit-box-shadow: 14px 15px 36px 3px rgba(56, 41, 41, 0.12);
   box-shadow: 14px 15px 36px 3px rgba(56, 41, 41, 0.12);
-  min-height: 30px;
-  -webkit-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
-  transition: all 300ms ease; }
+  min-height: 30px; }
 
 #about-row-logo {
   padding-top: 80px; }
@@ -396,7 +395,7 @@ li.details a {
   margin-right: 20px; }
 
 * {
-  font-family: Open Sans; }
+  font-family: Roboto; }
 
 body {
   height: 350vh; }
