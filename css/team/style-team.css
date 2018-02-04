@@ -90,9 +90,7 @@ button.navbar-toggler {
     border: 0.5px solid rgba(128, 128, 128, 0.09); } }
 
 body {
-  background: url("../../img/sel1.jpg");
-  background-size: contain;
-  background-repeat: cover; }
+  background: url("../../img/sel1.jpg"); }
 
 .container.team-container {
   background: white;
@@ -143,11 +141,11 @@ body {
 
 .image-blur {
   position: relative;
-  top: -166px;
+  top: -170px;
   border-radius: 100px;
   width: 130px;
-  -webkit-filter: blur(9.6px);
-  filter: blur(9.6px); }
+  -webkit-filter: blur(12px);
+  filter: blur(12px); }
 
 .member-name {
   color: #3c4858;
@@ -162,6 +160,17 @@ body {
 
 .item {
   border: solid 1px green; }
+
+.category {
+  margin-top: 32px;
+  font-size: 16px; }
+
+.list-group-item {
+  border: none;
+  padding-bottom: 2px;
+  padding-left: 0px;
+  text-transform: uppercase;
+  font-size: 14px; }
 
 .border {
   border: 3px solid blue; }
@@ -182,10 +191,10 @@ body {
 
 .page-footer {
   bottom: 0px;
-  background: -webkit-gradient(linear, left bottom, left top, from(black), to(transparent));
-  background: -webkit-linear-gradient(bottom, black, transparent);
-  background: -o-linear-gradient(bottom, black, transparent);
-  background: linear-gradient(0deg, black, transparent);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, black), color-stop(90%, transparent));
+  background: -webkit-linear-gradient(bottom, black 10%, transparent 90%);
+  background: -o-linear-gradient(bottom, black 10%, transparent 90%);
+  background: linear-gradient(0deg, black 10%, transparent 90%);
   padding: 70px 0 0 0;
   height: 320px; }
   .page-footer ul {
