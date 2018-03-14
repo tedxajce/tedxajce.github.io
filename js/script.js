@@ -16,7 +16,7 @@ $(document).ready(function () {
       "background-position": `center ${wScroll * 0.55}px`
     });
     $("#about-box-card").css({
-      "background-position": `center ${wScroll *2}px`
+      "background-position": `center ${wScroll *.005}px`
     });
   });
 
