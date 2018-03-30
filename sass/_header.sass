@@ -4,8 +4,14 @@ $bounds: 1px yellow solid
 @media only screen and (max-width: 1080px)
     #reg_butt
         padding: 10px
-    h1.hero-text
+    h1.hero-text#hero-text
+        font-size: 4em
         padding-top: 12vh
+    .hero-caption#hero-caption
+        font:
+             size: 16px
+             weight: 400
+        letter-spacing: 10px
     nav.navbar.navbar-expand-lg
         width: 100%
         margin: 0 0
@@ -19,7 +25,8 @@ $bounds: 1px yellow solid
         transition: all 300ms ease
     .nav-item .nav-link
         font-size: 200px
-    .kicker-text
+    h2.kicker-text
+        padding-top: 200px
         padding-bottom: 16px
 
 
@@ -30,7 +37,7 @@ nav.navbar
     z-index: 3000
 
 header
-    min-height: $header-height
+    min-height: $header-height+5
     background: url('../img/hero-image.jpg')
     background:
         position: center
@@ -65,23 +72,35 @@ button.navbar-toggler
         text-decoration: none
 
 .hero-text
+    letter-spacing: 10px
     font:
-        size: 4em
+        size: 10em
         weight: bold
     color: $font-color-darkbg
-    padding-top: $header-height/4
+    padding-top: ($header-height/4)-10
     margin:
         left: 20px
         right: 20px
     clear: both
     text-align: center
 
+.hero-caption
+    color: white
+    text-transform: uppercase
+    font:
+        size: 16px
+        weight: 400
+    letter-spacing: 10px
+    text-align: center
+    margin-top: -10px
+
 .kicker-text
     padding:
-        top: 8px
-        bottom: 75px
+        top: 90px
+        bottom: 16px
     font:
-        weight: 100
+        style: 'Open Sans'
+        weight: 400
         size: 1.5rem
 
     color: $font-color-darkbg
@@ -116,3 +135,8 @@ button.navbar-toggler
     border: $bounds
 
 .vc-subheadings
+
+sup
+    font-size: 10px
+    position: relative
+    top: -10px
