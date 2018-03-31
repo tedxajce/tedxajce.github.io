@@ -324,7 +324,6 @@ body {
   position: relative; }
 
 .page-footer {
-  position: absolute;
   bottom: 0px;
   background: url("../img/footer-image.jpg");
   padding: 70px 0 0 0;
@@ -410,6 +409,60 @@ li.details a {
 
 #contact-number {
   line-height: 0px; }
+
+@media only screen and (max-width: 1080px) {
+  p.section-write-up {
+    float: none;
+    width: auto;
+    font-size: 12px;
+    line-height: 24px; }
+  h2.section-title {
+    display: none; }
+  h2#small-display {
+    display: inline;
+    line-height: 48px;
+    font-size: 2.95em;
+    font-weight: bold;
+    text-align: center; }
+  div#section-theme {
+    padding-top: 0px; }
+  div.container.theme-section-container {
+    width: auto; } }
+
+#small-display {
+  display: none; }
+
+#section-theme {
+  background-color: url("./img/themebg.jpg");
+  padding-top: 100px;
+  min-height: 100vh; }
+
+.section-write-up {
+  float: right;
+  margin: 0;
+  width: 50vw;
+  padding-top: 12px;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  text-justify: auto; }
+
+.theme-section-container {
+  width: 90vw;
+  padding: 40px; }
+
+.section-title {
+  float: right;
+  font-size: 2.95em;
+  font-weight: bold; }
+
+.bigx {
+  width: 450px; }
+
+.section-title-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 10px; }
 
 .box {
   background: white;
