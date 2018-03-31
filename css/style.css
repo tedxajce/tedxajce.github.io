@@ -415,7 +415,8 @@ li.details a {
     float: none;
     width: auto;
     font-size: 12px;
-    line-height: 24px; }
+    line-height: 24px;
+    text-align: justify; }
   h2.section-title {
     display: none; }
   h2#small-display {
@@ -445,7 +446,8 @@ li.details a {
   font-size: 1.3em;
   line-height: 40px;
   text-align: right;
-  text-justify: auto; }
+  text-justify: auto;
+  color: rgba(0, 0, 0, 0.59); }
 
 .theme-section-container {
   width: 90vw;
