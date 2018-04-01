@@ -3,6 +3,9 @@ $(document).ready(function () {
   $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
     var i = 0;
+    $("body").css({
+      "background-position": `center ${wScroll * 0.45}px`,
+    });
     $("header").css({
       "background-position": `center ${wScroll * 0.45}px`,
     });
