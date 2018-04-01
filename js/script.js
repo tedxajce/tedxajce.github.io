@@ -45,7 +45,7 @@ $(document).ready(function () {
     center: true,
     stagePadding: 0,
     autoWidth: true,
-    loop: true,
+    // loop: true,
     margin: 10,
     nav: true,
   });
@@ -150,9 +150,23 @@ $(document).ready(function () {
       }
     });
 
-  $(window).scroll(function () {
-    
 
+  var lastScrollTop = 0;
+  $(window).scroll(function () {
+
+    // var st = window.pageYOffset || document.documentElement.scrollTop;
+    // if (st > lastScrollTop){
+    //     console.log('sdf')
+    //     $('nav.navbar').animate({
+    //       'opacity':'0'
+    //     },100,()=>{});
+    //   } else {
+    //     $('nav.navbar').animate({
+    //       'opacity':'1'
+    //     },100,()=>{});
+    // }
+    // lastScrollTop = st;
+  
     var windowScrolled = $(this).scrollTop();
     var headerHeight = $('#home').outerHeight();
     if (windowScrolled > headerHeight){
