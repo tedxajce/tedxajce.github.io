@@ -45,7 +45,7 @@ $(document).ready(function () {
     center: true,
     stagePadding: 0,
     autoWidth: true,
-    // loop: true,
+    loop: true,
     margin: 10,
     nav: true,
   });
