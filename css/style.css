@@ -507,6 +507,22 @@ li.details a {
   margin: 0 auto;
   padding-bottom: 10px; }
 
+@media only screen and (max-width: 1080px) {
+  img#sponsor-logo {
+    margin: 0; } }
+
+#section-sponsor {
+  max-height: 50vh; }
+
+#sponsor-title {
+  font-weight: bold;
+  font-size: 2.3em;
+  text-align: center; }
+
+#sponsor-logo {
+  display: inline;
+  margin: -45px 17% 0 28%; }
+
 ::moz-selection {
   color: red;
   background: black; }
