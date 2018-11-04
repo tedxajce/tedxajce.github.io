@@ -1,0 +1,65 @@
+$border: 3px solid blue
+$footer-text-color: rgba(255,255,255,0.89)
+
+.border
+    border: $border
+
+@media only screen and (max-width: 1080px)
+    #myfooter
+        height: 820px
+        position: relative
+    #contact,#links,#connect
+        padding-left: 60px
+    #linkslist li a
+        line-height: 22px
+    #connectlist li a
+        line-height: 22px
+
+
+body
+    position: relative
+
+.page-footer
+    bottom: 0px
+    background: linear-gradient(0deg,black 10%,rgba(0,0,0,0) 90%)
+    padding: 70px 0 0 0
+    height: 320px
+
+    ul
+        list-style: none
+        margin: 0
+        padding-left: 0
+
+.container.footer-container
+    max-width: 98%
+    margin: 0 auto
+
+.mainlogo
+    width: 69%
+    padding:
+        bottom: 50px
+.collegelogo
+    width: 70%
+    padding:
+        bottom: 50px
+
+.footerheading
+    display: inline-block
+    width: 150px
+    color: $footer-text-color
+    font:
+        size: 18px
+        weight: bold
+    letter-spacing: .08m
+
+.detail-block
+    padding-bottom: 16px
+
+li.details
+        color: $footer-text-color
+        line-height: 21px
+        font-size: 14px
+
+li.details a
+        color: $footer-text-color
+        line-height: 29px

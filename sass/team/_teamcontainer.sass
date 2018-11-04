@@ -1,0 +1,95 @@
+$text-color: #3c4858
+$sub-text-color: #999
+
+@media only screen and (max-width: 1080px)
+    .text-center#core-team-heading
+        font-size: 24px
+    .box
+        border: .5px solid rgba(128,128,128,0.09)
+    body#team-body
+        // background: url('../../img/sel1m.jpg')
+        // background-repeat: no-repeat
+
+body
+    background: url('../../img/sel1.jpg')
+
+.container.team-container
+    background: white
+    padding-bottom: 64px
+    position: relative
+    top: -32vh
+    border-radius: 2px
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
+
+.section
+    padding-top: 70px
+    // border: 1px solid blue
+
+#core-team-heading
+    color: #3c4858
+    font: 
+        size: 32px
+        family: Roboto
+        weight: bold
+    line-height: 40px
+    padding-top: 10px
+
+.box
+    // border: solid 2px green
+    border-radius: 4px
+    width: 200px
+    min-height: 263.05px
+    text-align: center
+    margin: 32px auto
+    padding: 8px 8px 16px 8px
+    transition: all 250ms ease
+    position: relative
+    top: 0px
+    &:hover
+        box-shadow: 0px 8px 32px -14px rgba(0,0,0,0.30), 0px 16px 55px -18px rgba(0,0,0,0.28)
+        top: -1px
+
+.image
+    z-index: 100
+    width: 150px
+    border-radius: 100px
+    position: relative
+    top: -40px
+
+.img-container
+    max-height: 150px
+
+.image-blur
+    position: relative
+    top: -170px
+    border-radius: 100px
+    width: 130px
+    filter: blur(12px)
+
+
+.member-name
+    color: $text-color
+    font:
+        family: Roboto
+        size: 18px
+
+.member-desig
+    color: $sub-text-color
+    font:
+        family: Roboto
+        size: 13px
+    text-transform: uppercase
+
+.item
+    border: solid 1px green
+
+.category
+    margin-top: 32px
+    font-size: 16px
+.list-group-item
+    border: none
+    padding:
+        bottom: 2px
+        left: 0px
+    text-transform: uppercase
+    font-size: 14px

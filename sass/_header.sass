@@ -1,0 +1,142 @@
+$header-height: 100vh
+$bounds: 1px yellow solid
+
+@media only screen and (max-width: 1080px)
+    #reg_butt
+        padding: 10px
+    h1.hero-text#hero-text
+        font-size: 4em
+        padding-top: 12vh
+    .hero-caption#hero-caption
+        font:
+             size: 16px
+             weight: 400
+        letter-spacing: 10px
+    nav.navbar.navbar-expand-lg
+        width: 100%
+        margin: 0 0
+        padding-top: 20px
+    a.nav-link
+        padding:
+                top: 40px
+                bottom: 40px
+        text-align: center 
+    nav
+        transition: all 300ms ease
+    .nav-item .nav-link
+        font-size: 200px
+    h2.kicker-text
+        padding-top: 200px
+        padding-bottom: 16px
+
+
+nav.navbar
+    width: 80%
+    margin: 0 auto
+    padding-top: 25px
+    z-index: 3000
+
+header
+    min-height: $header-height+5
+    background: url('../img/hero-image.jpg')
+    background:
+        position: center
+        size: cover
+    filter: greyscale(100%)
+    padding-bottom: 16px
+
+.nav-item
+    margin-left: 1em
+    margin-right: 1em
+
+button.navbar-toggler
+    margin-left: 20px
+
+.fa-bars
+    color: white
+
+.event-logo
+    height: 50px
+    
+.nav-item .nav-link
+    font:
+        size: 16px
+        family: Rubik
+    text-transform: uppercase
+    text-decoration: none
+    letter-spacing: .15em
+    color: white
+    transition: color 300ms
+    &:hover
+        color: rgba(207, 207, 207, 0.75)
+        text-decoration: none
+
+.hero-text
+    letter-spacing: 10px
+    font:
+        size: 10em
+        weight: bold
+    color: $font-color-darkbg
+    padding-top: ($header-height/4)-10
+    margin:
+        left: 20px
+        right: 20px
+    clear: both
+    text-align: center
+
+.hero-caption
+    color: white
+    text-transform: uppercase
+    font:
+        size: 16px
+        weight: 400
+    letter-spacing: 10px
+    text-align: center
+    margin-top: -10px
+
+.kicker-text
+    padding:
+        top: 90px
+        bottom: 16px
+    font:
+        style: 'Open Sans'
+        weight: 400
+        size: 1.5rem
+
+    color: $font-color-darkbg
+    text-align: center
+
+.button-reg
+    color: $font-color-darkbg
+    letter-spacing: .2rem
+    text:
+        transform: uppercase
+    font:
+        weight: 600
+    background: red
+    min-width: 230px
+    max-width: 300px
+    border-radius: 50px
+    margin: 0 auto 0 auto
+    text-align: center
+    padding: 12px
+    text-decoration: none
+    transition: all 300ms ease
+    position: relative
+    bottom: 0px
+    &:hover
+        box-shadow: rgba(255, 201, 201, 0.1) 0px 2px 2px,rgba(255, 201, 201, 0.1) 0px 4px 4px,rgba(255, 201, 201, 0.1) 0px 8px 8px,rgba(255, 201, 201, 0.1) 0px 16px 16px,rgba(255, 201, 201, 0.1) 0px 32px 32px
+        bottom: 4px
+
+
+.svgpos
+    position: relative
+    top: 200px
+    border: $bounds
+
+.vc-subheadings
+
+sup
+    font-size: 10px
+    position: relative
+    top: -10px
