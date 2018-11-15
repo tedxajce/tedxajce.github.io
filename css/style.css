@@ -36,7 +36,7 @@ nav.navbar {
 
 header {
   min-height: 105vh;
-  background: url("../img/hero-image.jpg");
+  background: url("../img/hero-image-min.jpg");
   background-position: center;
   background-size: cover;
   filter: greyscale(100%);
