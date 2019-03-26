@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+  console.log($(window).width());
+  if ($(window).width() > 960) {
+    console.log("IN");
   $(window).scroll(function () {
     var wScroll = $(this).scrollTop();
     var i = 0;
@@ -21,7 +24,9 @@ $(document).ready(function () {
     $("#about-box-card").css({
       "background-position": `center ${wScroll *.005}px`
     });
+ 
   });
+}
 
   var btnclicked = 0;
   $("button.navbar-toggler").click(function () {
