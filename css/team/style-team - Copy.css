@@ -36,11 +36,11 @@ nav.navbar {
   z-index: 3000; }
 
 header {
-  min-height: 80vh;
+  min-height: 120vh;
   background: url("../../img/team-hero.jpg");
   background-position: center;
   background-size: cover;
-  padding-bottom: 10px; }
+  padding-bottom: 16px; }
 
 .nav-item {
   margin-left: 1em;
@@ -70,16 +70,16 @@ button.navbar-toggler {
     text-decoration: none; }
 
 .hero-text {
-  font-size: 50px;
-  font-weight: 500;
+  font-size: 67px;
+  font-weight: 600;
   font-family: Roboto;
   color: white;
-  padding-top: 10vh; }
+  padding-top: 30vh; }
 
 .kicker-text {
-  padding-top: 6px;
-  padding-bottom: 50px;
-  font-weight: 400;
+  padding-top: 8px;
+  padding-bottom: 75px;
+  font-weight: 100;
   font-size: 1.5rem;
   color: white; }
 
