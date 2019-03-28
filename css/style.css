@@ -253,7 +253,7 @@ sup {
 
 .speaker-card {
   text-align: center;
-  min-height: 400px;
+  min-height: 100px;
   max-width: 300px;
   background-color: #fff;
   box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
@@ -264,7 +264,7 @@ sup {
 
 .speaker-card-carousel {
   text-align: center;
-  min-height: 400px;
+  min-height: 100px;
   width: 300px;
   background-color: #fff;
   box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
@@ -346,7 +346,7 @@ sup {
 }
 
 .speaker-card-carousel {
-  min-height: 468px;
+  min-height: 100px;
 }
 
 .speaker-card-carousel.slick-slide {
