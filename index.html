@@ -29,7 +29,36 @@
     <title>TEDxAJCE</title>
 
 </head>
-
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jul 3, 2021 00:00:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+        
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+</script>
 <body>
     <!-- Header Content -->
     <header id="home">
@@ -54,7 +83,10 @@
             </nav>
             <h1 class="hero-text" id="hero-text">TEDxAJCE 2021</h1>
             <h2 class="hero-caption" id="hero-caption">Gear up for the TEDXperience</h2>
-            <h2 class="kicker-text">June 2021</h2>
+            <h2 class="kicker-text">July 2021</h2>
+            <h2 class="hero-caption" id="countdown">begins in</h2>
+            <p id="demo"></p>
+        
             <!-- <a href="https://www.youtube.com/playlist?list=PLsRNoUx8w3rPklCAzKkxgjYDSYVx5Drlc" style="text-decoration:none">
                 <p class="button-reg" style="font-size:12px;">Watch the talks</p>
             </a> -->
