@@ -43,6 +43,7 @@
     padding-bottom: 16px;
   }
 }
+
 nav.navbar {
   width: 80%;
   margin: 0 auto;
@@ -185,6 +186,8 @@ sup {
   font-size: 30px;
   margin-top: 10px;
   color:#ffffff;
+  width: 250px;
+  margin: auto;
 }
 
 #countdown {
