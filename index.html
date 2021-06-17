@@ -1,437 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129240689-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-129240689-1');
-    </script>
-
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">
-
-    <!-- Owl Carousel CSS and Theme -->
-    <link rel="stylesheet" href="./css/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="./css/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.css">
-
-    <!-- Local CSS file -->
-    <link rel="stylesheet" href="./css/style.css">
     <title>TEDxAJCE</title>
+    <link rel="shortcut icon" href="img/favicon_io/favicon.ico" type="image/ico">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <!-- title font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+        html, body{
+            margin:0;
+            padding:0;
+            top:0;
+            left: 0;
+            overflow-x: hidden;
+            background-color: #17141d;
+            color: white;
+            font-family: 'DM Mono', monospace;
+        }
+        .section{
+            min-height: 100vh;
+        }
 
+        #frontpage .absoluteCenter {
+            text-align: center;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+        }
+        #frontpage .contentlayer{
+            z-index: 5;
+        }
+        #frontpage .absoluteCenter>h1{
+            font-size: 5em;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        /* parallax */
+        .parallax{
+            width: 100vw;
+            height: 100vh;
+            position:absolute !important;
+            top:0;
+            left:0;
+            overflow: hidden;
+        }
+        .parallax>.layer{
+            width:100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: inherit;
+        }
+        .parallax>.layer>.overlayer{
+            background: linear-gradient(to top, rgba(83, 0, 0, 0.1), rgba(255, 85, 85, 0.1));
+            width:100%;
+            height:100%;
+        }
+        .foothider{
+            z-index: 5;
+            position: absolute;
+            left:0;
+            top:100vh;
+            width: 100vw;
+            height: 3em;
+            transform: translate(0, -100%);
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.9));
+        }
+
+        /* Gallery */
+        .card-list {
+            display: flex;
+            padding: 3rem;
+            overflow-x: scroll !important;
+        }
+        .card {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            height: 350px;
+            width: 400px;
+            min-width: 250px;
+            padding: 1.5rem;
+            border-radius: 16px;
+            background: #17141d;
+            box-shadow: -1rem 0 3rem #000;
+            transition: .2s;
+        }
+        .card:hover{
+            transform: translateY(-1rem);
+        }
+        .card:hover~.card {
+            transform: translateX(130px);
+        }
+        .card:not(:first-child) {
+            margin-left: -130px;
+        }
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px; /* Remove this if you don't want the 3D effect */
+        }
+        /* This container is needed to position the front and back side */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        /* Position the front and back side */
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+        }
+        /* Style the front side (fallback if image is missing) */
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+        /* Style the back side */
+        .flip-card-back {
+            background-color: rgb(192, 3, 3);
+            color: white;
+            transform: rotateY(180deg);
+        }
+        /* cardlist scrollbar */
+        .card-list::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        .card-list::-webkit-scrollbar-thumb {
+            background: #201c29;
+            border-radius: 10px;
+            box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+        }
+        .card-list::-webkit-scrollbar-track {
+            background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+        }
+    </style>
 </head>
-
 <body>
-    <!-- Header Content -->
-    <header id="home">
-        <div class="parallax-wrapper">
-            <nav class="navbar navbar-expand-lg navwidth">
-                <button #id="mobile-menu-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler">
-                    <i class="fa fa-bars"></i>
-                </button>
-
-                <a class="navbar-brand" href="index.html">
-                    <img class="event-logo" src="./img/logo.png" alt="TEDxAJCE">
-                </a>
-
-                <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#home"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section-about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section-theme">Theme</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="venue-link" href="#section-venue">Venue</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="gallery-link" href="team-2019.html">Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="2018/index.html">2018 JIGSAW</a>
-                        </li>
-                    </ul>
+    <div class="maindiv">
+        <div class="section" id="frontpage">
+            <div class="parallax">
+                <!-- <div class="overlay"><div></div></div> -->
+                <div class="layer" id="layer0" speed="0"><div class="overlayer"></div></div>
+                <div class="layer" id="layer1" speed="14"><div class="overlayer"></div></div>
+                <div class="layer" id="layer2" speed="27"><div class="overlayer"></div></div>
+                <div class="layer" id="layer3" speed="39"><div class="overlayer"></div></div>
+                <div class="layer" id="layer4" speed="50"><div class="overlayer"></div></div>
+                <div class="layer" id="layer5" speed="60"><div class="overlayer"></div></div>
+                <div class="layer" id="layer6" speed="69"><div class="overlayer"></div></div>
+                <div class="layer contentlayer" id="layer" speed="69">
+                    <main class="absoluteCenter">
+                        <h1>TEDxAJCE 2021</h1>
+                        <div>
+                            <h1>begins in <p id="countdown"></p></h1>
+                        </div>
+                    </main>
+                    <div class="overlayer"></div>
                 </div>
-
-            </nav>
-            <h1 class="hero-text" id="hero-text">TEDxAJCE 2019</h1>
-            <h2 class="hero-caption" id="hero-caption">"MAZE - Unravel Life"</h2>
-            <h2 class="kicker-text">7th MAY 2019</h2>
-            <a href="https://www.youtube.com/playlist?list=PLsRNoUx8w3rPklCAzKkxgjYDSYVx5Drlc" style="text-decoration:none">
-                <p class="button-reg" style="font-size:12px;">Watch the talks</p>
-            </a>
-    </header>
-
-
-    <!-- About Section -->
-    <div id="section-about" class="specifyclass">
-        <div id="about-box-card" class="container align-self-center">
-            <div class="row justify-content-center">
-                <!-- <h4>Shits Real</h4> -->
+                <div class="layer" id="layer7" speed="77"><div class="overlayer"></div></div>
+                <div class="layer" id="layer8" speed="84"><div class="overlayer"></div></div>
+                <div class="layer" id="layer9" speed="90"><div class="overlayer"></div></div>
+                <div class="layer" id="layer10" speed="95"><div class="overlayer"></div></div>
+                <div class="layer" id="layer11" speed="100"><div class="overlayer"></div></div>
             </div>
-            <div id="about-row-logo" class="row bord">
-                <div class="col-4 col-md-2 offset-md-3 text-center bord">
-                    <img id="about-logo-ted" class="img-fluid" src="./img/ted-logo.png">
-                </div>
-                <div class="col-4 col-md-2 bord">
-                    <img id="about-logo-tedx" class="img-fluid" src="./img/tedx-logo.png">
-                </div>
-                <div class="col-4 col-md-2  bord">
-                    <img id="about-logo-tedxajce" class="img-fluid" src="./img/logo-black.png">
-                </div>
-            </div>
-            <div class="row">
-                <div id="content-container">
-                    <p id="content-ted" class="about-content text-center">
-                        “Creative thinking inspires ideas. Ideas inspire change” - Barbara Januszkiewicz. TED is a nonprofit media organization devoted
-                        to spreading ideas. It is a global community, welcoming people from every discipline and culture
-                        who seek a deeper understanding of the world. The power of ideas can change attitudes, lives and
-                        ultimately the world. Starting in 1984, TED Talks continue to be watched around the world, with an
-                        average of 17 new page views a second. TED conferences and events continue to inspire, motivate and
-                        thrill attendees.
-                    </p>
-                    <p id="content-tedx" class="about-content text-center">
-                        TEDx are independent TED-like events, which can be organized by any inspiring and enthusiastic organizers with a license
-                        from TED. TEDx was created in the spirit of TED's mission, 'ideas worth spreading'. It supports independent
-                        organizers who want to create a TED-like event in their own community. It is designed to help communities,
-                        organizations and individuals to spark conversation and connection through local TED-like experiences.
-                        Here a screening of TED Talks videos — or a combination of live presenters and TED Talks videos —
-                        sparks deep conversation and connections at the local level. TEDx has reached a checkpoint of 100,000
-                        talks recently.
-                    </p>
-                    <p id="content-tedxajce" class="about-content text-center">
-                        TEDxAJCE is an independently organized TEDx conference which seeks to create the TED experience at Amal Jyothi College Of
-                        Engineering,Kanjirapally. We provide a platform where speakers can trigger a spark to the community
-                        through their words. TEDxAJCE will have experienced speakers who can share their story of success
-                        and failures which can inspire many people, for their successes. We have an amazing audience which
-                        includes enthusiastic students, professionals and the Kanjirapally community. Our aim is to reach
-                        out to the maximum and share some ideas which are worth spreading.
-                    </p>
-                </div>
-            </div>
+            <div class="foothider"></div>
         </div>
-    </div>
-<!-- Theme Section -->
-    <div id="section-theme">
-        <div class="container theme-section-container clearfix">
-            <h2 class="section-title">Maze | Unravel Life. </h2>
-            <div class="section-title-wrapper">
-                <h2 id="small-display">Maze -
-                    <br> Unravel Life.
-                </h2>
-            </div>
-            <img class="float-left img-fluid bigx" src="./img/maze2d.png">
-            <p class="section-write-up"> Life is not a straight road with
-                directions on where to turn. It is a maze where every decision we make takes us in a
-                different direction and every time we turn one way we could just as easily have turned the
-                other. There has never been a better word than "The journey is always as beautiful as the
-                destination." to describe the path through the labyrinth we call life. Every person we meet,
-                or turn we make, plays a significant role in steering us to our destination. 2018 was an
-                eventful year and it showed us that life altering events often come unannounced, but we
-                don't have to deal with them alone. There is no event too big nor any turn too wrong that
-                cannot be made right with the right people to explore and unravel the mysteries of life with.</p>
-        </div>
-    </div>
-
-        <!-- Speaker Section -->
-    <div id="section-speakers" class="specifyclass">
-        <div class="container section-container d-none d-md-block">
-            <h2 id="speaker-heading">Speakers</h2>
-            <div class="row  justify-content-center">
-                <div class="speaker-card col-sm-12 col-lg-3" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/vava.jpg">
-                    <h2 class="speaker-name">Vava Suresh</h2>
-                    <h3 class="speaker-description">Snake Expert | Wildlife Conservationist</h3>
-                    <p class="speaker-about">
-                        Renowned as the snake master, Vava Suresh is an extraordinary human being. Being a wildlife conservationist and a snake expert, he has captured and released over 50,000 snakes, from human habitats back to their natural environments. At a time of rapid climate change and precarious ecosystems, is when work done by people like him become all the more meaningful. He works towards rescuing, rehabilitation of snakes and creating awareness among the public about snakes and their behavioural patterns. 
-                    </p>
-                </div>
-                <div class="speaker-card col-sm-12 col-lg-3" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/anwesha.jpg">
-                    <h2 class="speaker-name">Anwesha Das</h2>
-                    <h3 class="speaker-description">Teen Researcher | Science Enthusiast</h3>
-                    <p class="speaker-about">
-                        16 year old Anwesha Das is a STEM Researcher. She is interested in science, especially mathematics. The functioning of the human brain intrigues her. In addition to this, she likes writing, dancing, painting on walls and rocks, but is still pretty clueless about the World Cup or K-pop. A few months ago, she represented India at the International Exhibition for Young Inventors 2018 and was a bronze medallist. She was also a national finalist to the Innovation Challenge 2017, and was a second prize winner at the Innovation Display Contest 2017 conducted by the Council for Science and Technology, Uttar Pradesh, India. Anwesha Das makes it all seem like a cake-walk. 
-					</p>
-                </div>
-                <div class="speaker-card col-sm-12 col-lg-3" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/suresh.jpg">
-                    <h2 class="speaker-name">DR. SURESH DEVNANI</h2>
-                    <h3 class="speaker-description">The Happy Doctor | Author</h3>
-                    <p class="speaker-about">
-                        Dr. Suresh Devnani is an inspiring Motivational Speaker and Consultant who shares practical strategies from his 28+ years of professional experience and his on-going global research in Leadership, Personal growth and Organisational transformation. Commonly known as the Happy Doctor, Dr. Devnani is the Founder, Chief Happiness officer, of Dr. Devnani & Associates and one of the world’s leading experts on creating happiness within the workplace. He was recently awarded and recognised as the 101 Top Global Coaching Leaders by the World HRD Congress. His mission is to inspire people globally to leverage on happiness to boost their resilience, engagement, creative innovation and kindness.
-					</p>
-                </div>
-                
-                <div class="speaker-card col-sm-12 col-lg-3" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/piyush.jpg">
-                    <h2 class="speaker-name">Piyush Shinde</h2>
-                    <h3 class="speaker-description">Strategist | Innovator</h3>
-                    <p class="speaker-about">
-                        Mr. Piyush Shinde is a strategic sales, marketing and communications expert, providing efficient and successful business solutions and innovative strategies to various organizations and companies worldwide. With affinity to behavioural science, human psychology, and also his personal tryst with failures despite giving it all, made him think deep and paved the way for development of a novel concept called the “Thought Matrix”, that categorises all of us into four different personalities based on how each one of us reacts to opportunities. Using the Thought Matrix and its reflections he has constantly created opportunities when others around him failed to see them.
-                    </p>
-                </div>
-                
-
-
-                
-                <!--<div class="w-100 d-none d-lg-block"></div>-->
-
-                
-                
-                <div class="speaker-card col-sm-12 col-lg-3" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/Sathya.jpg">
-                    <h2 class="speaker-name">Sathya Ramaganapathy</h2>
-                    <h3 class="speaker-description">Author | Mom</h3>
-                    <p class="speaker-about">
-                        Sathya Ramaganapathy is a humour writer, business professional and a mom. She is the author of the recently published book “It’s a Mom Thing: Kickass Parenting”, which takes a light hearted look at navigating the minefield called parenting.  Sathya has written three children’s books and has been published in Voices from the Attic, The Madras Mag Anthology of Contemporary Writing, literary magazines including Papercuts, Antiserious and The Criterion, and in The Hindustan Times, Deccan Herald and Bangalore Mirror. She is the author of the funny parenting blog “Things My Kids Say”.					</p>
-                </div>
-
-                <div class="speaker-card col-sm-12 col-lg-3" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/mani.jpg">
-                    <h2 class="speaker-name">Mani Karthik</h2>
-                    <h3 class="speaker-description">Blogger | Mentor</h3>
-                    <p class="speaker-about">
-                        In love with the idea of sharing ideas with people, Mani Karthik took up blogging as a hobby to kill time. He soon quit his boring job in the Silicon Valley and took up blogging as a fulltime job. A few years down the line, he now works on his own as an entrepreneur, and helps people to settle in after returning to India from their jobs abroad. 
-					</p>
-                </div>
-
-                <!--<div class="w-100 d-none d-lg-block"></div>-->
-
-                <div class="speaker-card col-sm-12 col-lg-3" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/Geetanjali.jpeg">
-                    <h2 class="speaker-name">Dr. Geetanjali Chopra</h2>
-                    <h3 class="speaker-description">Founder of Wishes and Blessings</h3>
-                    <p class="speaker-about">
-                            Dr. Geetanjali Chopra is an academician, researcher, journalist and the founder and president of a Delhi based NGO. After completing her PhD from Jawaharlal Nehru University, she went on to gain experience in a variety of sectors, and has even tried her hand at radio jockeying and acting. After working as a fellow at Centre for Policy Research for 5 years, she chose to follow her dream of helping the underprivileged and set up ‘Wishes and Blessings’. She has reached out to more than two lakh people in just five years, and is excited to turn more tears into smiles in the future.
-                    </p>
-                </div>
-
-                <div class="speaker-card col-sm-12 col-lg-3" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/Abhijith.jpg">
-                    <h2 class="speaker-name">Abhijith P S Nair</h2>
-                    <h3 class="speaker-description">Violinist | Composer</h3>
-                    <p class="speaker-about">
-                        Embarking on his journey into the world of music at the mere age of 13, Abhijith P S Nair is now one of the finest  instrumental musicians of this age. Besides being an exceptional violinist, he is also an well accomplished music composer and arranger. He is perhaps best known for his instrumental video projects and unique instrumental flash mobs, that have gathered over millions of views over various social media platforms. He has performed and done many stellar collaborations with various artists; drummer Dave Weckl, Dr. K. J. Yesudas, Senri Kawaguchi, Shankar Mahadevan just to name a few.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-
-
-        <div class="section-container owler d-md-none ">
-            <h2 id="speaker-heading">Speakers</h2>
-            <div class="owl-carousel">
-                <div class="speaker-card-carousel " id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/vava.jpg">
-                    <h2 class="speaker-name">Vava Suresh</h2>
-                    <h3 class="speaker-description">Snake Expert | Wildlife Conservationist</h3>
-                    <p class="speaker-about">
-                        Renowned as the snake master, Vava Suresh is an extraordinary human being. Being a wildlife conservationist and a snake expert, he has captured and released over 50,000 snakes, from human habitats back to their natural environments. At a time of rapid climate change and precarious ecosystems, is when work done by people like him become all the more meaningful. He works towards rescuing, rehabilitation of snakes and creating awareness among the public about snakes and their behavioural patterns. 
-                    </p>
-                </div>
-
-                <div class="speaker-card-carousel" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/anwesha.jpg">
-                    <h2 class="speaker-name">Anwesha Das</h2>
-                    <h3 class="speaker-description">Teen Researcher | Science Enthusiast</h3>
-                    <p class="speaker-about">
-                        16 year old Anwesha Das is a STEM Researcher. She is interested in science, especially mathematics. The functioning of the human brain intrigues her. In addition to this, she likes writing, dancing, painting on walls and rocks, but is still pretty clueless about the World Cup or K-pop. A few months ago, she represented India at the International Exhibition for Young Inventors 2018 and was a bronze medallist. She was also a national finalist to the Innovation Challenge 2017, and was a second prize winner at the Innovation Display Contest 2017 conducted by the Council for Science and Technology, Uttar Pradesh, India. Anwesha Das makes it all seem like a cake-walk. 
-                    </p>
-                </div>
-
-                <div class="speaker-card-carousel" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/suresh.jpg">
-                    <h2 class="speaker-name">DR. SURESH DEVNANI</h2>
-                    <h3 class="speaker-description">The Happy Doctor | Author</h3>
-                    <p class="speaker-about">
-                            Dr. Suresh Devnani is an inspiring Motivational Speaker and Consultant who shares practical strategies from his 28+ years of professional experience and his on-going global research in Leadership, Personal growth and Organisational transformation. Commonly known as the Happy Doctor, Dr. Devnani is the Founder, Chief Happiness officer, of Dr. Devnani & Associates and one of the world’s leading experts on creating happiness within the workplace. He was recently awarded and recognised as the 101 Top Global Coaching Leaders by the World HRD Congress. His mission is to inspire people globally to leverage on happiness to boost their resilience, engagement, creative innovation and kindness.
-                    </p>
-                </div>
-
-                <div class="speaker-card-carousel" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/piyush.jpg">
-                    <h2 class="speaker-name">Piyush Shinde</h2>
-                    <h3 class="speaker-description">Strategist | Innovator</h3>
-                    <p class="speaker-about">
-                        Mr. Piyush Shinde is a strategic sales, marketing and communications expert, providing efficient and successful business solutions and innovative strategies to various organizations and companies worldwide. With affinity to behavioural science, human psychology, and also his personal tryst with failures despite giving it all, made him think deep and paved the way for development of a novel concept called the “Thought Matrix”, that categorises all of us into four different personalities based on how each one of us reacts to opportunities. Using the Thought Matrix and its reflections he has constantly created opportunities when others around him failed to see them.
-                    </p>
-                </div>
-
-                <div class="speaker-card-carousel" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/Sathya.jpg">
-                    <h2 class="speaker-name">Sathya Ramaganapathy</h2>
-                    <h3 class="speaker-description">Author | MOM</h3>
-                    <p class="speaker-about">
-                        Sathya Ramaganapathy is a humour writer, business professional and a mom. She is the author of the recently published book “It’s a Mom Thing: Kickass Parenting”, which takes a light hearted look at navigating the minefield called parenting.  Sathya has written three children’s books and has been published in Voices from the Attic, The Madras Mag Anthology of Contemporary Writing, literary magazines including Papercuts, Antiserious and The Criterion, and in The Hindustan Times, Deccan Herald and Bangalore Mirror. She is the author of the funny parenting blog “Things My Kids Say”.                    </p>
-                </div>
-
-                <div class="speaker-card-carousel" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/mani.jpg">
-                    <h2 class="speaker-name">Mani Karthik</h2>
-                    <h3 class="speaker-description">Blogger | Mentor</h3>
-                    <p class="speaker-about">
-                        In love with the idea of sharing ideas with people, Mani Karthik took up blogging as a hobby to kill time. He soon quit his boring job in the Silicon Valley and took up blogging as a fulltime job. A few years down the line, he now works on his own as an entrepreneur, and helps people to settle in after returning to India from their jobs abroad. 
-                    </p>
-                </div>
-
-                <div class="speaker-card-carousel" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/Geetanjali.jpeg">
-                    <h2 class="speaker-name">Dr. Geetanjali Chopra</h2>
-                    <h3 class="speaker-description">Founder of Wishes and Blessings</h3>
-                    <p class="speaker-about">
-                            Dr. Geetanjali Chopra is an academician, researcher, journalist and the founder and president of a Delhi based NGO. After completing her PhD from Jawaharlal Nehru University, she went on to gain experience in a variety of sectors, and has even tried her hand at radio jockeying and acting. After working as a fellow at Centre for Policy Research for 5 years, she chose to follow her dream of helping the underprivileged and set up ‘Wishes and Blessings’. She has reached out to more than two lakh people in just five years, and is excited to turn more tears into smiles in the future.
-                    </p>
-                </div>
-
-                <div class="speaker-card-carousel" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/Abhijith.jpg">
-                    <h2 class="speaker-name">Abhijith P S Nair</h2>
-                    <h3 class="speaker-description">Violinist | Composer</h3>
-                    <p class="speaker-about">
-                        Embarking on his journey into the world of music at the mere age of 13, Abhijith P S Nair is now one of the finest  instrumental musicians of this age. Besides being an exceptional violinist, he is also an well accomplished music composer and arranger. He is perhaps best known for his instrumental video projects and unique instrumental flash mobs, that have gathered over millions of views over various social media platforms. He has performed and done many stellar collaborations with various artists; drummer Dave Weckl, Dr. K. J. Yesudas, Senri Kawaguchi, Shankar Mahadevan just to name a few.
-                    </p>
-                </div>
-             
-
-
-           
-
-              
-               <!--  <div class="speaker-card-carousel" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/sachin.jpg">
-                    <h2 class="speaker-name">Speaker Name</h2>
-                    <h3 class="speaker-description"></h3>
-                    <p class="speaker-about">
-                            </p>
-                </div>
-                <div class="speaker-card-carousel" id="guy1">
-                    <img class="speaker-profile-image img-fluid" src="./img/avatars/speakers/joe.jpg">
-                    <h2 class="speaker-name">Speaker Name</h2>
-                    <h3 class="speaker-description"></h3>
-                    <p class="speaker-about">
-                             </p>
-                </div> -->
-            <div class="owl-nav">
-                <div class="owl-prev">prev</div>
-                <div class="owl-next">next</div>
-            </div>      
-            </div>
-        </div>
-
-    </div>
-
-    <div id="section-venue">
-        <div class="contain" id="spec-contain">
-            <div class="row data-contain">
-                <div class="col-lg-6 col-sm-12">
-                    <iframe id="mapframe" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBuIl2mwojDlTRsgMYCtDfgtVc-_76RM20
-                        &q=Amal+Jyothi+College+of+Engineering" allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="col-lg-6 col-sm-12  downsize">
-                    <div class="row align-middle data2-contain">
-                        <div class="col-12">
-                            <p class="venue-data" id="section-venue-title">Venue</p>
-                            <p class="venue-data" id="venue-name">Amal Jyothi College of Engineering</p>
-                        <!-- </div>
-                        <div class="col-12"> -->
-                            <P class="venue-data" id="venue-streetname">Kanjirappally, Kottayam</P><br>
-                            <p class="venue-data" id="venue-room">Building : Resource Block Auditorium</p>
+        <div class="section container" id="gallery">
+            <h1>. </h1>
+            <h1>Checkout Who's Speaking</h1>
+            <section class="card-list">
+                <article class="card">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="nikitha.jpg" alt="Avatar" style="width:300px;height:300px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>Nikitha Prem</h1> 
+                            <p>TEDx</p>
+                          </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
+                    <h3>Nikitha Prem</h3>
+                </article>
+                <article class="card">
+                    <header class="card-header">
+                        <p>May 25th 2020</p>
+                        <h2>Card tricks are fun. Hi mom!</h2>
+                    </header>
+                </article>
+                <article class="card">
+                    <header class="card-header">
+                        <p>May 25th 2020</p>
+                        <h2>Card tricks are fun. Hi mom!</h2>
+                    </header>
+                </article>
+                <article class="card">
+                    <header class="card-header">
+                        <p>May 25th 2020</p>
+                        <h2>Card tricks are fun. Hi mom!</h2>
+                    </header>
+                </article>
+            </section>
         </div>
     </div>
+    <script>
+        var layers = document.getElementsByClassName('layer');
+        var speeds = []
 
+        window.addEventListener('scroll', function(event){
+            var top = this.pageYOffset;
+            for (var layer of layers){
+                var speed = layer.getAttribute('speed')
+                layer.style.transform="translate3d(0px, "+(top-(top*(speed/100))) +"px, 0px)"
+            }
+        })
+        
+        // image fetches
+        for (var layer of layers){
+            switch (layer.id){
+                case "layer0": layer.style.backgroundImage="url('./img/parallaxLayers/0.png')";break;
+                case "layer1": layer.style.backgroundImage="url('./img/parallaxLayers/1.png')";break;
+                case "layer2": layer.style.backgroundImage="url('./img/parallaxLayers/2.png')";break;
+                case "layer3": layer.style.backgroundImage="url('./img/parallaxLayers/3.png')";break;
+                case "layer4": layer.style.backgroundImage="url('./img/parallaxLayers/4.png')";break;
+                case "layer5": layer.style.backgroundImage="url('./img/parallaxLayers/5.png')";break;
+                case "layer6": layer.style.backgroundImage="url('./img/parallaxLayers/6.png')";break;
+                case "layer7": layer.style.backgroundImage="url('./img/parallaxLayers/7.png')";break;
+                case "layer8": layer.style.backgroundImage="url('./img/parallaxLayers/8.png')";break;
+                case "layer9": layer.style.backgroundImage="url('./img/parallaxLayers/9.png')";break;
+                case "layer10": layer.style.backgroundImage="url('./img/parallaxLayers/10.png')";break;
+                case "layer11": layer.style.backgroundImage="url('./img/parallaxLayers/11.png')";break;
+            }
+            speeds.push(Number.parseInt(layer.getAttribute('speed')));
+        }
 
-    <!-- Footer Content -->
-    <footer id="myfooter" class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 offset-lg-1 ">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-12 col-sm-5 text-center">
-                            <img class=" mainlogo" src="./img/logo.png">
-                        </div>
-                        <div class="col-md-12 col-lg-12 col-sm-5 text-center">
-                            <a href="http://ajce.in" target="__blank">
-                            <img class="img-fluid  collegelogo" src="./img/collegelogo.png">
-							</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-2 col-lg-auto">
-                    <div id="links">
-                        <h5 class="footerheading">LINKS</h5>
-                        <ul id="linkslist" class="detail-block">
-                            <li class="details">
-                                <a href="#section-about">About</a>
-                            </li>
-                            <li class="details">
-                                <a href="#section-speakers">Speakers</a>
-                            </li>
-                            <li class="details">
-                                <a href="#section-schedule">Schedule</a>
-                            </li>
-                            <li class="details">
-                                <a href="#section-venue">Route Map</a>
-                            </li>
-                            <li class="details">
-                                <a href="team-2019.html">Team</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-2 col-lg-2">
-                    <div id="connect">
-                        <h5 class="footerheading">CONNECT</h5>
-                        <ul id="connectlist" class="detail-block">
-                            <li class="details">
-                                <a href="https://www.facebook.com/tedxajce">Facebook</a>
-                            </li>
-                            <li class="details">
-                                <a href="https://www.instagram.com/tedxajce">Instagram</a>
-                            </li>
-							<li class="details">
-                                <a href="https://www.flickr.com/photos/165706544@N05/">Flickr</a>
-                            </li>
-                            <!--<li class="details">
-                                <a href="#">Twitter</a>
-                            </li>-->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+        //layer depth analysis
+        var str="";
+        for (var x=0; x<101; x++){
+            if (speeds.indexOf(x)!=-1) str+='|';
+            else str+='-';
+        }
+        console.log(speeds, str)
+
+        // COUNTDOWN SCRIPT
+        var targetDate = new Date("Jul 3, 2021 00:00:00").getTime();
+        var timer = setInterval(function() {
+            var today = new Date().getTime();
+            var eta = targetDate - today;
+        
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(eta / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((eta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((eta % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((eta % (1000 * 60)) / 1000);
+        
+            // Output the result in an element with id="countdown"
+            document.getElementById("countdown").innerHTML = days + "D " + hours + "H "
+            + minutes + "m " + seconds + "s ";
+        
+            // If the count down is over, write some text 
+            if (eta < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+    </script>
 </body>
-
-
-<!-- Compiled and minified JavaScript Materialize-->
-<script src="./js/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-<script src="./css/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
-<script src="./js/script.js"></script>
-
 </html>
-
-<!-- possible links to include in the footer
-    Gallery ->
