@@ -23,7 +23,7 @@
             color: white;
             font-family: 'DM Mono', monospace;
         }
-        .section{
+        .section#frontpage{
             min-height: 100vh;
         }
 
@@ -76,6 +76,9 @@
         }
 
         /* Gallery */
+        .section#gallery{
+            min-height: 50vh;
+        }
         .card-list {
             display: flex;
             padding: 3rem;
@@ -154,6 +157,65 @@
         .card-list::-webkit-scrollbar-track {
             background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
         }
+
+        /* Speaker card*/
+        .section#speaker{
+            min-height: 50vh;
+        }
+        #speaker.section.container{
+            position: relative;
+            width: 1100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+        #speaker.section.container .card{
+            position: relative;
+            max-width: 300px;
+            height: 215px;
+            background: #fff;
+            margin: 30px 10px;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 20dpx rgba(0,0,0,.5);
+            transition: 0.3s ease-in-out;
+        }
+        #speaker.section.container .card:hover{
+            height: 420px;
+        }
+        #speaker.section.container .card .imgBx{
+            position: relative;
+            width: 260px;
+            height: 260px;
+            top: -60px;
+            left: 6px;
+            z-index: 1;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        #speaker.section.container .card .imgBx img{
+            max-width: 100%;
+            border-radius: 4px;
+
+        }
+        #speaker.section.container .card .content{
+            position: relative;
+            margin-top: -140px;
+            padding: 10px 15px;
+            text-align: center;
+            color: #111;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+        }
+        #speaker.section.container .card:hover .content{
+            visibility: visible;
+            opacity: 1;
+            margin-top: -40px;
+            transition-delay: 0.3s;
+        }
     </style>
 </head>
 <body>
@@ -193,7 +255,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <img src="nikitha.jpg" alt="Avatar" style="width:300px;height:300px;">
+                            <img src="img1.png" alt="Avatar" style="width:300px;height:300px;">
                           </div>
                           <div class="flip-card-back">
                             <h1>Nikitha Prem</h1> 
@@ -222,6 +284,35 @@
                     </header>
                 </article>
             </section>
+        </div>
+        <div class="section container" id="speaker">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="img1.png">
+                </div>
+                <div class="content">
+                    <h2>Card One</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam id hic officia deleniti enim odio laborum totam minus necessitatibus quasi rerum eaque repudiandae molestias doloremque asperiores, eius voluptatibus qui sapiente.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="img1.png">
+                </div>
+                <div class="content">
+                    <h2>Card Two</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam id hic officia deleniti enim odio laborum totam minus necessitatibus quasi rerum eaque repudiandae molestias doloremque asperiores, eius voluptatibus qui sapiente.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="img1.png">
+                </div>
+                <div class="content">
+                    <h2>Card Three</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam id hic officia deleniti enim odio laborum totam minus necessitatibus quasi rerum eaque repudiandae molestias doloremque asperiores, eius voluptatibus qui sapiente.</p>
+                </div>
+            </div>
         </div>
     </div>
     <script>
