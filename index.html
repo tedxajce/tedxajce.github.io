@@ -23,8 +23,22 @@
             color: white;
             font-family: 'DM Mono', monospace;
         }
+        button{
+            background-color: #17141d;
+            color:white;
+            border:0px;
+            padding: 1em 2em;
+            border-radius: 4px;
+
+        }
+        a{
+            color:red;
+        }
         .section{
             min-height: 100vh;
+        }
+        #frontpage~.section{
+            padding-top: 2em;
         }
 
         #frontpage .absoluteCenter {
@@ -154,13 +168,51 @@
         .card-list::-webkit-scrollbar-track {
             background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
         }
+
+        /* Description */
+        #tedxdescription{
+            min-height: 0;
+            margin-bottom: 2rem;
+        }
+        #tedxdescription #about-row-logo{
+            margin: 2rem 0;
+        }
+        #tedxdescription #about-row-logo div{
+            filter: grayscale(100%);
+            cursor: pointer;
+        }
+        #tedxdescription #about-row-logo{
+            justify-content: space-evenly;
+        }
+        #tedxdescription #about-row-logo div:hover, #tedxdescription #about-row-logo div.bord.activated{
+            filter: grayscale(0%);
+        }
+        #tedxdescription #about-row-logo div.bord.activated{
+            z-index: 10;
+            border: 1px solid darkred;
+        }
+        #tedxdescription .bord{
+            /* background-color: rgba(255, 255, 255, 0.1); */
+            box-shadow: 0 1em 2rem #000;
+            padding: 1em 2em;
+            margin: 0 .25em;
+            border-radius: 16px;
+            border: 1px solid transparent
+        }
+        #tedxdescription .about-row-stuff p{
+            line-height: 2em;
+            justify-content: space-between;
+        }
+        #tedxdescription .about-row-stuff{
+            margin-top:2rem;
+        }
+
     </style>
 </head>
 <body>
     <div class="maindiv">
         <div class="section" id="frontpage">
             <div class="parallax">
-                <!-- <div class="overlay"><div></div></div> -->
                 <div class="layer" id="layer0" speed="0"><div class="overlayer"></div></div>
                 <div class="layer" id="layer1" speed="14"><div class="overlayer"></div></div>
                 <div class="layer" id="layer2" speed="27"><div class="overlayer"></div></div>
@@ -168,24 +220,25 @@
                 <div class="layer" id="layer4" speed="50"><div class="overlayer"></div></div>
                 <div class="layer" id="layer5" speed="60"><div class="overlayer"></div></div>
                 <div class="layer" id="layer6" speed="69"><div class="overlayer"></div></div>
+                <div class="layer" id="layer7" speed="77"><div class="overlayer"></div></div>
+                <div class="layer" id="layer8" speed="84"><div class="overlayer"></div></div>
+                <div class="layer" id="layer9" speed="90"><div class="overlayer"></div></div>
+                <div class="layer" id="layer10" speed="95"><div class="overlayer"></div></div>
+                <div class="layer" id="layer11" speed="100"><div class="overlayer"></div></div>
                 <div class="layer contentlayer" id="layer" speed="69">
                     <main class="absoluteCenter">
                         <h1>TEDxAJCE 2021</h1>
                         <div>
                             <h1>begins in <p id="countdown"></p></h1>
                         </div>
+                        <h5><a href=""><button>Book Your Seats Now</button></a></h5>
                     </main>
                     <div class="overlayer"></div>
                 </div>
-                <div class="layer" id="layer7" speed="77"><div class="overlayer"></div></div>
-                <div class="layer" id="layer8" speed="84"><div class="overlayer"></div></div>
-                <div class="layer" id="layer9" speed="90"><div class="overlayer"></div></div>
-                <div class="layer" id="layer10" speed="95"><div class="overlayer"></div></div>
-                <div class="layer" id="layer11" speed="100"><div class="overlayer"></div></div>
             </div>
             <div class="foothider"></div>
         </div>
-        <div class="section container" id="gallery">
+        <div class="section container" id="speakers">
             <h1>. </h1>
             <h1>Checkout Who's Speaking</h1>
             <section class="card-list">
@@ -222,6 +275,50 @@
                     </header>
                 </article>
             </section>
+        </div>
+        <div class="section" id="tedxdescription">
+            <div class="container">
+                <!-- <div class="row justify-content-center">
+                    <h4>ABOUT TEDx</h4>
+                </div> -->
+                <div id="about-row-logo" class="row">
+                    <div id='but_content-ted' class="col-4 col-md-2 text-center bord activated" onclick="showAbout('content-ted')">
+                        <img id="about-logo-ted" class="img-fluid" src="./img/ted-logo.png">
+                    </div>
+                    <div id='but_content-tedx' class="col-4 col-md-2 bord" onclick="showAbout('content-tedx')">
+                        <img id="about-logo-tedx" class="img-fluid" src="./img/tedx-logo.png">
+                    </div>
+                    <div id='but_content-tedxajce' class="col-4 col-md-2  bord" onclick="showAbout('content-tedxajce')">
+                        <img id="about-logo-tedxajce" class="img-fluid" src="./img/logo-black.png">
+                    </div>
+                </div>
+                <div class="about-row-stuff row">
+                    <div id="content-container">
+                        <p id="content-ted" class="about-content text-center">
+                            “By spreading ideas worthy enough to be shared, the power of inspiration and change is created”. A global community striving towards spreading ideas from every discipline and culture, that is TED in a nutshell. It is a non-profit media organisation that helps people get the deeper meaning of ideas, attitudes, and the world itself. From its origin in 1984, TED talks have touched people’s heart. It is continued to be watched all around the world. The impact a TED event creates is unmatched. TED conferences and events inspire and motivate people towards becoming a better version of themselves. Read More <a href="">Here</a>
+                        </p>
+                        <p id="content-tedx" class="about-content text-center">
+                            TEDx events are independently organized, and licensed TED-like events organized by enthusiastic communities and organizers in line with TED’s mission ‘ideas worth spreading’. Its goal is to create a unique gathering in the community that will unleash new ideas, inspire, and inform. It provides a platform where ideas are shared openly, and connections are made through conversation. It strengthens bonds among the community through discussions and promotes harmony. The event screens TED Talks videos and invites live speakers to drive ideation and start conversations. TEDx has reached a milestone of 100,000 talks and are now viewed more than 3 billion times annually. Read More <a href="">Here</a>
+                        </p>
+                        <p id="content-tedxajce" class="about-content text-center">
+                            Established in 2017, TEDxAJCE is an independently organized TEDx event with the goal of catering the global experience of TED to our community at Amal Jyothi College of Engineering, Kanjirapally. We yearn to showcase new perspectives and ideas of speakers from all walks of life. TEDxAJCE has an enthusiastic community of students, professionals, and the community around it, open to ideas that expand their world view. Our aim is to open a window to a world of opportunities and encourage them to seek them out and pay it forward. Read More <a href="">Here</a>
+                        </p>
+                    </div>
+                </div>
+                <script>
+                    function showAbout(id, im=undefined){
+                        for (var element of document.getElementsByClassName('about-content')){
+                            if (element.id == id) element.style.display = "block";
+                            else element.style.display = "none";
+                        }
+                        for (var element of document.getElementsByClassName('bord')){
+                            if (element.id == 'but_'+id) element.classList.add('activated')
+                            else element.classList.remove('activated')
+                        }
+                    }
+                    showAbout('content-ted')
+                </script>
+            </div>
         </div>
     </div>
     <script>
