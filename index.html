@@ -12,6 +12,14 @@
     <!-- title font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script>
+    $(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+  	});
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
 
@@ -46,7 +54,15 @@
         a {
             color: red;
         }
-
+        .se-pre-con {
+	        position: fixed;
+	        left: 0px;
+	        top: 0px;
+	        width: 100%;
+	        height: 100%;
+	        z-index: 9999;
+	        background: url(img/Tedx.gif) center no-repeat rgb(0, 0, 0);  
+        }
         .section {
             min-height: 100vh;
         }
@@ -302,6 +318,7 @@
     </style>
 </head>
 <body>
+    <div class="se-pre-con"></div>
     <div class="maindiv">
         <div class="section" id="frontpage">
             <div class="parallax">
