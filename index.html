@@ -17,6 +17,7 @@
 
         html,
         body {
+            width: 100vw;
             margin: 0;
             padding: 0;
             top: 0;
@@ -255,67 +256,48 @@
         }
 
         /* Speaker card*/
-        #speaker{
+        #team{
             min-height: 0;
+            margin-bottom: 2em;
+            padding-bottom: 2em;
         }
-        #speaker.section div {
-            position: relative;
-            width: 100%;
+        div.team{
+            overflow-x: auto;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            padding: 30px;
+            flex-wrap: nowrap;
+            justify-content: space-between;
         }
-
-        #speaker.section div .card {
-            position: relative;
-            max-width: 300px;
-            height: 215px;
-            background: #fff;
-            margin: 30px 10px;
-            padding: 20px 15px;
+        .teamcard {
+            border-radius: 1em;
+            background: #fff2;
+            padding: 1em 2em;
+            margin: 0 1em;
             display: flex;
             flex-direction: column;
             box-shadow: 0 5px 20dpx rgba(0, 0, 0, .5);
-            transition: 0.3s ease-in-out;
+            transition: 0.3s ease-out;
         }
-
-        #speaker.section div .card:hover {
-            height: 420px;
+        .teamcard img{
+            width: 100%;
         }
-
-        #speaker.section div .card .imgBx {
-            position: relative;
-            width: 260px;
-            height: 260px;
-            top: -60px;
-            left: 6px;
-            z-index: 1;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        #speaker.section div .card .imgBx img {
-            max-width: 100%;
-            border-radius: 4px;
-        }
-
-        #speaker.section div .card .content {
-            position: relative;
-            margin-top: -140px;
-            padding: 10px 15px;
+        .teamcard > *{
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            color: #111;
-            visibility: hidden;
-            opacity: 0;
-            transition: 0.3s ease-in-out;
         }
 
-        #speaker.section div .card:hover .content {
-            visibility: visible;
-            opacity: 1;
-            margin-top: -40px;
-            transition-delay: 0.3s;
+        /* footer */
+        
+        #myfooter{
+            padding: 5em 0;
+            background-image: url('./img/footer-image.jpg');
+        }
+        #myfooter .mainlogo, #myfooter .collegelogo{
+            width:50%;
+            margin: 1em;
+        }
+        #myfooter .row > *{
+            margin: 0 1em;
         }
     </style>
 </head>
@@ -323,42 +305,18 @@
     <div class="maindiv">
         <div class="section" id="frontpage">
             <div class="parallax">
-                <div class="layer" id="layer0" speed="0">
-                    <div class="overlayer"></div>
-                </div>
-                <div class="layer" id="layer1" speed="14">
-                    <div class="overlayer"></div>
-                </div>
-                <div class="layer" id="layer2" speed="27">
-                    <div class="overlayer"></div>
-                </div>
-                <div class="layer" id="layer3" speed="39">
-                    <div class="overlayer"></div>
-                </div>
-                <div class="layer" id="layer4" speed="50">
-                    <div class="overlayer"></div>
-                </div>
-                <div class="layer" id="layer5" speed="60">
-                    <div class="overlayer"></div>
-                </div>
-                <div class="layer" id="layer6" speed="69">
-                    <div class="overlayer"></div>
-                </div>
-                <div class="layer" id="layer7" speed="77">
-                    <div class="overlayer"></div>
-                </div>
-                <div class="layer" id="layer8" speed="84">
-                    <div class="overlayer"></div>
-                </div>
-                <div class="layer" id="layer9" speed="90">
-                    <div class="overlayer"></div>
-                </div>
-                <div class="layer" id="layer10" speed="95">
-                    <div class="overlayer"></div>
-                </div>
-                <div class="layer" id="layer11" speed="100">
-                    <div class="overlayer"></div>
-                </div>
+                <div class="layer" id="layer0" speed="0"><div class="overlayer"></div></div>
+                <div class="layer" id="layer1" speed="14"><div class="overlayer"></div></div>
+                <div class="layer" id="layer2" speed="27"><div class="overlayer"></div></div>
+                <div class="layer" id="layer3" speed="39"><div class="overlayer"></div></div>
+                <div class="layer" id="layer4" speed="50"><div class="overlayer"></div></div>
+                <div class="layer" id="layer5" speed="60"><div class="overlayer"></div></div>
+                <div class="layer" id="layer6" speed="69"><div class="overlayer"></div></div>
+                <div class="layer" id="layer7" speed="77"><div class="overlayer"></div></div>
+                <div class="layer" id="layer8" speed="84"><div class="overlayer"></div></div>
+                <div class="layer" id="layer9" speed="90"><div class="overlayer"></div></div>
+                <div class="layer" id="layer10" speed="95"><div class="overlayer"></div></div>
+                <div class="layer" id="layer11" speed="100"><div class="overlayer"></div></div>
                 <div class="layer contentlayer" id="layer" speed="69">
                     <main class="absoluteCenter">
                         <h1>TEDxAJCE 2021</h1>
@@ -372,44 +330,6 @@
                 </div>
             </div>
             <div class="foothider"></div>
-        </div>
-        <div class="section container" id="speakers">
-            <h1>. </h1>
-            <h1>Checkout Who's Speaking</h1>
-            <section class="card-list">
-                <article class="card">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="img1.png" alt="Avatar" style="width:300px;height:300px;">
-                            </div>
-                            <div class="flip-card-back">
-                                <h1>Nikitha Prem</h1>
-                                <p>TEDx</p>
-                            </div>
-                        </div>
-                    </div>
-                    <h3>Nikitha Prem</h3>
-                </article>
-                <article class="card">
-                    <header class="card-header">
-                        <p>May 25th 2020</p>
-                        <h2>Card tricks are fun. Hi mom!</h2>
-                    </header>
-                </article>
-                <article class="card">
-                    <header class="card-header">
-                        <p>May 25th 2020</p>
-                        <h2>Card tricks are fun. Hi mom!</h2>
-                    </header>
-                </article>
-                <article class="card">
-                    <header class="card-header">
-                        <p>May 25th 2020</p>
-                        <h2>Card tricks are fun. Hi mom!</h2>
-                    </header>
-                </article>
-            </section>
         </div>
         <div class="section" id="tedxdescription">
             <div class="container">
@@ -475,44 +395,77 @@
                 </script>
             </div>
         </div>
-        <div class="section" id="speaker">
-            <h1 class="container">Meet Our Team</h1>
+        <div class="section" id="team">
+            <h1 class="container">Our Team</h1>
             <div class="container-fluid">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img1.png">
-                    </div>
-                    <div class="content">
-                        <h2>Card One</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam id hic officia deleniti
-                            enim odio laborum totam minus necessitatibus quasi rerum eaque repudiandae molestias
-                            doloremque asperiores, eius voluptatibus qui sapiente.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img1.png">
-                    </div>
-                    <div class="content">
-                        <h2>Card Two</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam id hic officia deleniti
-                            enim odio laborum totam minus necessitatibus quasi rerum eaque repudiandae molestias
-                            doloremque asperiores, eius voluptatibus qui sapiente.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img1.png">
-                    </div>
-                    <div class="content">
-                        <h2>Card Three</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam id hic officia deleniti
-                            enim odio laborum totam minus necessitatibus quasi rerum eaque repudiandae molestias
-                            doloremque asperiores, eius voluptatibus qui sapiente.</p>
-                    </div>
+                <div class="team">
+                    <div class="teamcard"><img class="img" src="img1.png" alt="xx"><h3>yomama</h3></div>
+                    <div class="teamcard"><img class="img" src="img1.png" alt="xx"><h3>yomama</h3></div>
+                    <div class="teamcard"><img class="img" src="img1.png" alt="xx"><h3>yomama</h3></div>
+                    <div class="teamcard"><img class="img" src="img1.png" alt="xx"><h3>yomama</h3></div>
+                    <div class="teamcard"><img class="img" src="img1.png" alt="xx"><h3>yomama</h3></div>
                 </div>
             </div>
         </div>
+        <footer id="myfooter" class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 offset-lg-1 ">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-sm-5 text-center">
+                                <img class="mainlogo" src="./img/logo.png">
+                            </div>
+                            <div class="col-md-12 col-lg-12 col-sm-5 text-center">
+                                <a href="http://ajce.in" target="__blank">
+                                <img class="img-fluid  collegelogo" src="./img/collegelogo.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-2 col-lg-auto">
+                        <div id="links">
+                            <h5 class="footerheading">LINKS</h5>
+                            <ul id="linkslist" class="detail-block">
+                                <li class="details">
+                                    <a href="#section-about">About</a>
+                                </li>
+                                <li class="details">
+                                    <a href="#section-speakers">Speakers</a>
+                                </li>
+                                <li class="details">
+                                    <a href="#section-schedule">Schedule</a>
+                                </li>
+                                <li class="details">
+                                    <a href="#section-venue">Route Map</a>
+                                </li>
+                                <li class="details">
+                                    <a href="team-2019.html">Team</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-2 col-lg-2">
+                        <div id="connect">
+                            <h5 class="footerheading">CONNECT</h5>
+                            <ul id="connectlist" class="detail-block">
+                                <li class="details">
+                                    <a href="https://www.facebook.com/tedxajce">Facebook</a>
+                                </li>
+                                <li class="details">
+                                    <a href="https://www.instagram.com/tedxajce">Instagram</a>
+                                </li>
+                                <li class="details">
+                                    <a href="https://www.flickr.com/photos/165706544@N05/">Flickr</a>
+                                </li>
+                                <!--<li class="details">
+                                    <a href="#">Twitter</a>
+                                </li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
     <script>
         var layers = document.getElementsByClassName('layer');
