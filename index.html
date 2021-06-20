@@ -315,6 +315,37 @@
         #myfooter .row > *{
             margin: 0 1em;
         }
+
+
+        /* gallery */
+        .section#gallery{
+            min-height: 0;
+        }
+        #gallery ul.images {
+            margin: auto;
+            box-shadow: 3px 8px 20px 0 rgba(46, 61, 73, 0.23);
+            border-radius: 5px;
+            white-space: nowrap;
+            padding: 10px;
+            width: 90%;
+            min-height: 0;
+            overflow-x: auto;
+            background-color: #fff2;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        #gallery ul::-webkit-scrollbar {
+            display: none;
+        }
+        #gallery ul.images li{
+            display: inline;
+            width: 250px;
+            height: 250px;
+        }
+        #gallery img {
+            width: 150px;
+            height: 150px;
+        }        
     </style>
 </head>
 <body>
@@ -411,6 +442,30 @@
                     showAbout('content-ted')
                 </script>
             </div>
+        </div>
+        <div class="section" id="gallery">
+            <h1 class="container">Gallery</h1>
+            <ul class="images">
+                <li><img src="img1.png"></li>
+                <li><img src="img1.png"></li>
+                <li><img src="img1.png"></li>
+                <li><img src="img1.png"></li>
+                <li><img src="img1.png"></li>
+                <li><img src="img1.png"></li>
+                <li><img src="img1.png"></li>
+                <li><img src="img1.png"></li>
+            </ul>
+            <br>
+            <ul class="images">
+                <li><img src="img1.png"></li>
+                <li><img src="img1.png"></li>
+                <li><img src="img1.png"></li>
+                <li><img src="img1.png"></li>
+                <li><img src="img1.png"></li>
+                <li><img src="img1.png"></li>
+                <li><img src="img1.png"></li>
+                <li><img src="img1.png"></li>
+            </ul>
         </div>
         <div class="section" id="team">
             <h1 class="container">Our Team</h1>
