@@ -10,7 +10,8 @@
 		// Animate loader off screen
 		$(".se-pre-con").fadeOut("slow");;
   	});
-    history.pushState("Home", "TEDxAJCE", "tedxajce.in");
+    var url = window.location.protocol+'//tedxajce.in'
+    window.history.replaceState({path:url}, "TEDxAJCE", url);
 
     </script>
     <meta charset="UTF-8">
