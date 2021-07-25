@@ -372,8 +372,16 @@
         #connectlist li{
             list-style: none; margin:1em;
         } 
-
-
+        #contacts li{
+            text-align: left;
+            margin-left: 15%;
+        }
+        #contacts a{
+            text-decoration: none !important;
+        }
+        #contacts a:hover{
+            text-decoration: underline !important;
+        }
         /* gallery */
         .section#gallery{
             min-height: 0;
@@ -427,7 +435,7 @@
                     <main class="absoluteCenter">
                         <h1>TEDxAJCE 2021</h1>
                         <div>
-                            <h1>begins in <p id="countdown"></p>
+                            <h1><p id="countdown"></p>
                             </h1>
                         </div>
                         <!-- <h5><a href="http://bit.ly/tedxajce"><button>Register for the Pre-Event</button></a></h5> -->
@@ -590,11 +598,20 @@
         <footer id="myfooter" class="page-footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <a href="#"><img class="mainlogo" src="./img/logo.png"></a>
                         <a href="http://ajce.in" target="__blank"><img class="img-fluid  collegelogo" src="./img/collegelogo.png"></a>
                     </div>
-                    <div id="links" class="col-sm-4">
+                    <div id="contacts" class="col-sm-3">
+                        <h5 class="footerheading">CONTACT</h5>
+                        <ul>
+                            <li class="details"><b>Nikita Prem</b><br><a href="callto:+917892183951">Phone: +917892183951<br><a href="mailto:nikitaprem2021@cs.ajce.in">nikitaprem2021@cs.ajce.in</a></li>
+                        </ul>
+                        <ul>
+                            <li class="details"><b>Joshwin Joseph Joby</b><br><a href="callto:+917559059326">Phone: +917559059326<br><a href="mailto:joshwinjosephjoby2021@me.ajce.in">joshwinjosephjoby2021@me.ajce.in</a></li>
+                        </ul>
+                    </div>
+                    <div id="links" class="col-sm-3">
                         <h5 class="footerheading">LINKS</h5>
                         <ul id="linkslist" class="detail-block">
                             <li class="details">
@@ -614,7 +631,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <h5 class="footerheading">STAY CONNECTED</h5>
                         <ul id="connectlist" class="detail-block">
                             <li class="details">
@@ -697,7 +714,7 @@
             // If the count down is over, write some text 
             if (eta < 0) {
                 clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "EXPIRED";
+                document.getElementById("countdown").innerHTML = "Brewing...";
             }
         }, 1000);
 
