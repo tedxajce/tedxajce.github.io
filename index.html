@@ -367,7 +367,10 @@
         #connectlist li{
             list-style: none; margin:1em;
         } 
-
+        #contacts li{
+            text-align: left;
+            margin-left: 20%;
+        }
 
         /* gallery */
         .section#gallery{
@@ -398,7 +401,8 @@
             width: auto;
             height: 150px;
             image-rendering:optimizeSpeed;
-        }        
+        }
+             
     </style>
 </head>
 <body>
@@ -422,10 +426,10 @@
                     <main class="absoluteCenter">
                         <h1>TEDxAJCE 2021</h1>
                         <div>
-                            <h1>begins in <p id="countdown"></p>
+                            <h1>Brewing...<p id="countdown"></p>
                             </h1>
                         </div>
-                        <h5><a href="http://bit.ly/tedxajce"><button>Register for the Pre-Event</button></a></h5>
+                        <!--<h5><a href="http://bit.ly/tedxajce"><button>Register for the Pre-Event</button></a></h5>-->
                     </main>
                     <div class="overlayer"></div>
                 </div>
@@ -585,11 +589,23 @@
         <footer id="myfooter" class="page-footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <a href="#"><img class="mainlogo" src="./img/logo.png"></a>
                         <a href="http://ajce.in" target="__blank"><img class="img-fluid  collegelogo" src="./img/collegelogo.png"></a>
                     </div>
-                    <div id="links" class="col-sm-4">
+                    <div id="contacts" class="col-sm-3">
+                        <h5 class="footerheading" id="contact">CONTACT</h5>
+                        <ul>
+                            <li>
+                                <p>Nikita Prem<br><a href="tel:+917892183951">Phone: +917892183951</a><br><a href="mailto:">Email: </a></p>
+                                
+                            </li>
+                            <li>
+                                <p>Joshwin Joby<br><a href="tel:+917559059326">Phone: +917559059326</a><br><a href="mailto:">Email: </a></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="links" class="col-sm-3">
                         <h5 class="footerheading">LINKS</h5>
                         <ul id="linkslist" class="detail-block">
                             <li class="details">
@@ -609,7 +625,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <h5 class="footerheading">STAY CONNECTED</h5>
                         <ul id="connectlist" class="detail-block">
                             <li class="details">
@@ -692,7 +708,7 @@
             // If the count down is over, write some text 
             if (eta < 0) {
                 clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "EXPIRED";
+                document.getElementById("countdown").innerHTML = "";
             }
         }, 1000);
 
