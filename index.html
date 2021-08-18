@@ -435,7 +435,8 @@
                     <main class="absoluteCenter">
                         <h1>TEDxAJCE 2021</h1>
                         <div>
-                            <h1><p id="countdown"></p>
+                            <br>
+                            <h1>Begins in<p id="countdown"></p>
                             </h1>
                         </div>
                         <!-- <h5><a href="http://bit.ly/tedxajce"><button>Register for the Pre-Event</button></a></h5> -->
@@ -696,7 +697,7 @@
         console.log(speeds, str)
 
         // COUNTDOWN SCRIPT
-        var targetDate = new Date("Jul 17, 2021 00:00:00").getTime();
+        var targetDate = new Date("Aug 28, 2021 00:00:00").getTime();
         var timer = setInterval(function () {
             var today = new Date().getTime();
             var eta = targetDate - today;
@@ -714,7 +715,7 @@
             // If the count down is over, write some text 
             if (eta < 0) {
                 clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "Brewing...";
+                document.getElementById("countdown").innerHTML = "The Journey Has Begun..!";
             }
         }, 1000);
 
