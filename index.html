@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
         html,
         body {
             width: 100vw;
@@ -48,8 +48,14 @@
             border: 0px;
             padding: 1em 2em;
             border-radius: 4px;
-
+            font-family: 'roboto';
+            z-index: 0;
         }
+        button:hover{
+            z-index: 1;
+            color: red;
+        }
+
 
         h1{
             /* font-family: 'DM Mono', monospace; */
@@ -234,8 +240,9 @@
 
         /* Description */
         #tedxdescription {
-            min-height: 0;
-            margin-bottom: 2rem;
+            min-height: 50vh;
+            width: 90%;
+            margin: auto;
         }
 
         #tedxdescription #about-row-logo {
@@ -278,6 +285,8 @@
         #tedxdescription .about-row-stuff p {
             line-height: 2em;
             justify-content: space-between;
+            width: 80%;
+            margin: auto;
         }
 
         #tedxdescription .about-row-stuff {
@@ -388,6 +397,7 @@
         }
         #gallery ul.images {
             margin: auto;
+            margin-left: 0;
             box-shadow: 3px 8px 20px 0 rgba(46, 61, 73, 0.23);
             border-radius: 5px;
             white-space: nowrap;
@@ -404,6 +414,7 @@
         }
         #gallery ul.images li{
             display: inline;
+            flex-direction: column;
             width: 250px;
             height: 250px;
         }
@@ -411,7 +422,103 @@
             width: auto;
             height: 150px;
             image-rendering:optimizeSpeed;
-        }        
+        }
+        .date{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: auto;
+            margin-right: 1%;
+            font-size: x-large;
+            line-height: 15px;
+            padding: 5px 5px 0px 5px;
+            font-family: 'Fredoka One', cursive;
+        }
+        .content-2018, .content-2019{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        /*Speaker panels*/
+        .section#speakers{
+            display: absolute;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(211, 209, 209, 0.5);
+            width: 90%;
+            margin: auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            min-height: 115vh !important;
+        }
+        .section#speakers .containerspeaker{
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+        @media screen and (max-width: 600px) {
+            .imgBx{
+                left: 0 !important;
+            }
+            .speakercard{
+                margin-top: 10px !important;
+            }
+        }
+        .section#speakers .containerspeaker .speakercard{
+            position: relative;
+            text-align: center;
+            border-radius: 8px;
+            max-width: 230px;
+            height: 190px;
+            background: #201c29;
+            margin: 80px 30px;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            transition: 0.3s ease-in-out;
+        }
+        .section#speakers .containerspeaker .speakercard:hover{
+            height: 400px;
+        }
+        .section#speakers .containerspeaker .speakercard .imgBx{
+            position: relative;
+            width: 190px;
+            height: 190px;
+            top: -50px;
+            left: 5px;
+            align-items: center;
+            z-index: 1;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        .section#speakers .containerspeaker .speakercard .imgBx h4{
+            text-align: center;
+        }
+        .section#speakers .containerspeaker .speakercard .imgBx img{
+            max-width: 100%;
+            border-radius: 4px;
+        }
+        .section#speakers .containerspeaker .speakercard .content{
+            position: relative;
+            margin-top: -140px;
+            padding: 10px 15px;
+            color: white;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+        }
+        .section#speakers .containerspeaker .speakercard:hover .content{
+            opacity: 1;
+            visibility: visible;
+            margin-top: -25px;
+            transition-delay: 0.3s;
+        }
+        
     </style>
 </head>
 <body>
@@ -439,7 +546,7 @@
                             <h1>Begins in<p id="countdown"></p>
                             </h1>
                         </div>
-                        <!-- <h5><a href="http://bit.ly/tedxajce"><button>Register for the Pre-Event</button></a></h5> -->
+                        <!--<h5><a href="http://bit.ly/tedxajce"><button>Register</button></a></h5>-->
                     </main>
                     <div class="overlayer"></div>
                 </div>
@@ -510,75 +617,153 @@
                 </script>
             </div>
         </div>
+        <div class="section" id="speakers">
+            <h1 class="container" style="color: #201c29;">Our Speakers</h1>
+            <div class="containerspeaker">
+                
+                <div class="speakercard">
+                    <div class="imgBx">
+                        <img src="img/avatars/speakers/default.jpg" alt="">
+                        <h4>Name</h4>
+                    </div>
+                    
+                    <div class="content">
+                        
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, aut mollitia. Necessitatibus iste rem aliquid tempora </p>
+                    </div>
+                    <h4></h4>
+                </div>
+                <div class="speakercard">
+                    <div class="imgBx">
+                        <img src="img/avatars/speakers/default.jpg" alt="">
+                        <h4>Name</h4>
+                    </div>
+                    <div class="content">
+                        
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, aut mollitia. Necessitatibus iste rem aliquid tempora </p>
+                    </div>
+                </div>
+                <div class="speakercard">
+                    <div class="imgBx">
+                        <img src="img/avatars/speakers/default.jpg" alt="">
+                        <h4>Name</h4>
+                    </div>
+                    <div class="content">
+                        
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, aut mollitia. Necessitatibus iste rem aliquid tempora </p>
+                    </div>
+                </div>
+                <div class="speakercard">
+                    <div class="imgBx">
+                        <img src="img/avatars/speakers/default.jpg" alt="">
+                        <h4>Name</h4>
+                    </div>
+                    <div class="content">
+                        
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, aut mollitia. Necessitatibus iste rem aliquid tempora </p>
+                    </div>
+                </div>
+                <div class="speakercard">
+                    <div class="imgBx">
+                        <img src="img/avatars/speakers/default.jpg" alt="">
+                        <h4>Name</h4>
+                    </div>
+                    <div class="content">
+                        
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, aut mollitia. Necessitatibus iste rem aliquid tempora </p>
+                    </div>
+                </div>
+                <div class="speakercard">
+                    <div class="imgBx">
+                        <img src="img/avatars/speakers/default.jpg" alt="">
+                        <h4>Name</h4>
+                    </div>
+                    <div class="content">
+                        
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, aut mollitia. Necessitatibus iste rem aliquid tempora </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
         <div class="section" id="gallery">
             <h1 class="container">Gallery</h1>
-            <ul class="images 2018">
-                <li>2018</li>
-                <li><img src="./img/2018/(1).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(2).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(3).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(4).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(5).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(6).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(7).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(8).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(9).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(10).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(11).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(12).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(13).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(14).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(15).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(16).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(17).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(18).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(19).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(20).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(21).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(22).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(23).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(24).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(25).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(26).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(27).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(28).JPG" alt="" loading="lazy"></img></li>
-                <li><img src="./img/2018/(29).JPG" alt="" loading="lazy"></img></li>
-            </ul>
+            <div class="content-2018">
+                <div class="date">
+                    <p>2</p><p>0</p><p>1</p><p>8</p>
+                </div>
+                    <ul class="images 2018">
+                        <li><img src="./img/2018/(1).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(2).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(3).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(4).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(5).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(6).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(7).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(8).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(9).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(10).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(11).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(12).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(13).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(14).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(15).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(16).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(17).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(18).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(19).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(20).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(21).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(22).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(23).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(24).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(25).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(26).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(27).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(28).JPG" alt="" loading="lazy"></img></li>
+                        <li><img src="./img/2018/(29).JPG" alt="" loading="lazy"></img></li>
+                    </ul>
+            </div>
+            
             <br>
-            <ul class="images 2019">
-                <li>2019</li>
-                <li><img src="./img/2019/(1).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(2).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(3).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(4).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(5).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(6).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(7).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(8).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(9).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(10).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(11).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(12).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(13).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(14).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(15).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(16).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(17).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(18).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(19).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(20).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(21).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(22).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(23).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(24).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(25).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(26).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(27).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(28).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(29).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(30).JPG" loading="lazy" alt=""></img></li>
-                <li><img src="./img/2019/(31).JPG" loading="lazy" alt=""></img></li>
-            </ul>
+            <div class="content-2019">
+                <div class="date">
+                    <p>2</p><p>0</p><p>1</p><p>9</p>
+                </div>
+                    <ul class="images 2019">
+                        <li><img src="./img/2019/(1).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(2).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(3).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(4).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(5).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(6).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(7).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(8).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(9).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(10).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(11).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(12).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(13).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(14).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(15).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(16).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(17).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(18).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(19).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(20).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(21).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(22).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(23).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(24).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(25).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(26).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(27).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(28).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(29).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(30).JPG" loading="lazy" alt=""></img></li>
+                        <li><img src="./img/2019/(31).JPG" loading="lazy" alt=""></img></li>
+                    </ul>
+            </div>
         </div>
         <div class="section" id="team">
             <h1 class="container">Our Executive Team</h1>
