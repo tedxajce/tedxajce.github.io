@@ -16,6 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEDxAJCE</title>
     <link rel="shortcut icon" href="img/favicon_io/favicon.ico" type="image/ico">
+    <!--Button font-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel="stylesheet">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
     <!-- poppins -->
@@ -42,18 +44,69 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        button {
-            background-color: #17141d;
-            color: white;
-            border: 0px;
-            padding: 1em 2em;
-            border-radius: 4px;
-            font-family: 'roboto';
-            z-index: 0;
+        div[class*=box] {
+            height: 33.33%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
         }
-        button:hover{
+        .box-3{background-color: transparent;}
+        .btn a{
+            pointer-events: auto;
+            text-decoration: none;
+            color: white;
+        }
+        .btn{
+            font-family: 'Open Sans Condensed', sans-serif;
+            line-height: 2.5em;
+            justify-content: center;
+            height: 3.3em;
+            text-align: center;
+            width: 10em;
+            cursor: pointer;
+        }
+        .btn-three{
+            color: white !important;
+            transition: all 0.5s;
+            position: absolute;
+        }
+        .btn-three::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: 1;
-            color: red;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.3s;
+        }
+        .btn-three:hover::before{
+            opacity: 0;
+            transform: scale(1.2,1.2);
+        }
+        .btn-three::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transform: scale(1.2,1.2);
+        }
+        .btn-three:hover::after{
+            opacity: 1;
+            transform: scale(1,1);
         }
 
 
@@ -442,14 +495,15 @@
         /*Speaker panels*/
         .section#speakers{
             display: absolute;
+            background-image: url(img/speakers-bg.png);
+            background-size: cover;
             border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(211, 209, 209, 0.5);
             width: 90%;
             margin: auto;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: white;
+            
             min-height: 115vh !important;
         }
         .section#speakers .containerspeaker{
@@ -469,6 +523,7 @@
                 margin-top: 10px !important;
             }
         }
+        
         .section#speakers .containerspeaker .speakercard{
             position: relative;
             text-align: center;
@@ -518,7 +573,106 @@
             margin-top: -25px;
             transition-delay: 0.3s;
         }
-        
+        /* Newsletter */
+        .section#subscribe {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            min-height: 40vh !important;
+        }
+
+        .news-head {
+            text-align: center;
+            margin: 0;
+        }
+
+        .email-entry {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 2em;
+        }
+
+        .submitemail {
+            border-radius: 40px;
+            margin-right: 3px;
+            width: 25em;
+            height: 2.5em;
+            border: 1px solid white;
+        }
+
+        .submitbtn {
+            border-radius: 40px;
+            
+            height: 2.5em;
+            border-color: transparent;
+        }
+        .submitbtn:hover{
+            color: red;
+        }
+        /* Buy-Tickets */
+        .section#buy-tickets {
+            padding: 60px 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #paymentPanel{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        @media screen and (max-width:600px) {
+            #paymentPanel{
+                flex-direction: column;
+            }
+            .payment-card{
+                width: auto !important;
+            }
+        }
+        #paybutton{
+            background-color: red !important;
+        }
+        .section#buy-tickets .payment-card {
+            border: none;
+            width: 30%;
+            border-radius: 10px !important;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
+            margin: 2%;
+            height: fit-content;
+        }
+        .card-body{
+            background-color: white;
+            border-radius: 10px;
+        }
+        #buy-tickets .payment-card:hover {
+            box-shadow: 0 10px 35px 0 rgba(255, 255, 255, 0.5);
+        }
+
+        #buy-tickets .card hr {
+            margin: 25px 0;
+        }
+
+        #buy-tickets .payment-card .card-title {
+            margin: 10px 0;
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        #buy-tickets .payment-card .card-price {
+            font-size: 48px;
+            margin: 0;
+            color: #17141d;
+        }
+
+        #buy-tickets .payment-card ul li {
+            margin-bottom: 20px;
+            color: #17141d;
+        }
+    
     </style>
 </head>
 <body>
@@ -543,10 +697,16 @@
                         <h1>TEDxAJCE 2021</h1>
                         <div>
                             <br>
-                            <h1>Begins in<p id="countdown"></p>
+                            <h1>Begins in<br><br><p id="countdown"></p>
                             </h1>
                         </div>
-                        <!--<h5><a href="http://bit.ly/tedxajce"><button>Register</button></a></h5>-->
+                        <br>
+                        <!--<a href="" id="button"><button>R E G I S T E R</button></a>-->
+                        <div class="box-3">
+                            <div class="btn btn-three">
+                                <a onclick="redirectButton">R E G I S T E R</a>
+                            </div>
+                        </div>
                     </main>
                     <div class="overlayer"></div>
                 </div>
@@ -598,7 +758,7 @@
                             all walks of life. TEDxAJCE has an enthusiastic community of students, professionals, and
                             the community around it, open to ideas that expand their world view. Our aim is to open a
                             window to a world of opportunities and encourage them to seek them out and pay it forward.
-                            Read More <a href="">Here</a>
+                            Read More <a href="https://www.ted.com/tedx/events/32157">Here</a>
                         </p>
                     </div>
                 </div>
@@ -765,6 +925,68 @@
                     </ul>
             </div>
         </div>
+        <div class="section" id="buy-tickets">
+            <h1 class="container">Buy Tickets</h1>
+            <p style="text-align:center;">Buy the event tickets at an affordable price.</p>
+            <div id="paymentPanel">                   
+                
+                    <div class="payment-card">
+                        
+                            <div class="card-body">
+                                <h3 class="card-title text-muted text-uppercase text-center">RED TICKET</h3>
+                                <h6 class="card-price text-center">Rs. 200</h6><hr style="background-color: black;">
+                                <hr stlye="color: black;">
+                                <ul class="fa-ul" style="list-style-type: none">
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to all talks</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to performances
+                                    </li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Interaction with speakers
+                                    </li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Network Lounges</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Social Lounges</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>TEDx Certificate</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Goodies</li>
+                                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span><b>A SAPLING planted in
+                                        your name</b></li>
+                                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span><b>Extra Goodies/
+                                        Coupons</b></li>
+                                </ul>
+                                <hr style="background-color: black;">
+                                <div class="text-center"><form><script  id="paybutton" src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_HnPfx0zET13h0K" async> </script> </form></div>
+                            </div>
+                        
+                    </div>
+                   
+                    <div class="payment-card">
+                        
+                            <div class="card-body">
+                                <h3 class="card-title text-muted text-uppercase text-center">GREEN TICKET</h3>
+                                <h6 class="card-price text-center">Rs. 250</h6><hr style="background-color: black;">
+                                <hr>
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to all talks</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to performances
+                                    </li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Interaction with speakers
+                                    </li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Network Lounges</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Social Lounges</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>TEDx Certificate</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Goodies</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span><b>A SAPLING planted in
+                                            your name</b></li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span><b>Extra Goodies/
+                                            Coupons</b></li>
+                                </ul>
+                                <hr style="background-color: black;">
+                                <div class="text-center"><form><script id="paybutton" src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_HnPcffW9j4X4H1" async> </script> </form></div>
+                            </div>
+                        
+                    </div>
+                    
+                
+            </div>
+        </div>
         <div class="section" id="team">
             <h1 class="container">Our Executive Team</h1>
             <div class="container-fluid">
@@ -780,6 +1002,37 @@
                     <div class="teamcard"><img class="img" loading="lazy" src="img/avatars/jitin.JPG" alt="xx"><h6>Jitin J Gigi</h6><h8>Website Lead</h8></div>
                 </div>
             </div>
+        </div>
+        <div class="section" id="subscribe">
+            <!-- Begin Mailchimp Signup Form -->
+            <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+            <div class="news-head">
+                <h1 class="container">NEWSLETTER</h1>
+                <p>Subscribe to our newsletter to recieve frequent updates</p>
+            </div>
+
+            <div id="mc_embed_signup">
+                <form
+                    action="https://gmail.us5.list-manage.com/subscribe/post?u=25eadb8d4577be71ebca37e28&amp;id=04d05a5a8c"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                    target="_blank" novalidate>
+
+                    <div id="mc_embed_signup_scroll">
+                        <div class="email-entry">
+                            <input type="email" value="" name="EMAIL" class="submitemail" id="mce-EMAIL"
+                                placeholder=" Email address" required>
+                            <div class="clear">
+                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                                    class="submitbtn">
+                            </div>
+                        </div>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                name="b_25eadb8d4577be71ebca37e28_04d05a5a8c" tabindex="-1" value=""></div>
+                    </div>
+                </form>
+            </div>
+            <!--End mc_embed_signup-->
         </div>
         <footer id="myfooter" class="page-footer">
             <div class="container">
@@ -813,7 +1066,7 @@
                                 <a href="#section-venue">Route Map</a>
                             </li> -->
                             <li class="details">
-                                <a href="#team">Team</a>
+                                <a href="#payment">Team</a>
                             </li>
                         </ul>
                     </div>
@@ -894,8 +1147,7 @@
             var seconds = Math.floor((eta % (1000 * 60)) / 1000);
 
             // Output the result in an element with id="countdown"
-            document.getElementById("countdown").innerHTML = days + "D " + hours + "H "
-                + minutes + "m " + seconds + "s ";
+            document.getElementById("countdown").innerHTML = days + "Days & " + hours + "Hours";
 
             // If the count down is over, write some text 
             if (eta < 0) {
@@ -903,7 +1155,10 @@
                 document.getElementById("countdown").innerHTML = "The Journey Has Begun..!";
             }
         }, 1000);
-
+        function redirectButton(){
+            document.getElementById("buytickets").scrollIntoView();
+            console.log('success');
+        }
     </script>
 </body>
 
