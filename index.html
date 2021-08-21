@@ -292,6 +292,9 @@
         }
 
         /* Description */
+        #but-content_theme{
+            margin-top: 1em;
+        }
         #tedxdescription {
             min-height: 50vh;
             width: 90%;
@@ -495,10 +498,10 @@
         /*Speaker panels*/
         .section#speakers{
             display: absolute;
-            background-image: url(img/speakers-bg.png);
+            background-image: url("img/bgspeaker.png");
             background-size: cover;
             border-radius: 8px;
-            width: 90%;
+            
             margin: auto;
             flex-direction: column;
             justify-content: center;
@@ -528,8 +531,8 @@
             position: relative;
             text-align: center;
             border-radius: 8px;
-            max-width: 230px;
-            height: 190px;
+            max-width: 260px;
+            height: 220px;
             background: #201c29;
             margin: 80px 30px;
             padding: 20px 15px;
@@ -539,12 +542,12 @@
             transition: 0.3s ease-in-out;
         }
         .section#speakers .containerspeaker .speakercard:hover{
-            height: 400px;
+            height: 535px;
         }
         .section#speakers .containerspeaker .speakercard .imgBx{
             position: relative;
-            width: 190px;
-            height: 190px;
+            width: 220px;
+            height: 220px;
             top: -50px;
             left: 5px;
             align-items: center;
@@ -615,6 +618,7 @@
             padding: 60px 0;
             display: flex;
             flex-direction: column;
+            min-height: 40vh;
         }
 
         #paymentPanel{
@@ -672,6 +676,16 @@
             margin-bottom: 20px;
             color: #17141d;
         }
+        .regDetails{
+            width: 70%;
+            color: white;
+            font-family: 'DM Mono', monospace;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: flex;
+        }
     
     </style>
 </head>
@@ -701,10 +715,10 @@
                             </h1>
                         </div>
                         <br>
-                        <!--<a href="" id="button"><button>R E G I S T E R</button></a>-->
-                        <div class="box-3">
+                        
+                        <div class="box-3" onclick="redirectButton()">
                             <div class="btn btn-three">
-                                <a onclick="redirectButton">R E G I S T E R</a>
+                                <a onclick="redirectButton()">REGISTRATION</a>
                             </div>
                         </div>
                     </main>
@@ -713,13 +727,17 @@
             </div>
             <div class="foothider"></div>
         </div>
-        <div class="section" id="tedxdescription">
+        <div class="section" id="tedxdescription" style="margin-bottom: 50px;">
             <div class="container">
                 <!-- <div class="row justify-content-center">
                     <h4>ABOUT TEDx</h4>
                 </div> -->
                 <div id="about-row-logo" class="row">
-                    <div id='but_content-ted' class="col-4 col-md-2 text-center bord activated"
+                    <div id='but_content-theme' class="col-4 col-md-2 bord activated"
+                        onclick="showAbout('content-theme')">
+                        <img id="about-logo-tedxajce" class="img-fluid" src="./img/Tracing the Roots.png">
+                    </div>
+                    <div id='but_content-ted' class="col-4 col-md-2 bord"
                         onclick="showAbout('content-ted')">
                         <img id="about-logo-ted" class="img-fluid" src="./img/ted-logo.png">
                     </div>
@@ -731,6 +749,14 @@
                     </div>
                 </div>
                 <div class="about-row-stuff row">
+                    <div id="content-container" >
+                        <p id="content-theme" class="about-content text-center">
+                            Our theme is ‘Tracing the Roots’. Our life is filled with choices, they play a major role in shaping us as a person. Each decision we make will have an impact, big or small, on us and 
+                            everything around us. This in some way contributes to shaping us and everything else into into how it is today. As we travel the journey called life, we have come across several crossroads 
+                            called choices and each time we made our decision of which path to travel. Among all these choices there are some decisions that led us to key turning points in our lives, those which had a major role in making us the person we have become. 
+                            When we trace back all these paths or roots, we see how they’ve shaped us into who we are today. Hence, tracing the roots is all about a retrospective into the way life is, or could have been.
+                        </p>
+                    </div>
                     <div id="content-container">
                         <p id="content-ted" class="about-content text-center">
                             “By spreading ideas worthy enough to be shared, the power of inspiration and change is
@@ -773,74 +799,77 @@
                             else element.classList.remove('activated')
                         }
                     }
-                    showAbout('content-ted')
+                    showAbout('content-theme')
                 </script>
             </div>
         </div>
         <div class="section" id="speakers">
-            <h1 class="container" style="color: #201c29;">Our Speakers</h1>
+            <h1 class="container">Our Speakers</h1>
             <div class="containerspeaker">
                 
                 <div class="speakercard">
                     <div class="imgBx">
-                        <img src="img/avatars/speakers/default.jpg" alt="">
-                        <h4>Name</h4>
+                        <img src="img/avatars/speakers/1.jpg" alt="">
+                        <h4>Henna Jayanth</h4>
                     </div>
                     
                     <div class="content">
-                        
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, aut mollitia. Necessitatibus iste rem aliquid tempora </p>
+                        <p>A State Level Cricketer turned Race Car Driver. A model and an entrepreneur. The only woman in the Redbull Opinion Leadership Program from Kerala in motorsports. An inspiration for countless youngsters out there.</p>    
                     </div>
                     <h4></h4>
                 </div>
                 <div class="speakercard">
                     <div class="imgBx">
-                        <img src="img/avatars/speakers/default.jpg" alt="">
-                        <h4>Name</h4>
+                        <img src="img/avatars/speakers/2.jpg" alt="">
+                        <h4>Renjith R Panathur</h4>
                     </div>
                     <div class="content">
-                        
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, aut mollitia. Necessitatibus iste rem aliquid tempora </p>
+                        <p>“I decided to fight and realise my dream," these are the words of a young man who fought all odds to reach where he is today. From working as a watchman to becoming an IIM professor, this man turned his life around purely through his hard work and dedication.</p>                        
                     </div>
                 </div>
                 <div class="speakercard">
                     <div class="imgBx">
-                        <img src="img/avatars/speakers/default.jpg" alt="">
-                        <h4>Name</h4>
+                        <img src="img/avatars/speakers/3.jpeg" alt="">
+                        <h4>Stephen Devassy</h4>
                     </div>
                     <div class="content">
-                        
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, aut mollitia. Necessitatibus iste rem aliquid tempora </p>
+                        <p>Musician, composer, arranger and music director, this man is indeed one with many talents. Magic on his fingers and music in his heart, he will leave you elated and transport you to that mesmerizing world.</p>    
                     </div>
                 </div>
                 <div class="speakercard">
                     <div class="imgBx">
-                        <img src="img/avatars/speakers/default.jpg" alt="">
-                        <h4>Name</h4>
+                        <img src="img/avatars/speakers/4.jpeg" alt="">
+                        <h4>Hani Musthafa</h4>
                     </div>
                     <div class="content">
-                        
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, aut mollitia. Necessitatibus iste rem aliquid tempora </p>
+                        <p>The face of Flywheel - India’s favourite auto show. He is the only person from south India to become one among the six jurors from India for the World Car Awards. His love for wheels culminated in the creation of the Flywheel team.</p>    
                     </div>
                 </div>
                 <div class="speakercard">
                     <div class="imgBx">
-                        <img src="img/avatars/speakers/default.jpg" alt="">
-                        <h4>Name</h4>
+                        <img src="img/avatars/speakers/5.jpeg" alt="">
+                        <h4>Shailaja Teacher</h4>
                     </div>
                     <div class="content">
-                        
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, aut mollitia. Necessitatibus iste rem aliquid tempora </p>
+                        <p>Her impeccable approach to counter various virus surges earned global recognition and was honoured for her efforts to fight the covid pandemic by the UN and lauded the world over. She is that one person who continuous to show us to find the light even in the darkest of times.</p>    
                     </div>
                 </div>
                 <div class="speakercard">
                     <div class="imgBx">
-                        <img src="img/avatars/speakers/default.jpg" alt="">
-                        <h4>Name</h4>
+                        <img src="img/avatars/speakers/6.jpg" alt="">
+                        <h4>Abeesh P Dominic</h4>
                     </div>
                     <div class="content">
-                        
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, aut mollitia. Necessitatibus iste rem aliquid tempora </p>
+                        <p>Body builder by profession, this man earned a place for him in he several world records by breaking 122 coconuts under 1 minute. He is the perfect example of how a human body can do incredible things with proper training.</p>                        
+                    </div>
+                </div>
+                <div class="speakercard">
+                    <div class="imgBx">
+                        <img src="img/avatars/speakers/7.JPG" alt="">
+                        <h4>VS Sabu</h4>
+                    </div>
+                    <div class="content">
+                        <p>From making the first autonomous robot in the country to his latest creation, a Tesla coil, he has been inspiring us for more than three decades. He has shown us degrees don’t build things but passion does.</p>
                     </div>
                 </div>
             </div>
@@ -925,31 +954,31 @@
                     </ul>
             </div>
         </div>
-        <div class="section" id="buy-tickets">
-            <h1 class="container">Buy Tickets</h1>
-            <p style="text-align:center;">Buy the event tickets at an affordable price.</p>
+        <div class="section" id="buy-tickets" style="margin-top: 50px;">
+            <h1 class="container">Registration</h1>
+            <p style="text-align:center; color: greenyellow;">Buy the event tickets at an affordable price.</p>
+            <div class="regDetails">
+                <p>We at <span style="color: red;">TEDxAJCE</span> are determined at leaving a lasting impression in every person we reach with our virtues and vision. So in our third edition, we decided to go the route that would be the hardest and the most redeeming to tread. Our event would be the first carbon neutral <span style="color: red;">TEDx</span> experience in the Northern Hemisphere. To leave this planet in a better shape than we inherited and to do so, we need your involvement. By being part of our curated TEDxAJCE experience and choosing the greener option. Our event will have two tickets, and two unique experiences.</p>
+            </div>
             <div id="paymentPanel">                   
                 
                     <div class="payment-card">
                         
                             <div class="card-body">
-                                <h3 class="card-title text-muted text-uppercase text-center">RED TICKET</h3>
+                                <h4 class="text-center" style="color: red;">RED TICKET</h3>
                                 <h6 class="card-price text-center">Rs. 200</h6><hr style="background-color: black;">
                                 <hr stlye="color: black;">
                                 <ul class="fa-ul" style="list-style-type: none">
                                     <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to all talks</li>
-                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to performances
-                                    </li>
-                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Interaction with speakers
-                                    </li>
-                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Network Lounges</li>
-                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Social Lounges</li>
-                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>TEDx Certificate</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to performances</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>A chance to interact with our distinguished speakers</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Activities that add value to your TEDx experience</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Exclusive lounges to network and connect with fellow attendees</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Social lounges to interact with individuals who share your interests</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>TEDx certificate of participation</li>
                                     <li><span class="fa-li"><i class="fa fa-check"></i></span>Goodies</li>
-                                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span><b>A SAPLING planted in
-                                        your name</b></li>
-                                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span><b>Extra Goodies/
-                                        Coupons</b></li>
+                                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span><b>A Sapling planted in your name. Its location will be geo tagged and sent to you.</b></li>
+                                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span><b>Goodies and coupons to appreciate your contribution for a good cause</b></li>
                                 </ul>
                                 <hr style="background-color: black;">
                                 <div class="text-center"><form><script  id="paybutton" src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_HnPfx0zET13h0K" async> </script> </form></div>
@@ -960,23 +989,20 @@
                     <div class="payment-card">
                         
                             <div class="card-body">
-                                <h3 class="card-title text-muted text-uppercase text-center">GREEN TICKET</h3>
+                                <h4 class="text-center" style="color: green;">GREEN TICKET</h3>
                                 <h6 class="card-price text-center">Rs. 250</h6><hr style="background-color: black;">
                                 <hr>
                                 <ul class="fa-ul">
                                     <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to all talks</li>
-                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to performances
-                                    </li>
-                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Interaction with speakers
-                                    </li>
-                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Network Lounges</li>
-                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Social Lounges</li>
-                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>TEDx Certificate</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to performances</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>A chance to interact with our distinguished speakers</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Activities that add value to your TEDx experience</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Exclusive lounges to network and connect with fellow attendees</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Social lounges to interact with individuals who share your interests</li>
                                     <li><span class="fa-li"><i class="fa fa-check"></i></span>Goodies</li>
-                                    <li><span class="fa-li"><i class="fa fa-check"></i></span><b>A SAPLING planted in
-                                            your name</b></li>
-                                    <li><span class="fa-li"><i class="fa fa-check"></i></span><b>Extra Goodies/
-                                            Coupons</b></li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>A Special TEDx participation certificate</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span><b>A Sapling planted in your name. Its location will be geo tagged and sent to you.</b></li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span><b>Goodies and coupons to appreciate your contribution for a good cause</b></li>
                                 </ul>
                                 <hr style="background-color: black;">
                                 <div class="text-center"><form><script id="paybutton" src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_HnPcffW9j4X4H1" async> </script> </form></div>
@@ -1066,18 +1092,18 @@
                                 <a href="#section-venue">Route Map</a>
                             </li> -->
                             <li class="details">
-                                <a href="#payment">Team</a>
+                                <a href="#team">Team</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-sm-3">
                         <h5 class="footerheading">STAY CONNECTED</h5>
                         <ul id="connectlist" class="detail-block">
-                            <li class="details">
+                            <!--<li class="details">
                                 <a href="https://www.facebook.com/tedxajce"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                                     <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
                                     </svg></a>
-                            </li>
+                            </li>-->
                             <li class="details">
                                 <a href="https://www.instagram.com/tedxajce"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
                                     <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
@@ -1147,7 +1173,7 @@
             var seconds = Math.floor((eta % (1000 * 60)) / 1000);
 
             // Output the result in an element with id="countdown"
-            document.getElementById("countdown").innerHTML = days + "Days & " + hours + "Hours";
+            document.getElementById("countdown").innerHTML = days + " Days & " + hours + " Hours";
 
             // If the count down is over, write some text 
             if (eta < 0) {
@@ -1156,7 +1182,8 @@
             }
         }, 1000);
         function redirectButton(){
-            document.getElementById("buytickets").scrollIntoView();
+            var element = document.getElementById("buy-tickets");
+            element.scrollIntoView();
             console.log('success');
         }
     </script>
