@@ -501,12 +501,12 @@
             background-image: url("img/bgspeaker.png");
             background-size: cover;
             border-radius: 8px;
-            
+            background-position: center;
             margin: auto;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            
+            width: 95%;
             min-height: 115vh !important;
         }
         .section#speakers .containerspeaker{
@@ -519,8 +519,12 @@
             padding: 30px;
         }
         @media screen and (max-width: 600px) {
+            .section#speakers {
+                background-image: url("img/BG.png");
+                background-position-y: top;
+            }
             .imgBx{
-                left: 0 !important;
+                left: 2 !important;
             }
             .speakercard{
                 margin-top: 10px !important;
@@ -648,11 +652,15 @@
             height: fit-content;
         }
         .card-body{
-            background-color: white;
+           /*background-color: white;*/
+            background-image: url("img/BG.png");
+            background-size: cover;
+            background-position: center;
+            background-position-y: top;
             border-radius: 10px;
         }
         #buy-tickets .payment-card:hover {
-            box-shadow: 0 10px 35px 0 rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 35px 0 rgba(255, 0, 0, 0.5);
         }
 
         #buy-tickets .card hr {
@@ -669,12 +677,12 @@
         #buy-tickets .payment-card .card-price {
             font-size: 48px;
             margin: 0;
-            color: #17141d;
+            color: white;
         }
 
         #buy-tickets .payment-card ul li {
             margin-bottom: 20px;
-            color: #17141d;
+            color: white;
         }
         .regDetails{
             width: 70%;
@@ -967,9 +975,9 @@
                     <div class="payment-card">
                         
                             <div class="card-body">
-                                <h4 class="text-center" style="color: red;">RED TICKET</h3>
+                                <h4 class="text-center" style="color: red;">RED TICKET</h4>
                                 <h6 class="card-price text-center">Rs. 250</h6>
-                                <p style="color: black; width: fit-content; margin: auto;">(Early bird price over)</p><hr style="background-color: black;">
+                                <p style="width: fit-content; margin: auto;">(Early bird price over)</p><hr>
                                 <ul class="fa-ul" style="list-style-type: none">
                                     <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to all talks</li>
                                     <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to performances</li>
@@ -981,7 +989,7 @@
                                     <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span><b>A Sapling planted in your name. Its location will be geo tagged and sent to you.</b></li>
                                     <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span><b>Goodies and coupons to appreciate your contribution for a good cause</b></li>
                                 </ul>
-                                <hr style="background-color: black;">
+                                <hr>
                                 <div class="text-center"><form><script  id="paybutton" src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_HnPfx0zET13h0K" async> </script> </form></div>
                             </div>
                         
@@ -990,9 +998,9 @@
                     <div class="payment-card">
                         
                             <div class="card-body">
-                                <h4 class="text-center" style="color: green;">GREEN TICKET</h3>
+                                <h4 class="text-center" style="color: green;">GREEN TICKET</h4>
                                 <h6 class="card-price text-center">Rs. 300</h6>
-                                <p style="color: black; width: fit-content; margin: auto;">(Early bird price over)</p><hr style="background-color: black;">
+                                <p style="width: fit-content; margin: auto;">(Early bird price over)</p><hr>
                                 <ul class="fa-ul">
                                     <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to all talks</li>
                                     <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to performances</li>
@@ -1004,7 +1012,7 @@
                                     <li><span class="fa-li"><i class="fa fa-check"></i></span><b>A Sapling planted in your name. Its location will be geo tagged and sent to you.</b></li>
                                     <li><span class="fa-li"><i class="fa fa-check"></i></span><b>Goodies and coupons to appreciate your contribution for a good cause</b></li>
                                 </ul>
-                                <hr style="background-color: black;">
+                                <hr>
                                 <div class="text-center"><form><script id="paybutton" src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_HnPcffW9j4X4H1" async> </script> </form></div>
                             </div>
                         
