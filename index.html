@@ -328,6 +328,10 @@
         #about-logo-tedx, #about-logo-tedxajce {
             padding-top: 7%;
         }
+        #about-logo-theme{
+            padding-top: 8%;
+            margin: auto;
+        }
 
         #tedxdescription .bord {
             /* background-color: rgba(255, 255, 255, 0.1); */
@@ -529,6 +533,9 @@
             .speakercard{
                 margin-top: 10px !important;
             }
+            .speakercard:hover{
+                transition-delay: 1s;
+            }
         }
         
         .section#speakers .containerspeaker .speakercard{
@@ -543,10 +550,11 @@
             display: flex;
             flex-direction: column;
             box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-            transition: 0.3s ease-in-out;
+            transition: 0.3s 1s ease-in-out;
         }
         .section#speakers .containerspeaker .speakercard:hover{
             height: 535px;
+            transition: 1s ease-in-out;
         }
         .section#speakers .containerspeaker .speakercard .imgBx{
             position: relative;
@@ -572,13 +580,13 @@
             color: white;
             visibility: hidden;
             opacity: 0;
-            transition: 0.3s ease-in-out;
+            transition: 0.3s 0.8s ease-in-out;
         }
         .section#speakers .containerspeaker .speakercard:hover .content{
             opacity: 1;
             visibility: visible;
             margin-top: -25px;
-            transition-delay: 0.3s;
+            transition-delay: 0.7s ;
         }
         /* Newsletter */
         .section#subscribe {
@@ -652,7 +660,6 @@
             height: fit-content;
         }
         .card-body{
-           /*background-color: white;*/
             background-image: url("img/BG.png");
             background-size: cover;
             background-position: center;
@@ -745,7 +752,7 @@
                 <div id="about-row-logo" class="row">
                     <div id='but_content-theme' class="col-4 col-md-2 bord activated"
                         onclick="showAbout('content-theme')">
-                        <img id="about-logo-tedxajce" class="img-fluid" src="./img/Tracing the Roots.png">
+                        <img id="about-logo-theme" class="img-fluid" src="./img/Tracing the Roots.png">
                     </div>
                     <div id='but_content-ted' class="col-4 col-md-2 bord"
                         onclick="showAbout('content-ted')">
