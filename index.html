@@ -1194,7 +1194,7 @@
             var seconds = Math.floor((eta % (1000 * 60)) / 1000);
 
             // Output the result in an element with id="countdown"
-            document.getElementById("countdown").innerHTML = days + " Days & " + hours + " Hours";
+            document.getElementById("countdown").innerHTML =hours + " Hours" + minutes + " Minutes";
 
             // If the count down is over, write some text 
             if (eta < 0) {
