@@ -702,7 +702,17 @@
             display: flex;
             flex-direction: column;
         }
-
+        #download{
+            margin: auto;
+            color: white;
+        }
+        #download button{
+            background-color: rgba(255, 255, 255, 0.1); 
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        #download button:hover{
+            box-shadow: 0 5px 20px 0 rgba(255, 255, 255, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -895,6 +905,10 @@
         <div class="section" id="schedule" style="min-height: 20vh;">
             <h1 class="container">Event Schedule</h1>
             <h4 style="margin: 0 auto;">WILL BE UPDATED SOON</h4>
+            <br> <br>
+            <form method="get" action="img/schedule.pdf" id='download' style="margin: auto;">
+                <button type="submit" style="color: white; background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.5);">Download Schedule</button>
+            </form>
         </div>
         <div class="section" id="gallery">
             <h1 class="container">Gallery</h1>
@@ -1194,7 +1208,7 @@
             var seconds = Math.floor((eta % (1000 * 60)) / 1000);
 
             // Output the result in an element with id="countdown"
-            document.getElementById("countdown").innerHTML =hours + " Hours" + minutes + " Minutes";
+            document.getElementById("countdown").innerHTML =hours + " Hours " + minutes + " Minutes";
 
             // If the count down is over, write some text 
             if (eta < 0) {
