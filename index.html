@@ -697,7 +697,12 @@
             text-align: center;
             display: flex;
         }
-    
+        /*Schedule*/
+        #schedule {
+            display: flex;
+            flex-direction: column;
+        }
+
     </style>
 </head>
 <body>
@@ -724,16 +729,15 @@
                         <br>
                         <div>
                             <br>
-                            <h1>Begins in<br><p id="countdown"></p>
-                            </h1>
+                            <br><h1 id="countdown"></h1>
                         </div>
                         <br>
                         
-                        <div class="box-3" onclick="redirectButton()">
+                        <!--<div class="box-3" onclick="redirectButton()">
                             <div class="btn btn-three">
                                 <a onclick="redirectButton()">REGISTRATION</a>
                             </div>
-                        </div>
+                        </div>-->
                     </main>
                     <div class="overlayer"></div>
                 </div>
@@ -887,6 +891,10 @@
                 </div>
             </div>
             
+        </div>
+        <div class="section" id="schedule" style="min-height: 20vh;">
+            <h1 class="container">Event Schedule</h1>
+            <h4 style="margin: 0 auto;">WILL BE UPDATED SOON</h4>
         </div>
         <div class="section" id="gallery">
             <h1 class="container">Gallery</h1>
@@ -1191,7 +1199,7 @@
             // If the count down is over, write some text 
             if (eta < 0) {
                 clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "The Journey Has Begun..!";
+                document.getElementById("countdown").innerHTML = "It's Happening Now..!";
             }
         }, 1000);
         function redirectButton(){
