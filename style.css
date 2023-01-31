@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+html,
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    background-color: #17141d;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+div[class*=box] {
+    height: 33.33%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.box-3{background-color: transparent;}
+.btn a{
+    pointer-events: auto;
+    text-decoration: none;
+    color: white;
+}
+.btn{
+    font-family: 'Open Sans Condensed', sans-serif;
+    line-height: 2.5em;
+    justify-content: center;
+    height: 3.3em;
+    text-align: center;
+    width: 10em;
+    cursor: pointer;
+}
+.btn-three{
+    color: white !important;
+    transition: all 0.5s;
+    position: absolute;
+}
+.btn-three::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s;
+}
+.btn-three:hover::before{
+    opacity: 0;
+    transform: scale(1.2,1.2);
+}
+.btn-three::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transform: scale(1.2,1.2);
+}
+.btn-three:hover::after{
+    opacity: 1;
+    transform: scale(1,1);
+}
+
+
+h1{
+    /* font-family: 'DM Mono', monospace; */
+    text-align: center;
+    width:100;
+    margin-bottom: 2rem;
+}
+
+a {
+    color: red;
+}
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(img/Tedx.gif) center no-repeat rgb(0, 0, 0);  
+}
+.section {
+    min-height: 100vh;
+}
+
+#frontpage~.section {
+    padding-top: 2em;
+}
+
+#frontpage .absoluteCenter {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+#frontpage .contentlayer {
+    z-index: 5;
+}
+
+#frontpage .absoluteCenter>h1 {
+    font-size: 5em;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* parallax */
+.parallax {
+    width: 100vw;
+    height: 100vh;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.parallax>.layer {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: inherit;
+    image-rendering: optimizeSpeed;
+}
+
+.parallax>.layer>.overlayer {
+    background: linear-gradient(to top, rgba(83, 0, 0, 0.1), rgba(255, 85, 85, 0.1));
+    width: 100%;
+    height: 100%;
+}
+
+.foothider {
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    top: 100vh;
+    width: 100vw;
+    height: 3em;
+    transform: translate(0, -100%);
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.9));
+}
+
+/* Gallery */
+.section#gallery {
+    min-height: 50vh;
+}
+
+.card-list {
+    display: flex;
+    padding: 3rem;
+    overflow-x: scroll !important;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    transition: .2s;
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:hover~.card {
+    transform: translateX(130px);
+}
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: rgb(192, 3, 3);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* cardlist scrollbar */
+.card-list::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.card-list::-webkit-scrollbar-thumb {
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, .25), inset -2px -2px 2px rgba(0, 0, 0, .25);
+}
+
+.card-list::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
+}
+
+/* Description */
+#but-content_theme{
+    margin-top: 1em;
+}
+#tedxdescription {
+    min-height: 50vh;
+    width: 90%;
+    margin: auto;
+}
+
+#tedxdescription #about-row-logo {
+    margin: 2rem 0;
+}
+
+#tedxdescription #about-row-logo div {
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+#tedxdescription #about-row-logo {
+    justify-content: space-evenly;
+}
+
+#tedxdescription #about-row-logo div:hover,
+#tedxdescription #about-row-logo div.bord.activated {
+    filter: grayscale(0%);
+}
+
+#tedxdescription #about-row-logo div.bord.activated {
+    z-index: 10;
+    border: 1px solid darkred;
+}
+
+/*centre the logos here*/
+#about-logo-tedx, #about-logo-tedxajce {
+    padding-top: 7%;
+}
+#about-logo-theme{
+    padding-top: 8%;
+    margin: auto;
+}
+
+#tedxdescription .bord {
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    box-shadow: 0 1em 2rem #000;
+    padding: 1em 2em;
+    margin: 0 .25em;
+    border-radius: 16px;
+    border: 1px solid transparent
+}
+
+#tedxdescription .about-row-stuff p {
+    line-height: 2em;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+#tedxdescription .about-row-stuff {
+    margin-top: 2rem;
+}
+
+/* Speaker card*/
+#team{
+    min-height: 0;
+    margin-bottom: 2em;
+    margin: 0;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+}
+div.team{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.teamcard {
+    border-radius: 1em;
+    background: #fff2;
+    padding: .3em .3em;
+    margin: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 20dpx rgba(0, 0, 0, .5);
+    transition: 0.3s ease-out;
+}
+.teamcard img{
+    height: 150px;
+    border-radius: 1em;
+    box-shadow: 0 5px 5px 2px rgba(0,0,0,0.5) inset;
+    image-rendering: optimizeSpeed;
+}
+.teamcard h6{
+    margin-top: 1em;
+}
+.teamcard > *{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* footer */
+
+#myfooter{
+    padding: 5em 0;
+    background-image: url('./img/footer-image.jpg');
+    image-rendering: optimizeSpeed;
+}
+#myfooter > .container .row{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#myfooter .row div a img{
+    width:100%;
+}
+#myfooter .row > div{
+    text-align: center;
+    padding: 1em;
+}
+#myfooter ul{
+    list-style-type: none;
+    padding: 0 !important;
+    margin-top: 1em;
+}
+#myfooter a{
+    color: white;
+}
+/* #myfooter .mainlogo, #myfooter .collegelogo{
+    width:50%;
+    margin: 1em;
+}
+#myfooter .row > *{
+    margin: 0 1em;
+}
+.fa {
+    padding-top: 3%;
+}
+*/
+#connectlist li{
+    list-style: none; margin:1em;
+} 
+#contacts li{
+    text-align: left;
+    margin-left: 15%;
+}
+#contacts a{
+    text-decoration: none !important;
+}
+#contacts a:hover{
+    text-decoration: underline !important;
+}
+/* gallery */
+.section#gallery{
+    min-height: 0;
+}
+#gallery ul.images {
+    margin: auto;
+    margin-left: 0;
+    box-shadow: 3px 8px 20px 0 rgba(46, 61, 73, 0.23);
+    border-radius: 5px;
+    white-space: nowrap;
+    padding: 10px;
+    width: 90%;
+    min-height: 0;
+    overflow-x: auto;
+    background-color: #fff2;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+#gallery ul::-webkit-scrollbar {
+    display: none;
+}
+#gallery ul.images li{
+    display: inline;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+}
+#gallery img {
+    width: auto;
+    height: 150px;
+    image-rendering:optimizeSpeed;
+}
+.date{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    margin-right: 1%;
+    font-size: x-large;
+    line-height: 15px;
+    padding: 5px 5px 0px 5px;
+    font-family: 'Fredoka One', cursive;
+}
+.content-2018, .content-2019{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/*Speaker panels*/
+.section#speakers{
+    display: absolute;
+    background-image: url("img/bgspeaker.png");
+    background-size: cover;
+    border-radius: 8px;
+    background-position: center;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    min-height: 115vh !important;
+}
+.section#speakers .containerspeaker{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+@media screen and (max-width: 600px) {
+    .section#speakers {
+        background-image: url("img/BG.png");
+        background-position-y: top;
+    }
+    .imgBx{
+        left: 2 !important;
+    }
+    .speakercard{
+        margin-top: 10px !important;
+    }
+    .speakercard:hover{
+        transition-delay: 1s;
+    }
+}
+
+.section#speakers .containerspeaker .speakercard{
+    position: relative;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 260px;
+    height: 220px;
+    background: #201c29;
+    margin: 80px 30px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s 1s ease-in-out;
+}
+.section#speakers .containerspeaker .speakercard:hover{
+    height: 535px;
+    transition: 1s ease-in-out;
+}
+.section#speakers .containerspeaker .speakercard .imgBx{
+    position: relative;
+    width: 220px;
+    height: 220px;
+    top: -50px;
+    left: 5px;
+    align-items: center;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.section#speakers .containerspeaker .speakercard .imgBx h4{
+    text-align: center;
+}
+.section#speakers .containerspeaker .speakercard .imgBx img{
+    max-width: 100%;
+    border-radius: 4px;
+}
+.section#speakers .containerspeaker .speakercard .content{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s 0.8s ease-in-out;
+}
+.section#speakers .containerspeaker .speakercard:hover .content{
+    opacity: 1;
+    visibility: visible;
+    margin-top: -25px;
+    transition-delay: 0.7s ;
+}
+/* Newsletter */
+.section#subscribe {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    min-height: 40vh !important;
+}
+
+.news-head {
+    text-align: center;
+    margin: 0;
+}
+
+.email-entry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+}
+
+.submitemail {
+    border-radius: 40px;
+    margin-right: 3px;
+    width: 24em;
+    height: 2.5em;
+    border: 1px solid white;
+}
+
+.submitbtn {
+    border-radius: 40px;
+    
+    height: 2.5em;
+    border-color: transparent;
+}
+.submitbtn:hover{
+    color: red;
+}
+/* Buy-Tickets */
+.section#buy-tickets {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 40vh;
+}
+
+#paymentPanel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (max-width:600px) {
+    #paymentPanel{
+        flex-direction: column;
+    }
+    .payment-card{
+        width: auto !important;
+    }
+    #soldout{
+        margin-top: 100% !important;
+    }
+}
+#paybutton{
+    background-color: red !important;
+}
+.section#buy-tickets .payment-card {
+    border: none;
+    width: 30%;
+    border-radius: 10px !important;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
+    margin: 2%;
+    height: fit-content;
+}
+.card-body{
+    background-image: url("img/BG.png");
+    background-size: cover;
+    background-position: center;
+    background-position-y: top;
+    border-radius: 10px;
+}
+#buy-tickets .payment-card:hover {
+    box-shadow: 0 10px 35px 0 rgba(255, 0, 0, 0.5);
+}
+
+#buy-tickets .card hr {
+    margin: 25px 0;
+}
+
+#buy-tickets .payment-card .card-title {
+    margin: 10px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+#buy-tickets .payment-card .card-price {
+    font-size: 48px;
+    margin: 0;
+    color: white;
+}
+
+#buy-tickets .payment-card ul li {
+    margin-bottom: 20px;
+    color: white;
+}
+.regDetails{
+    width: 70%;
+    color: white;
+    font-family: 'DM Mono', monospace;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+/*Schedule*/
+#schedule {
+    display: flex;
+    flex-direction: column;
+}
+#download{
+    margin: auto;
+    color: white;
+}
+#download button{
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+#download button:hover{
+    box-shadow: 0 5px 20px 0 rgba(255, 255, 255, 0.2);
+}
