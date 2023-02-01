@@ -299,7 +299,9 @@
         <div class="text-center" id="volunteer-call" style="margin-top: 80px; margin-bottom: 80px;">
             <h1 class="container">Volunteer call</h1>
             <h4>Open till 11:59PM, 08 February, 2023</h4>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc_XHG3xJeTkO_9bK1tazRXa33RMENl8tQBIwEsqSVko-vWLQ/viewform?embedded=true" width="80%" height="640px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <br>
+            <h5>To know more about team details & description, click <span style="color: red;"><a href="https://drive.google.com/file/d/1zM0tjfjC5ZRqkz0BSHi3pY6zKG-kagjF/view" style="text-decoration:none; cursor:pointer;">here</a></span></h5>
+            <iframe id="frame" src="https://docs.google.com/forms/d/e/1FAIpQLSc_XHG3xJeTkO_9bK1tazRXa33RMENl8tQBIwEsqSVko-vWLQ/viewform?embedded=true" width="80%" height="640px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
         <!-- <div class="section" id="buy-tickets" style="margin-top: 50px;">
             <h1 class="container">Registration</h1>
@@ -412,8 +414,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
-                        <a href="#"><img class="mainlogo" src="./img/logo.png"></a>
-                        <a href="http://ajce.in" target="__blank"><img class="img-fluid  collegelogo" src="./img/collegelogo.png"></a>
+                        <div class="row"><a href="#"><img class="mainlogo" src="./img/logo.png"></a></div>
+                        <div class="row"><a href="http://ajce.in" target="__blank"><img class="img-fluid  collegelogo" style="padding-top: 2em;" src="./img/collegelogo.png"></a></div>
                     </div>
                     <div id="contacts" class="col-sm-3">
                         <h5 class="footerheading">CONTACT</h5>
@@ -470,6 +472,12 @@
         </footer>
     </div>
     <script>
+        var iframe = document.getElementById('frame');
+
+        iframe.addEventListener('load', function() {
+            console.log(iframe.contentDocument.querySelector('form + div'))
+        })
+
         var layers = document.getElementsByClassName('layer');
         var speeds = []
 
