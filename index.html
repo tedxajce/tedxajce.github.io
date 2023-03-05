@@ -473,11 +473,11 @@
         </footer>
     </div>
     <script>
-        var iframe = document.getElementById('frame');
+        // var iframe = document.getElementById('frame');
 
-        iframe.addEventListener('load', function() {
-            console.log(iframe.contentDocument.querySelector('form + div'))
-        })
+        // iframe.addEventListener('load', function() {
+        //     console.log(iframe.contentDocument.querySelector('form + div'))
+        // })
 
         var layers = document.getElementsByClassName('layer');
         var speeds = []
@@ -493,18 +493,18 @@
         // image fetches
         for (var layer of layers) {
             switch (layer.id) {
-                case "layer0": layer.style.backgroundImage = "url('./img/parallaxLayers/0.png')"; break;
-                case "layer1": layer.style.backgroundImage = "url('./img/parallaxLayers/1.png')"; break;
-                case "layer2": layer.style.backgroundImage = "url('./img/parallaxLayers/2.png')"; break;
-                case "layer3": layer.style.backgroundImage = "url('./img/parallaxLayers/3.png')"; break;
-                case "layer4": layer.style.backgroundImage = "url('./img/parallaxLayers/4.png')"; break;
-                case "layer5": layer.style.backgroundImage = "url('./img/parallaxLayers/5.png')"; break;
-                case "layer6": layer.style.backgroundImage = "url('./img/parallaxLayers/6.png')"; break;
-                case "layer7": layer.style.backgroundImage = "url('./img/parallaxLayers/7.png')"; break;
-                case "layer8": layer.style.backgroundImage = "url('./img/parallaxLayers/8.png')"; break;
-                case "layer9": layer.style.backgroundImage = "url('./img/parallaxLayers/9.png')"; break;
-                case "layer10": layer.style.backgroundImage = "url('./img/parallaxLayers/10.png')"; break;
-                case "layer11": layer.style.backgroundImage = "url('./img/parallaxLayers/11.png')"; break;
+                case "layer0": layer.style.backgroundImage = "url('img/parallaxLayers/0.png')"; break;
+                case "layer1": layer.style.backgroundImage = "url('img/parallaxLayers/1.png')"; break;
+                case "layer2": layer.style.backgroundImage = "url('img/parallaxLayers/2.png')"; break;
+                case "layer3": layer.style.backgroundImage = "url('img/parallaxLayers/3.png')"; break;
+                case "layer4": layer.style.backgroundImage = "url('img/parallaxLayers/4.png')"; break;
+                case "layer5": layer.style.backgroundImage = "url('img/parallaxLayers/5.png')"; break;
+                case "layer6": layer.style.backgroundImage = "url('img/parallaxLayers/6.png')"; break;
+                case "layer7": layer.style.backgroundImage = "url('img/parallaxLayers/7.png')"; break;
+                case "layer8": layer.style.backgroundImage = "url('img/parallaxLayers/8.png')"; break;
+                case "layer9": layer.style.backgroundImage = "url('img/parallaxLayers/9.png')"; break;
+                case "layer10": layer.style.backgroundImage = "url('img/parallaxLayers/10.png')"; break;
+                case "layer11": layer.style.backgroundImage = "url('img/parallaxLayers/11.png')"; break;
             }
             speeds.push(Number.parseInt(layer.getAttribute('speed')));
         }
