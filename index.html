@@ -2,548 +2,1021 @@
 <html lang="en">
 
 <head>
-    <!-- preload -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-    <script>
-    $(window).load(function() {
-		// Animate loader off screen
-		$(".se-pre-con").fadeOut("slow");;
-  	});
-    </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEDxAJCE</title>
-    <link rel="shortcut icon" href="img/favicon_io/favicon.ico" type="image/ico">
-    <!--Button font-->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel="stylesheet">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
-    <!-- poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <!-- title font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEDxAJCE - 2023</title>
+  <link rel="shortcut icon" href="assets/images/favicon_io/favicon-32x32.png"
+    type="assets/images/favicon_io/favicon-32x32.png" />
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+    rel="stylesheet" />
+
+  <!-- animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+
+  <!-- magnific popup -->
+  <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- slik carousel -->
+  <link rel="stylesheet" href="assets/css/slick-theme.css" />
+  <link rel="stylesheet" href="assets/css/slick.css" />
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+  <!-- css -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-    <!--div class="se-pre-con"></div-->
-    <div class="maindiv">
-        <div class="section" id="frontpage">
-            <div class="parallax">
-                <div class="layer" id="layer0" speed="0"><div class="overlayer"></div></div>
-                <div class="layer" id="layer1" speed="14"><div class="overlayer"></div></div>
-                <div class="layer" id="layer2" speed="27"><div class="overlayer"></div></div>
-                <div class="layer" id="layer3" speed="39"><div class="overlayer"></div></div>
-                <div class="layer" id="layer4" speed="50"><div class="overlayer"></div></div>
-                <div class="layer" id="layer5" speed="60"><div class="overlayer"></div></div>
-                <div class="layer" id="layer6" speed="69"><div class="overlayer"></div></div>
-                <div class="layer" id="layer7" speed="77"><div class="overlayer"></div></div>
-                <div class="layer" id="layer8" speed="84"><div class="overlayer"></div></div>
-                <div class="layer" id="layer9" speed="90"><div class="overlayer"></div></div>
-                <div class="layer" id="layer10" speed="95"><div class="overlayer"></div></div>
-                <div class="layer" id="layer11" speed="100"><div class="overlayer"></div></div>
-                <div class="layer contentlayer" id="layer" speed="69">
-                    <main class="absoluteCenter">
-                        <h1>TEDxAJCE 2023</h1>
-                        <!--<h4 style="background-color: #fff2;">28th August 2021 at 10:00 am</h4>-->
-                        <h4>Coming soon...</h4>
-                        <br>
-                        <div>
-                            <br>
-                            <br><h1 id="countdown"></h1>
-                        </div>
-                        <br>
-                        
-                        <!-- <div class="box-3" onclick="redirectButton()">
-                            <div class="btn btn-three">
-                                <a onclick="redirectButton()">Volunteer Call</a>
-                            </div>
-                        </div> -->
-                    </main>
-                    <div class="overlayer"></div>
-                </div>
-            </div>
-            <div class="foothider"></div>
-        </div>
-        <div class="section" id="tedxdescription" style="margin-bottom: 50px;">
-            <div class="container">
-                <!-- <div class="row justify-content-center">
-                    <h4>ABOUT TEDx</h4>
-                </div> -->
-                <div id="about-row-logo" class="row">
-                    <!-- <div id='but_content-theme' class="col-4 col-md-2 bord activated"
-                        onclick="showAbout('content-theme')">
-                        <img id="about-logo-theme" class="img-fluid" src="./img/Tracing the Roots.png">
-                    </div> -->
-                    <div id='but_content-ted' class="col-4 col-md-2 bord activated" onclick="showAbout('content-ted')">
-                        <img id="about-logo-ted" class="img-fluid" src="./img/ted-logo.png">
-                    </div>
-                    <div id='but_content-tedx' class="col-4 col-md-2 bord" onclick="showAbout('content-tedx')">
-                        <img id="about-logo-tedx" class="img-fluid" src="./img/tedx-white.png">
-                    </div>
-                    <div id='but_content-tedxajce' class="col-4 col-md-2  bord" onclick="showAbout('content-tedxajce')">
-                        <img id="about-logo-tedxajce" class="img-fluid" src="./img/ajce-logo-white.png">
-                    </div>
-                </div>
-                <div class="about-row-stuff row">
-                    <!-- <div id="content-container" >
-                        <p id="content-theme" class="about-content text-center">
-                            Our theme is ‘Tracing the Roots’. Our life is filled with choices, they play a major role in shaping us as a person. Each decision we make will have an impact, big or small, on us and 
-                            everything around us. This in some way contributes to shaping us and everything else into into how it is today. As we travel the journey called life, we have come across several crossroads 
-                            called choices and each time we made our decision of which path to travel. Among all these choices there are some decisions that led us to key turning points in our lives, those which had a major role in making us the person we have become. 
-                            When we trace back all these paths or roots, we see how they’ve shaped us into who we are today. Hence, tracing the roots is all about a retrospective into the way life is, or could have been.
-                        </p>
-                    </div> -->
-                    <div id="content-container">
-                        <p id="content-ted" class="about-content text-center">
-                            “By spreading ideas worthy enough to be shared, the power of inspiration and change is
-                            created”. A global community striving towards spreading ideas from every discipline and
-                            culture, that is TED in a nutshell. It is a non-profit media organisation that helps people
-                            get the deeper meaning of ideas, attitudes, and the world itself. From its origin in 1984,
-                            TED talks have touched people’s heart. It is continued to be watched all around the world.
-                            The impact a TED event creates is unmatched. TED conferences and events inspire and motivate
-                            people towards becoming a better version of themselves. Read More <a href="https://www.ted.com/">Here</a>
-                        </p>
-                        <p id="content-tedx" class="about-content text-center">
-                            TEDx events are independently organized, and licensed TED-like events organized by
-                            enthusiastic communities and organizers in line with TED’s mission ‘ideas worth spreading’.
-                            Its goal is to create a unique gathering in the community that will unleash new ideas,
-                            inspire, and inform. It provides a platform where ideas are shared openly, and connections
-                            are made through conversation. It strengthens bonds among the community through discussions
-                            and promotes harmony. The event screens TED Talks videos and invites live speakers to drive
-                            ideation and start conversations. TEDx has reached a milestone of 100,000 talks and are now
-                            viewed more than 3 billion times annually. Read More <a href="https://www.ted.com/about/programs-initiatives/tedx-program">Here</a>
-                        </p>
-                        <p id="content-tedxajce" class="about-content text-center">
-                            Established in 2017, TEDxAJCE is an independently organized TEDx event with the goal of
-                            catering the global experience of TED to our community at Amal Jyothi College of
-                            Engineering, Kanjirapally. We yearn to showcase new perspectives and ideas of speakers from
-                            all walks of life. TEDxAJCE has an enthusiastic community of students, professionals, and
-                            the community around it, open to ideas that expand their world view. Our aim is to open a
-                            window to a world of opportunities and encourage them to seek them out and pay it forward.
-                            Read More <a href="https://www.ted.com/tedx/events/53408">Here</a>
-                        </p>
-                    </div>
-                </div>
-                <script>
-                    function showAbout(id, im = undefined) {
-                        for (var element of document.getElementsByClassName('about-content')) {
-                            if (element.id == id) element.style.display = "block";
-                            else element.style.display = "none";
-                        }
-                        for (var element of document.getElementsByClassName('bord')) {
-                            if (element.id == 'but_' + id) element.classList.add('activated')
-                            else element.classList.remove('activated')
-                        }
-                    }
-                    showAbout('content-ted')
-                </script>
-            </div>
-        </div>
-        <div class="section" id="speakers">
-            <h1 class="container">Our Previous Speakers</h1>
-            <div class="containerspeaker">
-                
-                <div class="speakercard">
-                    <div class="imgBx">
-                        <img src="img/avatars/speakers/1.jpg" alt="">
-                        <h4>Henna Jayanth</h4>
-                    </div>
-                    
-                    <div class="content">
-                        <p>A State Level Cricketer turned Race Car Driver. A model and an entrepreneur. The only woman in the Redbull Opinion Leadership Program from Kerala in motorsports. An inspiration for countless youngsters out there.</p>    
-                    </div>
-                    <h4></h4>
-                </div>
-                <div class="speakercard">
-                    <div class="imgBx">
-                        <img src="img/avatars/speakers/2.jpg" alt="">
-                        <h4>Renjith R Panathur</h4>
-                    </div>
-                    <div class="content">
-                        <p>“I decided to fight and realise my dream," these are the words of a young man who fought all odds to reach where he is today. From working as a watchman to becoming an IIM professor, this man turned his life around purely through his hard work and dedication.</p>                        
-                    </div>
-                </div>
-                <div class="speakercard">
-                    <div class="imgBx">
-                        <img src="img/avatars/speakers/3.jpeg" alt="">
-                        <h4>Stephen Devassy</h4>
-                    </div>
-                    <div class="content">
-                        <p>Musician, composer, arranger and music director, this man is indeed one with many talents. Magic on his fingers and music in his heart, he will leave you elated and transport you to that mesmerizing world.</p>    
-                    </div>
-                </div>
-                <div class="speakercard">
-                    <div class="imgBx">
-                        <img src="img/avatars/speakers/4.jpeg" alt="">
-                        <h4>Hani Musthafa</h4>
-                    </div>
-                    <div class="content">
-                        <p>The face of Flywheel - India’s favourite auto show. He is the only person from south India to become one among the six jurors from India for the World Car Awards. His love for wheels culminated in the creation of the Flywheel team.</p>    
-                    </div>
-                </div>
-                <div class="speakercard">
-                    <div class="imgBx">
-                        <img src="img/avatars/speakers/5.jpeg" alt="">
-                        <h4>Shailaja Teacher</h4>
-                    </div>
-                    <div class="content">
-                        <p>Her impeccable approach to counter various virus surges earned global recognition and was honoured for her efforts to fight the covid pandemic by the UN and lauded the world over. She is that one person who continuous to show us to find the light even in the darkest of times.</p>    
-                    </div>
-                </div>
-                <div class="speakercard">
-                    <div class="imgBx">
-                        <img src="img/avatars/speakers/6.jpg" alt="">
-                        <h4>Abeesh P Dominic</h4>
-                    </div>
-                    <div class="content">
-                        <p>Body builder by profession, this man earned a place for him in he several world records by breaking 122 coconuts under 1 minute. He is the perfect example of how a human body can do incredible things with proper training.</p>                        
-                    </div>
-                </div>
-                <div class="speakercard">
-                    <div class="imgBx">
-                        <img src="img/avatars/speakers/7.JPG" alt="">
-                        <h4>VS Sabu</h4>
-                    </div>
-                    <div class="content">
-                        <p>From making the first autonomous robot in the country to his latest creation, a Tesla coil, he has been inspiring us for more than three decades. He has shown us degrees don’t build things but passion does.</p>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-        <div class="section" id="gallery">
-            <h1 class="container">Gallery</h1>
-            <div class="content-2018">
-                <div class="date">
-                    <p>2</p><p>0</p><p>1</p><p>8</p>
-                </div>
-                    <ul class="images 2018">
-                        <li><img src="./img/2018/(1).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(2).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(3).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(4).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(5).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(6).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(7).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(8).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(9).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(10).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(11).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(12).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(13).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(14).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(15).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(16).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(17).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(18).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(19).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(20).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(21).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(22).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(23).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(24).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(25).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(26).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(27).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(28).JPG" alt="" loading="lazy"></img></li>
-                        <li><img src="./img/2018/(29).JPG" alt="" loading="lazy"></img></li>
-                    </ul>
-            </div>
-            
-            <br>
-            <div class="content-2019">
-                <div class="date">
-                    <p>2</p><p>0</p><p>1</p><p>9</p>
-                </div>
-                    <ul class="images 2019">
-                        <li><img src="./img/2019/(1).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(2).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(3).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(4).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(5).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(6).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(7).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(8).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(9).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(10).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(11).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(12).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(13).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(14).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(15).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(16).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(17).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(18).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(19).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(20).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(21).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(22).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(23).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(24).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(25).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(26).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(27).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(28).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(29).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(30).JPG" loading="lazy" alt=""></img></li>
-                        <li><img src="./img/2019/(31).JPG" loading="lazy" alt=""></img></li>
-                    </ul>
-            </div>
-        </div>
-        <!-- <div class="text-center" id="volunteer-call" style="margin-top: 80px; margin-bottom: 80px;">
-            <h1 class="container">Volunteer call</h1>
-            <h4>Open till 11:59PM, 08 February, 2023</h4>
-            <br>
-            <h5>To know more about team details & description, click <span style="color: red;"><a href="https://drive.google.com/file/d/1zM0tjfjC5ZRqkz0BSHi3pY6zKG-kagjF/view" style="text-decoration:none; cursor:pointer;">here</a></span></h5>
-            <h5>If you are not able to view the form below, click <span style="color: red;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc_XHG3xJeTkO_9bK1tazRXa33RMENl8tQBIwEsqSVko-vWLQ/viewform?embedded=true" style="text-decoration:none; cursor:pointer;">here</a></span></h5>
-            <iframe id="frame" src="https://docs.google.com/forms/d/e/1FAIpQLSc_XHG3xJeTkO_9bK1tazRXa33RMENl8tQBIwEsqSVko-vWLQ/viewform?embedded=true" width="80%" height="640px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div> -->
-        <!-- <div class="section" id="buy-tickets" style="margin-top: 50px;">
-            <h1 class="container">Registration</h1>
-            <img id="soldout" src="img/soldout.png" style="position: absolute; width: 15em;z-index: 10; align-self:center; margin-top: 30%;">
-            <div style="filter: blur(3px);">
-                <p style="text-align:center; color: greenyellow;">Buy the event tickets at an affordable price.</p>
-                <div class="regDetails">
-                    <p>We at <span style="color: red;">TEDxAJCE</span> are determined at leaving a lasting impression in every person we reach with our virtues and vision. So in our third edition, we decided to go the route that would be the hardest and the most redeeming to tread. This year, our event would be a <span style="color: red;">TEDx</span> experience tailored to be eco friendly and sustainable as an initiative to tackle the ill effects of climate change. To leave this planet in a better shape than we inherited and to do so, we need your involvement. By being part of our curated TEDxAJCE experience and choosing the greener option. Our event will have two tickets, and two unique experiences.</p>
-                </div>
-                <div id="paymentPanel">                   
-                    
-                        <div class="payment-card">
-                            
-                                <div class="card-body">
-                                    <h4 class="text-center" style="color: red;">RED TICKET</h4>
-                                    <h6 class="card-price text-center">Rs. 250</h6>
-                                    <p style="width: fit-content; margin: auto;">(Early bird price over)</p><hr>
-                                    <ul class="fa-ul" style="list-style-type: none">
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to all talks</li>
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to performances</li>
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span>A chance to interact with our distinguished speakers</li>
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span>Activities that add value to your TEDx experience</li>
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span>Exclusive lounges to network and connect with fellow attendees</li>
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span>Social lounges to interact with individuals who share your interests</li>
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span>TEDx certificate of participation</li>
-                                        <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span><b>A Sapling planted in your name. Its location will be geo tagged and sent to you.</b></li>
-                                        <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span><b>Goodies and coupons to appreciate your contribution for a good cause</b></li>
-                                    </ul>
-                                    <hr> -->
-                                    <!--<div class="text-center"><form><script  id="paybutton" src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_HnPfx0zET13h0K" async> </script> </form></div>-->
-                                <!-- </div>
-                            
-                        </div>
-                    
-                        <div class="payment-card">
-                            
-                                <div class="card-body">
-                                    <h4 class="text-center" style="color: green;">GREEN TICKET</h4>
-                                    <h6 class="card-price text-center">Rs. 300</h6>
-                                    <p style="width: fit-content; margin: auto;">(Early bird price over)</p><hr>
-                                    <ul class="fa-ul">
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to all talks</li>
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span>Access to performances</li>
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span>A chance to interact with our distinguished speakers</li>
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span>Activities that add value to your TEDx experience</li>
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span>Exclusive lounges to network and connect with fellow attendees</li>
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span>Social lounges to interact with individuals who share your interests</li>
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span>A Special TEDx participation certificate</li>
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span><b>A Sapling planted in your name. Its location will be geo tagged and sent to you.</b></li>
-                                        <li><span class="fa-li"><i class="fa fa-check"></i></span><b>Goodies and coupons to appreciate your contribution for a good cause</b></li>
-                                    </ul>
-                                    <hr> -->
-                                    <!--<div class="text-center"><form><script id="paybutton" src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_HnPcffW9j4X4H1" async> </script> </form></div>-->
-                                <!-- </div>
-                                
-                        </div>
-                    </div>
-                </div>
-        </div> -->
-        <!-- <div class="section" id="team">
-            <h1 class="container">Our Executive Team</h1>
-            <div class="container-fluid">
-                <div class="team">
-                    <div class="teamcard"><img class="img" loading="lazy" src="img/avatars/manojtjoy.jpg" alt="xx"><h6>Manoj T Joy</h6><h8>Faculty Coordinator</h8></div>
-                    <div class="teamcard"><img class="img" loading="lazy" src="img/avatars/adithyakr.jpeg" alt="xx"><h6>Adithya Krishnan</h6><h8>Organiser</h8></div>
-                    <div class="teamcard"><img class="img" loading="lazy" src="img/avatars/alan.jpg" alt="xx"><h6>Alan James</h6><h8>Co-organiser</h8></div>
-                </div>
-                <div class="team">
-                    <div class="teamcard"><img class="img" loading="lazy" src="img/avatars/akhil.jpeg" alt="xx"><h6>Akhil Hakkim</h6><h8>Marketing Lead</h8></div>
-                    <div class="teamcard"><img class="img" loading="lazy" src="img/avatars/sara.jpeg" alt="xx"><h6>Sara Sara Manu</h6><h8>Editorial Lead</h8></div>
-                    <div class="teamcard"><img class="img" loading="lazy" src="img/avatars/libin.jpeg" alt="xx"><h6>Libin George</h6><h8>Production Lead</h8></div>
-                    <div class="teamcard"><img class="img" loading="lazy" src="img/avatars/farzeen.jpg" alt="xx"><h6>Farzeen Firoz</h6><h8>Media Lead</h8></div>
-                    <div class="teamcard"><img class="img" loading="lazy" src="img/avatars/livya.jpg" alt="xx"><h6>Livya Liffy</h6><h8>Curation Lead</h8></div>
-                    <div class="teamcard"><img class="img" loading="lazy" src="img/avatars/zameel.jpg" alt="xx"><h6>Zameel Hassan</h6><h8>Website Lead</h8></div>
-                </div>
-            </div>
-        </div> -->
-        <div class="section" id="subscribe">
-            <!-- Begin Mailchimp Signup Form -->
-            <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-            <div class="news-head">
-                <h1 class="container">NEWSLETTER</h1>
-                <p>Subscribe to our newsletter to recieve frequent updates</p>
-            </div>
+  <div class="body-wrap dark-version">
+    <!-- header area start -->
+    <header class="header-area">
+      <nav class="header-nav navbar fixed-top navbar-expand-lg custom-navbar bg-nav position-absolute w-100">
+        <div class="container header-nav-menu">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo/logo.png" alt="Header Logo" />
+          </a>
 
-            <div id="mc_embed_signup">
-                <form
-                    action="https://gmail.us5.list-manage.com/subscribe/post?u=25eadb8d4577be71ebca37e28&amp;id=04d05a5a8c"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-                    target="_blank" novalidate>
-
-                    <div id="mc_embed_signup_scroll">
-                        <div class="email-entry">
-                            <input type="email" value="" name="EMAIL" class="submitemail" id="mce-EMAIL"
-                                placeholder=" Email address" required>
-                            <div class="clear">
-                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                                    class="submitbtn">
-                            </div>
-                        </div>
-                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                                name="b_25eadb8d4577be71ebca37e28_04d05a5a8c" tabindex="-1" value=""></div>
+          <div class="collapse navbar-collapse d-none d-lg-block">
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item">
+                <a href="index.html#" class="nav-link py-3">Homepage</a>
+                <div class="drop-down">
+                  <div class="row drop-down-wrap g-0">
+                    <div class="col-7">
+                      <ul class="drop-down-menu">
+                        <li class="dropdown-item d-flex align-items-center">
+                          <a href="https://tedxjace.in" class="item-content">
+                            <h5 class="item-title">TEDxAJCE 2023</h5>
+                            <span class="item-sub">Event Overview</span>
+                          </a>
+                        </li>
+                        <li class="dropdown-item d-flex align-items-center">
+                          <a href="https://tedxajce.in/tedx2021" class="item-content">
+                            <h5 class="item-title">TEDxAJCE 2021</h5>
+                            <span class="item-sub">Event Overview</span>
+                          </a>
+                        </li>
+                        <li class="dropdown-item d-flex align-items-center">
+                          <a href="https://tedxajce.in/tedx2019" class="item-content">
+                            <h5 class="item-title">TEDxAJCE 2019</h5>
+                            <span class="item-sub">Event Overview</span>
+                          </a>
+                        </li>
+                        <li class="dropdown-item d-flex align-items-center">
+                          <a href="https://tedxajce.in/tedx2018" class="item-content">
+                            <h5 class="item-title">TEDxAJCE 2018</h5>
+                            <span class="item-sub">Event Overview</span>
+                          </a>
+                        </li>
+                      </ul>
                     </div>
-                </form>
-            </div>
-            <!--End mc_embed_signup-->
-        </div>
-        <footer id="myfooter" class="page-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="row"><a href="#"><img class="mainlogo" src="./img/logo.png"></a></div>
-                        <div class="row"><a href="http://ajce.in" target="__blank"><img class="img-fluid  collegelogo" style="padding-top: 2em;" src="./img/collegelogo.png"></a></div>
+                    <div class="col-5">
+                      <div class="dropdown-thumb position-relative" style="
+                            background-image: url(assets/images/banner/contact-bg.png);
+                          ">
+                        <a class="dropdown-sub position-absolute" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                          href="index.html#">Register Now</a>
+                      </div>
                     </div>
-                    <div id="contacts" class="col-sm-3">
-                        <h5 class="footerheading">CONTACT</h5>
-                        <ul>
-                            <li class="details"><b>Adithya Krishnan R</b><br><a href="callto:+919745493845">Phone: +91 97454 93845<br><a href="mailto:adithyakrishnanr2023@ch.ajce.in">adithyakrishnanr2023@ch.ajce.in</a></li>
-                        </ul>
-                        <ul>
-                            <li class="details"><b>Alan James</b><br><a href="callto:+919811334463">Phone: +91 98113 34463<br><a href="mailto:alanjames2023@cs.ajce.in">alanjames2023@cs.ajce.in</a></li>
-                        </ul>
-                    </div>
-                    <div id="links" class="col-sm-3">
-                        <h5 class="footerheading">LINKS</h5>
-                        <ul id="linkslist" class="detail-block">
-                            <li class="details">
-                                <a href="#tedxdescription">About</a>
-                            </li>
-                            <!-- <li class="details">
-                                <a href="#section-speakers">Speakers</a>
-                            </li> -->
-                            <li class="details">
-                                <a href="#countdown">Schedule</a>
-                            </li>
-                            <!-- <li class="details">
-                                <a href="#section-venue">Route Map</a>
-                            </li> -->
-                            <li class="details">
-                                <a href="#team">Team</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3">
-                        <h5 class="footerheading">STAY CONNECTED</h5>
-                        <ul id="connectlist" class="detail-block">
-                            <!--<li class="details">
-                                <a href="https://www.facebook.com/tedxajce"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                                    </svg></a>
-                            </li>-->
-                            <li class="details">
-                                <a href="https://www.instagram.com/tedxajce"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                                    </svg></a>
-                            </li>
-                            <li class="details">
-                                <a href="https://www.flickr.com/photos/165706544@N05/"><i class="fa fa-flickr" style="font-size:2em"></i></a>
-                            </li>
-                            <!--<li class="details">
-                                <a href="#">Twitter</a>
-                            </li>-->
-                        </ul>
-                    </div>
+                  </div>
                 </div>
+              </li>
+              <li class="nav-item">
+                <a href="index.html#blog-sec" class="nav-link py-3">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html#talks" class="nav-link py-3">Talks</a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html#speakers" class="nav-link py-3">Speakers</a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html#faq-sec" class="nav-link py-3">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html#gallery" class="nav-link py-3">Gallery</a>
+              </li>
+            </ul>
+            <div class="mode-and-button d-flex align-items-center">
+              <button class="header-btn custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Buy Tickets
+              </button>
             </div>
-        </footer>
+          </div>
+
+          <!-- mobile menu -->
+          <div class="mobile-view-header d-block d-lg-none d-flex gap-3 align-items-center">
+            <a class="border rounded-1 py-1 px-2 bg-light" data-bs-toggle="offcanvas" href="index.html#offcanvasExample"
+              role="button" aria-controls="offcanvasExample">
+              <span class="navbar-toggler-icon nav-toggler-icon"></span>
+            </a>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
+              <div class="offcanvas-header">
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/logo/logo.png" alt="Header Logo" />
+                </a>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="dropdown mt-3">
+                  <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                      <a href="index.html#" class="nav-link py-3">Homepage</a>
+                      <div class="drop-down">
+                        <div class="row drop-down-wrap g-0">
+                          <div class="col-7">
+                            <ul class="drop-down-menu">
+                              <li class="dropdown-item d-flex align-items-center">
+                                <a href="https://tedxajce.in" class="item-content">
+                                  <h5 class="item-title">TEDxAJCE 2023</h5>
+                                  <span class="item-sub">Event Overview</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-item d-flex align-items-center">
+                                <a href="https://tedxajce.in/tedx2021" class="item-content">
+                                  <h5 class="item-title">TEDxAJCE 2021</h5>
+                                  <span class="item-sub">Event Overview</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-item d-flex align-items-center">
+                                <a href="https://tedxajce.in/tedx2019" class="item-content">
+                                  <h5 class="item-title">TEDxAJCE 2019</h5>
+                                  <span class="item-sub">Event Overview</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-item d-flex align-items-center">
+                                <a href="https://tedxajce.in/tedx2018" class="item-content">
+                                  <h5 class="item-title">TEDxAJCE 2018</h5>
+                                  <span class="item-sub">Event Overview</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-5">
+                            <div class="dropdown-thumb position-relative" style="
+                                  background-image: url(assets/images/banner/home-conference-dropdown-bg.jpg);
+                                ">
+                              <span class="dropdown-sub position-absolute">Register Now</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a href="index.html#blog-sec" class="nav-link py-3">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="index.html#talks" class="nav-link py-3">Talks</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="index.html#speakers" class="nav-link py-3">Speakers</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="index.html#faq-sec" class="nav-link py-3">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="index.html#gallery" class="nav-link py-3">Gallery</a>
+                    </li>
+                  </ul>
+                  <br />
+                  <button class="header-btn custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Buy Tickets
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end mobile menu -->
+        </div>
+      </nav>
+
+      <!-- hero sec start -->
+      <section class="hero-sec" style="
+            background-image: url(assets/images/banner/home-background.jpg);
+          ">
+        <div class="hero-slider-wrap">
+          <div class="hero-slider-item overflow-hidden">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-8 col-md-6 order-md-1 order-2">
+                  <div class="slider-item-content-wrap">
+                    <div class="item-content">
+                      <h3 class="item-title1">
+                        An independently organized TEDx event
+                      </h3>
+                      <div class="button-group">
+                        <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          Register
+                        </button>
+                        <button class="custom-btn item-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                          Watch Video
+                        </button>
+                      </div>
+                      <img src="assets/images/dots/dots.png" alt="Shadow Image"
+                        class="dots-1 opacity-50 img-moving-anim2" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 order-md-2 order-1">
+                  <div class="item-image">
+                    <div class="img-1 img-moving-anim1">
+                      <img src="assets/images/banner-slider/2.jpg" alt="Event template" />
+                    </div>
+                    <div class="img-2 img-moving-anim2">
+                      <img src="assets/images/banner-slider/1.jpg" alt="Event template" />
+                    </div>
+                    <img src="assets/images/dots/dots2.png" alt="Shadow Image" class="dots-2 img-moving-anim3" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-slider-item overflow-hidden">
+            <div class="container position-relative">
+              <div class="row align-items-center slide-2">
+                <div class="text-center">
+                  <div class="slider-item-content-wrap">
+                    <div class="item-content2">
+                      <h3 class="item-title2">
+                        An independently organized TEDx event
+                      </h3>
+                      <div class="conference-video">
+                        <a href="index.html#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
+                            class="fa-solid fa-play"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dots">
+                <img src="assets/images/dots/dots2.png" alt="Shadow Image" class="dots-4 img-moving-anim2" />
+              </div>
+            </div>
+            <img src="assets/images/dots/dots5.png" alt="Shadow Image" class="dots-3 img-moving-anim3" />
+          </div>
+
+          <div class="hero-slider-item overflow-hidden">
+            <div class="container">
+              <div class="row align-items-center slide-3">
+                <div class="col-lg-8 col-md-6 order-md-1 order-2">
+                  <div class="slider-item-content-wrap">
+                    <div class="item-content">
+                      <h3 class="item-title1">
+                        An independently organized TEDx event
+                      </h3>
+                      <br />
+                      <div class="button-group">
+                        <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          Register
+                        </button>
+                        <button class="custom-btn item-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                          Watch Video
+                        </button>
+                      </div>
+                      <img src="assets/images/dots/dots.png" alt="Shadow Image" class="dots-1 img-moving-anim3" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 order-md-2 order-1">
+                  <div class="item-image">
+                    <div class="img-3 img-moving-anim1">
+                      <img src="assets/images/banner-slider/3.jpg" alt="Event template" />
+                    </div>
+                  </div>
+                  <img src="assets/images/dots/dots2.png" alt="Shadow Image" class="dots-5 img-moving-anim3" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- hero sec end -->
+    </header>
+    <!-- header area end -->
+
+    <!-- info sec start -->
+    <div class="info-sec">
+      <div class="container">
+        <div class="info-countdown" style="background-image: url(assets/images/banner/bg.png)">
+          <ul class="counter-box d-flex justify-content-around" data-countdown="2023/05/03"></ul>
+          <div class="dots img-moving-anim2">
+            <img src="assets/images/dots/dots3.png" alt="Shadow Image" />
+          </div>
+        </div>
+        <div class="information-area">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="600">
+              <div class="mail">
+                <div class="icon">
+                  <img src="assets/images/icon/mail.svg" alt="Mail" />
+                </div>
+                <a href="mailto:tedxajce@amaljyothi.ac.in" class="mail-link">tedxajce@amaljyothi.ac.in</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="800">
+              <div class="location">
+                <div class="icon">
+                  <img src="assets/images/icon/map-pin.svg" alt="Map" />
+                </div>
+                <a href="https://www.google.com/maps/place/Amal+Jyothi+College+of+Engineering/@9.5286371,76.8192296,17z/data=!3m1!4b1!4m6!3m5!1s0x3b063626ed32c771:0xff305e1affdbb4b4!8m2!3d9.5286318!4d76.8234568!16s%2Fm%2F0cpbjkz"
+                  class="location-link">Amal Jyothi College of Engineering</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1000">
+              <div class="number">
+                <div class="icon">
+                  <img src="assets/images/icon/phone.svg" alt="Phone" />
+                </div>
+                <a href="tel:+91 97454 93845" class="number-link">+91 97454 93845</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script>
-        // var iframe = document.getElementById('frame');
+    <!-- info sec end -->
+    <!-- blog sec start -->
+    <section id="blog-sec" class="blog-sec pt-0" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <div class="section-head col-xl-9 m-auto text-center mb-5">
+          <span class="label">About</span>
+        </div>
+        <div class="blog-cards-wrap zoom-gallery">
+          <div class="dots img-moving-anim1">
+            <img src="assets/images/dots/dots15.png" alt="Shadow Image" class="blog-dots-1" />
+          </div>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="800">
+              <div class="card h-100 border-0">
+                <a class="card-thumb item-thumb overflow-hidden" href="assets/images/brand/1.png">
+                  <img src="assets/images/brand/1.png" class="card-img-top" alt="image-not-found" />
+                  <span class="view">VIEW</span>
+                </a>
+                <div class="card-body">
+                  <span class="label">TED Events</span>
+                  <p class="card-desc">
+                    “By spreading ideas worthy enough to be shared, the power
+                    of inspiration and change is created”. A global community
+                    striving towards spreading ideas from every discipline and
+                    culture, that is TED in a nutshell. It is a non-profit
+                    media organisation that helps people get the deeper
+                    meaning of ideas, attitudes, and the world itself. From
+                    its origin in 1984, TED talks have touched people’s heart.
+                    It is continued to be watched all around the world. The
+                    impact a TED event creates is unmatched. TED conferences
+                    and events inspire and motivate people towards becoming a
+                    better version of themselves.
+                  </p>
+                  <a class="blog-btn" href="https://www.ted.com/">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="600">
+              <div class="card h-100 border-0">
+                <a class="card-thumb item-thumb overflow-hidden" href="assets/images/brand/2.png">
+                  <img src="assets/images/brand/2.png" class="card-img-top" alt="image-not-found" />
+                  <span class="view">VIEW</span>
+                </a>
+                <div class="card-body">
+                  <span class="label">TEDx Events</span>
+                  <p class="card-desc">
+                    TEDx events are independently organized, and licensed
+                    TED-like events organized by enthusiastic communities and
+                    organizers in line with TED’s mission ‘ideas worth
+                    spreading’. Its goal is to create a unique gathering in
+                    the community that will unleash new ideas, inspire, and
+                    inform. It provides a platform where ideas are shared
+                    openly, and connections are made through conversation. It
+                    strengthens bonds among the community through discussions
+                    and promotes harmony. The event screens TED Talks videos
+                    and invites live speakers to drive ideation and start
+                    conversations. TEDx has reached a milestone of 100,000
+                    talks and are now viewed more than 3 billion times
+                    annually.
+                  </p>
+                  <a class="blog-btn" href="https://www.ted.com/about/programs-initiatives/tedx-program">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="400">
+              <div class="card h-100 border-0 position-relative">
+                <a class="card-thumb item-thumb overflow-hidden" href="assets/images/brand/3.png">
+                  <img src="assets/images/brand/3.png" class="card-img-top" alt="image-not-found" />
+                  <span class="view">VIEW</span>
+                </a>
+                <div class="card-body">
+                  <span class="label">TEDx AJCE</span>
+                  <p class="card-desc">
+                    Aimed with the vision of catering the global experience of TED to our community
+                    at Amal Jyothi College of Engineering, Kanjirappally, TEDXAJCE is an independently 
+                    organized TEDX event that came into existence in 2018 to imbibe the spirit of 
+                    perceivance and inquisitiveness for all disciplines of life.
+                    TEDXAJCE has a vibrant culture of students and professionals, along with 
+                    social life flourishing all around in the laps of nature. 
+                    It aims to widen perspectives by welcoming the light of knowledge from all around
+                    the world, thus strengthening and empowering the community with incredible ideas
+                    from passionate minds.
+                  </p>
+                  <a class="blog-btn" href="https://www.ted.com/tedx/events/53408">Read More</a>
+                </div>
+                <img src="assets/images/dots/dots16.png" alt="Shadow Image" class="blog-dots-2 img-moving-anim1" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shape">
+        <img src="assets/images/shape/7.svg" alt="Shape" />
+      </div>
+    </section>
+    <!-- blog sec end -->
+    <div class="container">
+      <hr />
+    </div>
+    <!-- talks sec start -->
+    <section id="talks" class="about-sec">
+      <div class="container">
+        <div class="section-head col-xl-9 m-auto text-center mb-5">
+          <span class="label">Previous Talks</span>
+          <h1 class="title mb-4">
+            Experience our previous talks that caught eyes of a large audience
+          </h1>
+        </div>
+        <div class="about-items-wrap" data-aos="fade-right" data-aos-duration="1000">
+          <div class="row g-4">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
+              <div class="about-item">
+                <div class="item-thumb">
+                  <img src="assets/images/about/about1.png" alt="About Images" />
+                  <div class="item-content">
+                    <div class="content-title text-white">
+                      <span class="date">April, 2021</span>
+                      <h5 class="title">
+                        To be inspired is great, but to inspire is an honour |
+                        K K Shailaja | TEDxAJCE
+                      </h5>
+                    </div>
+                    <div class="about-video">
+                      <a class="video-btn1 popup-video" data-bs-toggle="modal" data-bs-target="#kkshailaja"
+                        href="https://youtu.be/6U7H1bQYPq8"><span><i class="fas fa-play"></i></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3" data-aos="fade-right" data-aos-duration="700">
+              <div class="about-item">
+                <div class="item-thumb">
+                  <img src="assets/images/about/about2.png" alt="About Images" />
+                  <div class="item-content text-white">
+                    <div class="content-title">
+                      <span class="date">July, 2019</span>
+                      <h5 class="title">
+                        A unique love story - Detours and me | Geetanjali
+                        Chopra | TEDxAJCE
+                      </h5>
+                    </div>
+                    <div class="about-video">
+                      <a class="video-btn1 popup-video" data-bs-toggle="modal" data-bs-target="#geetanjalichopra"
+                        href="https://youtu.be/oRmvwiSvYeU"><span><i class="fas fa-play"></i></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3" data-aos="fade-right" data-aos-duration="600">
+              <div class="about-item">
+                <div class="item-thumb">
+                  <img src="assets/images/about/about3.png" alt="About Images" />
+                  <div class="item-content text-white">
+                    <div class="content-title">
+                      <span class="date">May, 2018</span>
+                      <h5 class="title">
+                        The Food Puzzle of India | Joe A Scaria | TEDxAJCE
+                      </h5>
+                    </div>
+                    <div class="about-video">
+                      <a class="video-btn1 popup-video" data-bs-toggle="modal" data-bs-target="#joeascaria"
+                        href="https://youtu.be/8-ZsYq5rNLE"><span><i class="fas fa-play"></i></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dots img-moving-anim5">
+              <img src="assets/images/dots/dots4.png" alt="Shape Images" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shape">
+        <img src="assets/images/shape/1.svg" alt="Shadow" />
+      </div>
+    </section>
+    <!-- about sec end -->
+    <div class="container mt-5">
+      <hr />
+    </div>
 
-        // iframe.addEventListener('load', function() {
-        //     console.log(iframe.contentDocument.querySelector('form + div'))
-        // })
+    <!-- speakers sec start -->
+    <section id="speakers" class="speakers-gallery-sec position-relative">
+      <div class="container">
+        <div class="section-head col-xl-8 m-auto text-center mb-5">
+          <span class="label">Our Previous Speakers</span>
+          <h2 class="title">
+            Meet some of our previous speakers from all around India
+          </h2>
+        </div>
+        <div class="speakers-gallery-items-wrap">
+          <div class="row">
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <div class="speakers-gallery-item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
+                <div class="speakers-gallery-item-thumb overflow-hidden position-relative">
+                  <img src="assets/images/gallery/gallery1.jpg" alt="Gallery Image 2" />
+                </div>
+                <ul class="social-icons social">
+                  <li>
+                    <a href="https://www.facebook.com/StephenDevassy/"><i class="fa-brands fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/stephendevassy/"><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/StephenDevassy"><i class="fa-brands fa-twitter"></i></a>
+                  </li>
+                </ul>
+                <div class="item-content">
+                  <h3 class="title">Stephen Devassy</h3>
+                  <span class="sub">Musician, composer, arranger and music director</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <div class="speakers-gallery-item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
+                <div class="speakers-gallery-item-thumb overflow-hidden position-relative">
+                  <img src="assets/images/gallery/gallery2.jpg" alt="Gallery Image 2" />
+                </div>
+                <ul class="social-icons social">
+                  <li>
+                    <a href="https://www.facebook.com/kkshailaja/"><i class="fa-brands fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://instagram.com/shailajateacher/"><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="index.html"><i class="fa-brands fa-twitter"></i></a>
+                  </li>
+                </ul>
+                <div class="item-content">
+                  <h3 class="title">K. K. Shailaja</h3>
+                  <span class="sub">MLA, former Health Minister and a wonderful teacher</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <div class="speakers-gallery-item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="800">
+                <div class="speakers-gallery-item-thumb overflow-hidden position-relative">
+                  <img src="assets/images/gallery/gallery3.jpg" alt="Gallery Image 3" />
+                </div>
+                <ul class="social-icons social">
+                  <li>
+                    <a href="https://www.facebook.com/IAmVavaSuresh/"><i class="fa-brands fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/vavasuresh/"><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/vavasureshcobra?lang=en"><i class="fa-brands fa-twitter"></i></a>
+                  </li>
+                </ul>
+                <div class="item-content">
+                  <h3 class="title">Vava Suresh</h3>
+                  <span class="sub">Indian wildlife conservationist and a snake expert</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <div class="speakers-gallery-item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                <div class="speakers-gallery-item-thumb overflow-hidden position-relative">
+                  <img src="assets/images/gallery/gallery4.jpg" alt="Gallery Image 4" />
+                </div>
+                <ul class="social-icons social">
+                  <li>
+                    <a href="https://www.facebook.com/KJAlphons/"><i class="fa-brands fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/alphons_kj/"><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/alphonstourism"><i class="fa-brands fa-twitter"></i></a>
+                  </li>
+                </ul>
+                <div class="item-content">
+                  <h3 class="title">Alphons Kannanthanam</h3>
+                  <span class="sub">Former Minister of Tourism of India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dots img-moving-anim1">
+            <img src="assets/images/dots/dots8.png" alt="Shadow Image" />
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+          <button class="custom-btn custom-btn2">+ Speakers</button>
+        </div>
+      </div>
+    </section>
+    <!-- speakers sec end -->
+    <div class="container">
+      <hr />
+    </div>
+    <div class="container">
+      <hr />
+    </div>
+    <!-- faq sec start -->
+    <section class="faq-sec" id="faq-sec">
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-lg-6 mb-5 mb-lg-3" data-aos="fade-right" data-aos-duration="1000">
+            <div class="title-area">
+              <h2 class="title mb-3">
+                Frequently asked questions, about the event
+              </h2>
+              <p class="desc mb-5">
+                TEDxAJCE is an independently organized TEDx event with the goal of catering the global experience of TED to our community at Amal Jyothi College of Engineering, Kanjirapally.
+              </p>
 
-        var layers = document.getElementsByClassName('layer');
-        var speeds = []
+              <a class="blog-btn" href="mailto:tedxajce@amaljyothi.ac.in"><img src="assets/images/icon/mail.svg" alt="Mail" />  Have any queries? Write to us</a>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+            <div class="question-area">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Are the tickets refundable?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      No. Tickets once purchased are non-refundable.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      What will be the price of the ticket?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      We offer different types of tickets. You can visit our ticket section to know more including the price and book one that meets your requirements. There are only limited tickets. They are usually sold quickly on a first come first serve basis.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Are refreshments and lunch included in the ticket?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Yes, lunch and refreshments are standard for all ticket catagories.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Where would the event be held? 
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      The event will be held at the Resource Block-Auditorium, Amal Jyothi College of Engineering, Kanjirappally, Kottayam.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      What is the date and timing of the event?
+                    </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      The event is on May 3rd 2023. The event starts at 09:00 am and is expected to wind up by 04:30 pm. 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- faq sec end -->
+    <div class="container">
+      <hr />
+    </div>
+    <!-- gallery sec start -->
+    <section id="gallery" class="gallery-sec mb-5" data-aos="fade-up" data-aos-duration="1200">
+      <div class="container-fluid">
+        <div class="col-xl-8 section-head text-center m-auto mb-5">
+          <span class="label">Gallery</span>
+          <h2 class="title">
+            Relive the best moments from our past events through video and
+            photos in our gallery
+          </h2>
+        </div>
 
-        window.addEventListener('scroll', function (event) {
-            var top = this.pageYOffset;
-            for (var layer of layers) {
-                var speed = layer.getAttribute('speed')
-                layer.style.transform = "translate3d(0px, " + (top - (top * (speed / 100))) + "px, 0px)"
-            }
-        })
+        <div class="image-gallery-wrap zoom-gallery d-flex align-items-center">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="image-gallery-item" data-aos="fade-up" data-aos-duration="1000">
+                <a class="item-thumb" href="assets/images/gallery/img-gallery1.png">
+                  <img src="assets/images/gallery/img-gallery1.png" alt="Image Gallery 1" />
+                  <span class="view">VIEW</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="image-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                <a class="item-thumb" href="assets/images/gallery/img-gallery2.png">
+                  <img src="assets/images/gallery/img-gallery2.png" alt="Image Gallery 2" />
+                  <span class="view">VIEW</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="image-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                <a class="item-thumb" href="assets/images/gallery/img-gallery3.png">
+                  <img src="assets/images/gallery/img-gallery3.png" alt="Image Gallery 3" />
+                  <span class="view">VIEW</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shape">
+          <img src="assets/images/shape/6.svg" alt="Shape" />
+        </div>
+      </div>
+    </section>
+    <!-- gallery sec end -->
+    <div class="container">
+      <hr />
+    </div>
 
-        // image fetches
-        for (var layer of layers) {
-            switch (layer.id) {
-                case "layer0": layer.style.backgroundImage = "url('img/parallaxLayers/0.png')"; break;
-                case "layer1": layer.style.backgroundImage = "url('img/parallaxLayers/1.png')"; break;
-                case "layer2": layer.style.backgroundImage = "url('img/parallaxLayers/2.png')"; break;
-                case "layer3": layer.style.backgroundImage = "url('img/parallaxLayers/3.png')"; break;
-                case "layer4": layer.style.backgroundImage = "url('img/parallaxLayers/4.png')"; break;
-                case "layer5": layer.style.backgroundImage = "url('img/parallaxLayers/5.png')"; break;
-                case "layer6": layer.style.backgroundImage = "url('img/parallaxLayers/6.png')"; break;
-                case "layer7": layer.style.backgroundImage = "url('img/parallaxLayers/7.png')"; break;
-                case "layer8": layer.style.backgroundImage = "url('img/parallaxLayers/8.png')"; break;
-                case "layer9": layer.style.backgroundImage = "url('img/parallaxLayers/9.png')"; break;
-                case "layer10": layer.style.backgroundImage = "url('img/parallaxLayers/10.png')"; break;
-                case "layer11": layer.style.backgroundImage = "url('img/parallaxLayers/11.png')"; break;
-            }
-            speeds.push(Number.parseInt(layer.getAttribute('speed')));
-        }
+    <!-- footer area start -->
+    <footer class="footer-area" style="background-image: url(assets/images/banner/Footer.png)">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-sm-6 col-lg-8">
+                  <div class="footer-info">
+                    <a href="index.html" class="footer-logo">
+                      <img src="assets/images/logo/footerlogo.png" alt="Footer Logo" />
+                    </a>
+                    <p class="footer-desc">
+                      TEDxAJCE is an independently organized TEDx event with
+                      the goal of catering the global experience of TED to our
+                      community at Amal Jyothi College of Engineering,
+                      Kanjirapally.
+                    </p>
+                    <ul class="footer-social social">
+                      <li>
+                        <a href="https://www.instagram.com/tedxajce/"><i class="fa-brands fa-instagram"></i></a>
+                      </li>
+                      <li>
+                        <a href="https://www.linkedin.com/company/tedx-ajce/"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                      </li>
+                      <li>
+                        <a href="https://www.flickr.com/photos/165706544@N05/"><i class="fa-brands fa-flickr"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="footer-about custom-item">
+                    <h3 class="title">Navigation</h3>
+                    <ul class="about-item">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#talks">Talks</a></li>
+                      <li><a href="#speakers">Speakers</a></li>
+                      <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="footer-contact custom-item">
+                    <h3 class="title">Contact</h3>
+                    <ul class="contact-item">
+                      <li>
+                        <a href="tel:9745493845">Adithya Krishnan - Organizer</a>
+                      </li>
+                      <li>
+                        <a href="tel:9811334463">Alan James - Co-Organizer</a>
+                      </li>
+                      <li>
+                        <a href="mailto:tedxajce@amaljyothi.ac.in">Email Us</a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.google.com/maps/place/Amal+Jyothi+College+of+Engineering/@9.5286371,76.8192296,17z/data=!3m1!4b1!4m6!3m5!1s0x3b063626ed32c771:0xff305e1affdbb4b4!8m2!3d9.5286318!4d76.8234568!16s%2Fm%2F0cpbjkz">Address</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="footer-copyright-area text-center pb-3">
+          <span><strong>© 2023 TEDxAJCE</strong></span>
+        </div>
+      </div>
+    </footer>
+    <!-- footer area end -->
 
-        //layer depth analysis
-        var str = "";
-        for (var x = 0; x < 101; x++) {
-            if (speeds.indexOf(x) != -1) str += '|';
-            else str += '-';
-        }
-        console.log(speeds, str)
+    <!-- Modal -->
+    <div class="modal fade popup-modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+      tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg popup-dialogue modal-dialog-centered">
+        <div class="modal-content popup-content p-4 bg-white">
+          <button type="button" class="btn btn-secondary ms-auto" data-bs-dismiss="modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
 
-        // COUNTDOWN SCRIPT
-        var targetDate = new Date("Aug 28, 2021 10:00:00").getTime();
-        var timer = setInterval(function () {
-            var today = new Date().getTime();
-            var eta = targetDate - today;
+          <div class="modal-body popup-body">
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/FYl7fhaKcgE"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(eta / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((eta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((eta % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((eta % (1000 * 60)) / 1000);
+    <!-- Button trigger modal -->
+    <!-- Modal 2 -->
 
-            // Output the result in an element with id="countdown"
-            document.getElementById("countdown").innerHTML =hours + " Hours " + minutes + " Minutes";
+    <div class="modal fade popup-modal" id="kkshailaja" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg popup-dialogue modal-dialog-centered">
+        <div class="modal-content popup-content p-4 bg-white">
+          <button type="button" class="btn btn-secondary ms-auto" data-bs-dismiss="modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
 
-            // If the count down is over, write some text 
-            if (eta < 0) {
-                clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "";
-            }
-        }, 1000);
-        // function redirectButton(){
-        //     var element = document.getElementById("volunteer-call");
-        //     element.scrollIntoView();
-        //     console.log('success');
-        // }
-    </script>
+          <div class="modal-body popup-body">
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/6U7H1bQYPq8"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button trigger modal -->
+
+    <!-- Modal 3 -->
+
+    <div class="modal fade popup-modal" id="geetanjalichopra" data-bs-backdrop="static" data-bs-keyboard="false"
+      tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg popup-dialogue modal-dialog-centered">
+        <div class="modal-content popup-content p-4 bg-white">
+          <button type="button" class="btn btn-secondary ms-auto" data-bs-dismiss="modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <div class="modal-body popup-body">
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/oRmvwiSvYeU"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button trigger modal -->
+
+    <!-- Modal 4 -->
+
+    <div class="modal fade popup-modal" id="joeascaria" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg popup-dialogue modal-dialog-centered">
+        <div class="modal-content popup-content p-4 bg-white">
+          <button type="button" class="btn btn-secondary ms-auto" data-bs-dismiss="modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <div class="modal-body popup-body">
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/8-ZsYq5rNLE"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button trigger modal -->
+
+    <!-- Modal 5 -->
+    <div class="modal popup-box fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog popup-box-dialog modal-dialog-centered">
+        <div class="modal-content popup-box-content">
+          <div class="popup-card" style="width: 100%">
+            <button type="button" class="btn popup2-btn ms-auto" data-bs-dismiss="modal">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img src="assets/images/popup.png" class="card-img-top" alt="popup-bg" />
+            <div class="card-body popup-card-body">
+              <div class="popup-title-area">
+                <p class="popup-sub">May 3, 2023</p>
+                <h5 class="card-title popup-title">TEDx AJCE 2023</h5>
+              </div>
+              <a href="index.html#" class="btn popup-play" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
+                  class="fa-solid fa-play"></i></a>
+            </div>
+
+            <div id="eventbrite-widget-container-443112520477" class="text-center mb-3 mt-3">
+              Event Registration will start soon
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- jquery -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.countdown.min.js"></script>
+
+  <!-- animation -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <!-- magnific popup -->
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+  <!-- bootstrap -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script>
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 30) {
+        $(".custom-navbar").addClass("scrolled");
+      } else {
+        $(".custom-navbar").removeClass("scrolled");
+      }
+    });
+  </script>
+
+  <!-- slick -->
+  <script src="assets/js/slick.min.js"></script>
+
+  <!-- parallax js -->
+  <script src="assets/js/parallax.min.js"></script>
+
+  <!-- javaScript -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- color switch -->
+  <script src="color-switch/switch.js"></script>
 </body>
 
 </html>
