@@ -42,7 +42,7 @@
     autoplay: true,
     speed: 300,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     prevArrow: ".main-left-arrow",
     nextArrow: ".main-right-arrow",
     responsive: [

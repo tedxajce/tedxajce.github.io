@@ -624,6 +624,11 @@ hr {
   padding: 40px 0px;
   position: relative;
 }
+@media screen and (max-width: 1024px) {
+  .about-sec .shape {
+    display: none;
+  }
+}
 .about-sec .shape {
   position: absolute;
   bottom: -40%;
@@ -3125,4 +3130,7 @@ hr {
 
 .custom-navbar.scrolled {
   background-color: #17141d !important;
+}
+.label {
+  width: 15em !important;
 }
