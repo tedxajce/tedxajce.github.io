@@ -3179,12 +3179,13 @@ hr {
 .card-01.height-fix .card-img-overlay:hover{
   top: 0%;
   display: block;
+  background-color: black;
+  opacity: 80%;
 }
 .card-01.height-fix .card-img-overlay:hover p{
   top: 44%;
   display: block;
 }
-
 .card-01.height-fix .fa {
   color: #fff;
   font-size: 22px;
