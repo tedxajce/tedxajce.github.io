@@ -3195,3 +3195,8 @@ hr {
 .card-title span {
   color: #eb0028;
 }
+#download-brochure .custom-btn2 {
+  border-radius: 8px !important;
+  width: auto !important;
+  padding: 0 1em 0 1em;
+}
