@@ -1809,6 +1809,15 @@ hr {
   margin: auto;
 }
 
+.card-error{
+  color: #bcbcbc;
+  font-size: 14px;
+}
+.card-error img{
+  height: 22px;
+  width: 22px;
+}
+
 .pricing-cart-wrap .card:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -3176,13 +3185,13 @@ hr {
 .card-01.height-fix .card-img-overlay p{
   display: none;
 }
-.card-01.height-fix .card-img-overlay:hover{
+.card-01.height-fix:hover .card-img-overlay{
   top: 0%;
   display: block;
   background-color: black;
   opacity: 80%;
 }
-.card-01.height-fix .card-img-overlay:hover p{
+.card-01.height-fix:hover .card-img-overlay p{
   top: 44%;
   display: block;
 }
