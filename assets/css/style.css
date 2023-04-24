@@ -778,7 +778,7 @@ hr {
 /* about sec end */
 /* blog sec start*/
 .blog-sec {
-  padding: 100px;
+  padding: 100 0;
   position: relative;
 }
 
