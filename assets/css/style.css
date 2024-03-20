@@ -2,6 +2,25 @@
 
 body {
   font-family: Helvetica, sans-serif;
+  scrollbar-width: thin; /* width of the scrollbar */
+  scrollbar-color: #888 #f1f1f1; /
+}
+/* body::-webkit-scrollbar{
+  display: none;
+} */
+
+/* WebKit (Chrome, Safari) scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* color of the thumb */
+  border-radius: 4px; /* roundness of the corners */
 }
 
 #talks img {
