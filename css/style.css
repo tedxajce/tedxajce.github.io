@@ -12003,7 +12003,6 @@ i.bg-color-secondary {
   background-image: url("../images/misc/waves.png");
   overflow: hidden;
 }
-
 .de-pricing-s1 .d-inner {
   position: relative;
   background: #ccc;
@@ -19121,7 +19120,7 @@ img {
 .speaker-card{
   max-height: 168.5px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 840px) {
   .speaker-card {
     max-height: 234.5px ;
   }
@@ -19149,7 +19148,14 @@ img {
   position: relative;
   animation: glide 6s linear infinite alternate;
 }
-
+@media screen and (max-width: 720px) {
+  .moving-dots {
+    max-width: 120px;
+    max-height: 120px;
+    position: relative;
+    animation: glide 6s linear infinite alternate;
+  }
+}
 .moving-vertical {
   position: relative;
   animation: rotate-text 6s linear infinite;
